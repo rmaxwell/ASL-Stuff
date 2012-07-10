@@ -1,5 +1,3 @@
-<?php $this->load->view('includes/header'); ?>
-
 <div id="login_form">
 
 	<h1>Login, Fool!</h1>
@@ -13,7 +11,3 @@
 	?>
 
 </div><!-- end login_form-->
-
-<?php $this->load->view('includes/tut_info'); ?>
-	
-<?php $this->load->view('includes/footer'); ?>

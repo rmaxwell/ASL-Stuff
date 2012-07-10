@@ -11,8 +11,9 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://localhost:8888/ci_day6/";
-
+ 
+$config['base_url'] = "http://localhost:8888/admin/";
+ 
 /*
 |--------------------------------------------------------------------------
 | Index File

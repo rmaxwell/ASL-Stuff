@@ -10,8 +10,41 @@ class Site extends Controller
 
 	function members_area()
 	{
+		$this->load->view('cms/nav');
 		$this->load->view('logged_in_area');
 	}
+	
+	/*
+function gallery()
+	{
+		$this->load->view('nav');
+		$this->load->view('gallery');
+	}
+	
+	function videos()
+	{
+		$this->load->view('nav');
+		$this->load->view('videos');
+	}
+	
+	function bio()
+	{
+		$this->load->view('nav');
+		$this->load->view('bio');
+	}
+	
+	function blog()
+	{
+		$this->load->view('nav');
+		$this->load->view('blog');
+	}
+	
+	function site_nav()
+	{
+		$this->load->view('nav');
+		$this->load->view('site_nav');
+	}
+*/
 	
 	function another_page() // just for sample
 	{

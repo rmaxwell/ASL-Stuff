@@ -53,7 +53,7 @@ class Login extends Controller {
 		}
 		
 		else
-		{			
+		{
 			$this->load->model('membership_model');
 			
 			if($query = $this->membership_model->create_member())
