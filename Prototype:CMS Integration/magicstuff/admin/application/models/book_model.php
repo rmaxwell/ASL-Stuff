@@ -9,20 +9,10 @@ class Book_model extends Model {
 
 	public function get()
 	{
-		//$query = $this->db->get('booking_contacts');
+		//From database with table 'booking_contacts', col 'booking_id'
 		$this->db->where('booking_id',1);
 		$query = $this->db->get('booking_contacts');
 		return $query->result_array();
-		
-		/*
-		if($query->num_rows == 1)
-		{
-			return $query;
-		}
-		*/
-		//added to check if this 1 not working...
-		//return $query;
-
 	}
 	
 	public function update($data)
