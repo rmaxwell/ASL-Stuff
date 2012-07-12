@@ -60,7 +60,7 @@ class CI_Language {
 
 		if ($idiom == '')
 		{
-			$CI =& get_instance();
+			$CI = get_instance();
 			$deft_lang = $CI->config->item('language');
 			$idiom = ($deft_lang == '') ? 'english' : $deft_lang;
 		}

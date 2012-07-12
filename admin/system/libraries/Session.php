@@ -56,7 +56,7 @@ class CI_Session {
 		log_message('debug', "Session Class Initialized");
 
 		// Set the super object to a local variable for use throughout the class
-		$this->CI =& get_instance();
+		$this->CI = get_instance();
 
 		// Set all the session preferences, which can either be set
 		// manually via the $params array above or via the config file

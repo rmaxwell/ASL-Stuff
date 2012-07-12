@@ -36,7 +36,7 @@ class CI_Profiler {
  	
  	function CI_Profiler()
  	{
- 		$this->CI =& get_instance();
+ 		$this->CI = get_instance();
  		$this->CI->load->language('profiler');
  	}
  	

@@ -65,7 +65,7 @@ class CI_Input {
 	{
 		log_message('debug', "Input Class Initialized");
 
-		$CFG =& load_class('Config');
+		$CFG = load_class('Config');
 		$this->use_xss_clean	= ($CFG->item('global_xss_filtering') === TRUE) ? TRUE : FALSE;
 		$this->allow_get_array	= ($CFG->item('enable_query_strings') === TRUE) ? TRUE : FALSE;
 		$this->_sanitize_globals();
@@ -970,7 +970,7 @@ class CI_Input {
 	*/
 	function _html_entity_decode_callback($match)
 	{
-		$CFG =& load_class('Config');
+		$CFG = load_class('Config');
 		$charset = $CFG->item('charset');
 
 		return $this->_html_entity_decode($match[0], strtoupper($charset));

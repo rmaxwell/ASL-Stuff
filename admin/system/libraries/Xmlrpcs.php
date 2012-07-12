@@ -329,7 +329,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc
 			{
 				if ($this->object === FALSE)
 				{
-					$CI =& get_instance();
+					$CI = get_instance();
 					return $CI->$method_parts['1']($m);
 				}
 				else

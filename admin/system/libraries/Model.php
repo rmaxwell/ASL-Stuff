@@ -56,7 +56,7 @@ class Model {
 	 */	
 	function _assign_libraries($use_reference = TRUE)
 	{
-		$CI =& get_instance();				
+		$CI = get_instance();				
 		foreach (array_keys(get_object_vars($CI)) as $key)
 		{
 			if ( ! isset($this->$key) AND $key != $this->_parent_name)
@@ -66,7 +66,7 @@ class Model {
 				if ($use_reference == TRUE)
 				{
 					$this->$key = NULL; // Needed to prevent reference errors with some configurations
-					$this->$key =& $CI->$key;
+					$this->$key = $CI->$key;
 				}
 				else
 				{

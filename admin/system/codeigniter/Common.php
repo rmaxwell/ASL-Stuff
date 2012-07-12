@@ -127,13 +127,13 @@ function &load_class($class, $instantiate = TRUE)
 	if ($is_subclass == TRUE)
 	{
 		$name = config_item('subclass_prefix').$class;
-		$objects[$class] =& new $name();
+		$objects[$class] = new $name();
 		return $objects[$class];
 	}
 
 	$name = ($class != 'Controller') ? 'CI_'.$class : $class;
 	
-	$objects[$class] =& new $name();
+	$objects[$class] = new $name();
 	return $objects[$class];
 }
 
@@ -161,7 +161,7 @@ function &get_config()
 			exit('Your config file does not appear to be formatted correctly.');
 		}
 
-		$main_conf[0] =& $config;
+		$main_conf[0] = $config;
 	}
 	return $main_conf[0];
 }
@@ -178,7 +178,7 @@ function config_item($item)
 
 	if ( ! isset($config_item[$item]))
 	{
-		$config =& get_config();
+		$config = get_config();
 
 		if ( ! isset($config[$item]))
 		{
@@ -205,7 +205,7 @@ function config_item($item)
 */
 function show_error($message)
 {
-	$error =& load_class('Exceptions');
+	$error = load_class('Exceptions');
 	echo $error->show_error('An Error Was Encountered', $message);
 	exit;
 }
@@ -223,7 +223,7 @@ function show_error($message)
 */
 function show_404($page = '')
 {
-	$error =& load_class('Exceptions');
+	$error = load_class('Exceptions');
 	$error->show_404($page);
 	exit;
 }
@@ -242,13 +242,13 @@ function log_message($level = 'error', $message, $php_error = FALSE)
 {
 	static $LOG;
 	
-	$config =& get_config();
+	$config = get_config();
 	if ($config['log_threshold'] == 0)
 	{
 		return;
 	}
 
-	$LOG =& load_class('Log');
+	$LOG = load_class('Log');
 	$LOG->write_log($level, $message, $php_error);
 }
 
@@ -280,7 +280,7 @@ function _exception_handler($severity, $message, $filepath, $line)
 		return;
 	}
 
-	$error =& load_class('Exceptions');
+	$error = load_class('Exceptions');
 
 	// Should we display the error?
 	// We'll get the current error_reporting level and add its bits
@@ -292,7 +292,7 @@ function _exception_handler($severity, $message, $filepath, $line)
 	}
 	
 	// Should we log the error?  No?  We're done...
-	$config =& get_config();
+	$config = get_config();
 	if ($config['log_threshold'] == 0)
 	{
 		return;

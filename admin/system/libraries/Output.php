@@ -243,7 +243,7 @@ class CI_Output {
 	 */		
 	function _display($output = '')
 	{	
-		// Note:  We use globals because we can't use $CI =& get_instance()
+		// Note:  We use globals because we can't use $CI = get_instance()
 		// since this function is sometimes called by the caching mechanism,
 		// which happens before the CI super object is available.
 		global $BM, $CFG;
@@ -253,7 +253,7 @@ class CI_Output {
 		// Set the output data
 		if ($output == '')
 		{
-			$output =& $this->final_output;
+			$output = $this->final_output;
 		}
 		
 		// --------------------------------------------------------------------
@@ -316,7 +316,7 @@ class CI_Output {
 		// --------------------------------------------------------------------
 
 		// Grab the super object.  We'll need it in a moment...
-		$CI =& get_instance();
+		$CI = get_instance();
 		
 		// Do we need to generate profile data?
 		// If so, load the Profile class and run it.
@@ -365,7 +365,7 @@ class CI_Output {
 	 */	
 	function _write_cache($output)
 	{
-		$CI =& get_instance();	
+		$CI = get_instance();	
 		$path = $CI->config->item('cache_path');
 	
 		$cache_path = ($path == '') ? BASEPATH.'cache/' : $path;

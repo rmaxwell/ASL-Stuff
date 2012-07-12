@@ -36,8 +36,8 @@ class CI_DB_utility extends CI_DB_forge {
 	function CI_DB_utility()
 	{
 		// Assign the main database object to $this->db
-		$CI =& get_instance();
-		$this->db =& $CI->db;
+		$CI = get_instance();
+		$this->db = $CI->db;
 		
 		log_message('debug', "Database Utility Class Initialized");
 	}
@@ -235,7 +235,7 @@ class CI_DB_utility extends CI_DB_forge {
 		extract($params);
 			
 		// Load the xml helper
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->load->helper('xml');
 
 		// Generate the result
@@ -374,7 +374,7 @@ class CI_DB_utility extends CI_DB_forge {
 
 			// Load the Zip class and output it
 			
-			$CI =& get_instance();
+			$CI = get_instance();
 			$CI->load->library('zip');
 			$CI->zip->add_data($prefs['filename'], $this->_backup($prefs));							
 			return $CI->zip->get_zip();

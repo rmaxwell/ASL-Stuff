@@ -605,7 +605,7 @@ class CI_FTP {
 	 */
 	function _error($line)
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->lang->load('ftp');
 		show_error($CI->lang->line($line));
 	}

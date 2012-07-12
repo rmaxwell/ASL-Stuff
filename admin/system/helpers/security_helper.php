@@ -39,7 +39,7 @@ if ( ! function_exists('xss_clean'))
 {
 	function xss_clean($str, $is_image = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		return $CI->input->xss_clean($str, $is_image);
 	}
 }

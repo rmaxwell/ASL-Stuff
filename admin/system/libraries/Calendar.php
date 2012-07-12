@@ -47,7 +47,7 @@ class CI_Calendar {
 	 */
 	function CI_Calendar($config = array())
 	{		
-		$this->CI =& get_instance();
+		$this->CI = get_instance();
 		
 		if ( ! in_array('calendar_lang'.EXT, $this->CI->lang->is_loaded, TRUE))
 		{

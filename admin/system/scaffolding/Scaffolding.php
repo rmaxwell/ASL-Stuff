@@ -34,7 +34,7 @@ class Scaffolding {
 
 	function Scaffolding($db_table)
 	{
-		$this->CI =& get_instance();
+		$this->CI = get_instance();
 		
 		$this->CI->load->database("", FALSE, TRUE);			
 		$this->CI->load->library('pagination');

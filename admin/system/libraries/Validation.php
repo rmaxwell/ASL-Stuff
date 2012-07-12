@@ -45,7 +45,7 @@ class CI_Validation {
 	 */	
 	function CI_Validation()
 	{	
-		$this->CI =& get_instance();
+		$this->CI = get_instance();
 		
 		if (function_exists('mb_internal_encoding'))
 		{

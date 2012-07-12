@@ -58,7 +58,7 @@ if ( ! function_exists('set_cookie'))
 		}
 	
 		// Set the config file options
-		$CI =& get_instance();
+		$CI = get_instance();
 	
 		if ($prefix == '' AND $CI->config->item('cookie_prefix') != '')
 		{
@@ -107,7 +107,7 @@ if ( ! function_exists('get_cookie'))
 {
 	function get_cookie($index = '', $xss_clean = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		
 		$prefix = '';
 		

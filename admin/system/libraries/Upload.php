@@ -804,7 +804,7 @@ class CI_Upload {
 			return FALSE;
 		}
 
-		$CI =& get_instance();	
+		$CI = get_instance();	
 		$data = $CI->input->xss_clean($data);
 		
 		flock($fp, LOCK_EX);
@@ -824,7 +824,7 @@ class CI_Upload {
 	 */	
 	function set_error($msg)
 	{
-		$CI =& get_instance();	
+		$CI = get_instance();	
 		$CI->lang->load('upload');
 		
 		if (is_array($msg))

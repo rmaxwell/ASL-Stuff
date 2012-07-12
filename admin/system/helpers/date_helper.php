@@ -39,7 +39,7 @@ if ( ! function_exists('now'))
 {
 	function now()
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 	
 		if (strtolower($CI->config->item('time_reference')) == 'gmt')
 		{
@@ -149,7 +149,7 @@ if ( ! function_exists('timespan'))
 {
 	function timespan($seconds = 1, $time = '')
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->lang->load('date');
 
 		if ( ! is_numeric($seconds))
@@ -505,7 +505,7 @@ if ( ! function_exists('timezone_menu'))
 {
 	function timezone_menu($default = 'UTC', $class = "", $name = 'timezones')
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->lang->load('date');
 	
 		if ($default == 'GMT')

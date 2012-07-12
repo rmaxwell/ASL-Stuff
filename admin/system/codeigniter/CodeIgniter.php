@@ -65,7 +65,7 @@ set_error_handler('_exception_handler');
  * ------------------------------------------------------
  */
 
-$BM =& load_class('Benchmark');
+$BM = load_class('Benchmark');
 $BM->mark('total_execution_time_start');
 $BM->mark('loading_time_base_classes_start');
 
@@ -75,7 +75,7 @@ $BM->mark('loading_time_base_classes_start');
  * ------------------------------------------------------
  */
 
-$EXT =& load_class('Hooks');
+$EXT = load_class('Hooks');
 
 /*
  * ------------------------------------------------------
@@ -90,10 +90,10 @@ $EXT->_call_hook('pre_system');
  * ------------------------------------------------------
  */
 
-$CFG =& load_class('Config');
-$URI =& load_class('URI');
-$RTR =& load_class('Router');
-$OUT =& load_class('Output');
+$CFG = load_class('Config');
+$URI = load_class('URI');
+$RTR = load_class('Router');
+$OUT = load_class('Output');
 
 /*
  * ------------------------------------------------------
@@ -115,8 +115,8 @@ if ($EXT->_call_hook('cache_override') === FALSE)
  * ------------------------------------------------------
  */
 
-$IN		=& load_class('Input');
-$LANG	=& load_class('Language');
+$IN		= load_class('Input');
+$LANG	= load_class('Language');
 
 /*
  * ------------------------------------------------------

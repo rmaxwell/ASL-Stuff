@@ -213,22 +213,22 @@ echo form_dropdown('shirts', $options, 'large');<br />
 <br />
 // Would produce:<br />
 <br />
-&lt;select name=&quot;shirts&quot;&gt;<br />
-&lt;option value=&quot;small&quot;&gt;Small Shirt&lt;/option&gt;<br />
-&lt;option value=&quot;med&quot;&gt;Medium  Shirt&lt;/option&gt;<br />
-&lt;option value=&quot;large&quot; selected=&quot;selected&quot;&gt;Large Shirt&lt;/option&gt;<br />
-&lt;option value=&quot;xlarge&quot;&gt;Extra Large Shirt&lt;/option&gt;<br />
+&lt;select name=quot;shirts&quot;&gt;<br />
+&lt;option value=quot;small&quot;&gt;Small Shirt&lt;/option&gt;<br />
+&lt;option value=quot;med&quot;&gt;Medium  Shirt&lt;/option&gt;<br />
+&lt;option value=quot;large&quot; selected=quot;selected&quot;&gt;Large Shirt&lt;/option&gt;<br />
+&lt;option value=quot;xlarge&quot;&gt;Extra Large Shirt&lt;/option&gt;<br />
 &lt;/select&gt;<br />
 <br />
 echo form_dropdown('shirts', $options, $shirts_on_sale);<br />
 <br />
 // Would produce:<br />
 <br />
-&lt;select name=&quot;shirts&quot; multiple=&quot;multiple&quot;&gt;<br />
-&lt;option value=&quot;small&quot; selected=&quot;selected&quot;&gt;Small Shirt&lt;/option&gt;<br />
-&lt;option value=&quot;med&quot;&gt;Medium  Shirt&lt;/option&gt;<br />
-&lt;option value=&quot;large&quot; selected=&quot;selected&quot;&gt;Large Shirt&lt;/option&gt;<br />
-&lt;option value=&quot;xlarge&quot;&gt;Extra Large Shirt&lt;/option&gt;<br />
+&lt;select name=quot;shirts&quot; multiple=quot;multiple&quot;&gt;<br />
+&lt;option value=quot;small&quot; selected=quot;selected&quot;&gt;Small Shirt&lt;/option&gt;<br />
+&lt;option value=quot;med&quot;&gt;Medium  Shirt&lt;/option&gt;<br />
+&lt;option value=quot;large&quot; selected=quot;selected&quot;&gt;Large Shirt&lt;/option&gt;<br />
+&lt;option value=quot;xlarge&quot;&gt;Extra Large Shirt&lt;/option&gt;<br />
 &lt;/select&gt;</code>
 
 
@@ -258,13 +258,13 @@ echo form_fieldset_close();
 <br />
 &lt;/fieldset&gt;</code>
 <p>Similar to other functions, you can submit an associative array in the second parameter if you prefer to set additional attributes. </p>
-<p><code>$attributes = array('id' =&gt; 'address_info', 'class' =&gt; 'address_info');<br />
+<p><code>$attributes = array('id' =gt; 'address_info', 'class' =gt; 'address_info');<br />
     echo form_fieldset('Address Information', $attributes);<br />
 echo &quot;&lt;p&gt;fieldset content here&lt;/p&gt;\n&quot;;<br />
 echo form_fieldset_close(); <br />
 <br />
 // Produces<br />
-&lt;fieldset id=&quot;address_info&quot; class=&quot;address_info&quot;&gt; <br />
+&lt;fieldset id=quot;address_info&quot; class=quot;address_info&quot;&gt; <br />
 &lt;legend&gt;Address Information&lt;/legend&gt; <br />
 &lt;p&gt;form content here&lt;/p&gt; <br />
 &lt;/fieldset&gt;</code></p>
@@ -284,7 +284,7 @@ echo fieldset_close($string);<br />
 <br />
 // Would produce:<br />
 <br />
-&lt;input type=&quot;checkbox&quot; name=&quot;newsletter&quot; value=&quot;accept&quot; checked=&quot;checked&quot; /&gt;</code>
+&lt;input type=quot;checkbox&quot; name=quot;newsletter&quot; value=quot;accept&quot; checked=quot;checked&quot; /&gt;</code>
 <p>The third parameter contains a boolean TRUE/FALSE to determine whether the box should be checked or not.</p>
 <p>Similar to the other form functions in this helper, you can also pass an array of attributes to the function:</p>
 
@@ -320,7 +320,7 @@ fourth parameter:</p>
 <br />
 // Would produce:<br />
 <br />
-&lt;input type=&quot;submit&quot; name=&quot;mysubmit&quot; value=&quot;Submit Post!&quot; /&gt;</code>
+&lt;input type=quot;submit&quot; name=quot;mysubmit&quot; value=quot;Submit Post!&quot; /&gt;</code>
 <p>Similar to other functions, you can submit an associative array in the first parameter if you prefer to set your own attributes.
     The third parameter lets you add extra data to your form, like JavaScript.</p>
 <h2>form_label()</h2>
@@ -329,16 +329,16 @@ fourth parameter:</p>
 <br />
 // Would produce:
 <br />
-&lt;label for=&quot;username&quot;&gt;What is your Name&lt;/label&gt;</code>
+&lt;label for=quot;username&quot;&gt;What is your Name&lt;/label&gt;</code>
 <p>Similar to other functions, you can submit an associative array in the third parameter if you prefer to set additional attributes.    </p>
 <p><code>$attributes = array(<br />
-&nbsp;&nbsp;&nbsp;&nbsp;'class' =&gt; 'mycustomclass',<br />
-&nbsp;&nbsp;&nbsp;&nbsp;'style' =&gt; 'color: #000;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'class' =gt; 'mycustomclass',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'style' =gt; 'color: #000;',<br />
 );<br />
     echo form_label('What is your Name', 'username', $attributes);<br />
         <br />
 // Would produce: <br />
-&lt;label for=&quot;username&quot; class=&quot;mycustomclass&quot; style=&quot;color: #000;&quot;&gt;What is your Name&lt;/label&gt;</code></p>
+&lt;label for=quot;username&quot; class=quot;mycustomclass&quot; style=quot;color: #000;&quot;&gt;What is your Name&lt;/label&gt;</code></p>
 <h2>form_reset()</h2>
 
 <p>Lets you generate a standard reset button. Use is identical to <dfn>form_submit()</dfn>.</p>

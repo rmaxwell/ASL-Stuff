@@ -32,7 +32,7 @@ class CI_Loader {
 	var $_ci_ob_level;
 	var $_ci_view_path		= '';
 	var $_ci_is_php5		= FALSE;
-	var $_ci_is_instance 	= FALSE; // Whether we should use $this or $CI =& get_instance()
+	var $_ci_is_instance 	= FALSE; // Whether we should use $this or $CI = get_instance()
 	var $_ci_cached_vars	= array();
 	var $_ci_classes		= array();
 	var $_ci_loaded_files	= array();
@@ -151,7 +151,7 @@ class CI_Loader {
 			return;
 		}
 		
-		$CI =& get_instance();
+		$CI = get_instance();
 		if (isset($CI->$name))
 		{
 			show_error('The model name you are loading is the name of a resource that is already being used: '.$name);
@@ -201,7 +201,7 @@ class CI_Loader {
 	function database($params = '', $return = FALSE, $active_record = FALSE)
 	{
 		// Grab the super object
-		$CI =& get_instance();
+		$CI = get_instance();
 		
 		// Do we even need to load the database class?
 		if (class_exists('CI_DB') AND $return == FALSE AND $active_record == FALSE AND isset($CI->db) AND is_object($CI->db))
@@ -221,7 +221,7 @@ class CI_Loader {
 		$CI->db = '';
 		
 		// Load the DB class
-		$CI->db =& DB($params, $active_record);	
+		$CI->db = DB($params, $active_record);	
 		
 		// Assign the DB object to any existing models
 		$this->_ci_assign_to_models();
@@ -242,7 +242,7 @@ class CI_Loader {
 			$this->database();
 		}
 		
-		$CI =& get_instance();
+		$CI = get_instance();
 
 		// for backwards compatibility, load dbforge so we can extend dbutils off it
 		// this use is deprecated and strongly discouraged
@@ -252,7 +252,7 @@ class CI_Loader {
 		require_once(BASEPATH.'database/drivers/'.$CI->db->dbdriver.'/'.$CI->db->dbdriver.'_utility'.EXT);
 		$class = 'CI_DB_'.$CI->db->dbdriver.'_utility';
 
-		$CI->dbutil =& new $class();
+		$CI->dbutil = new $class();
 
 		$CI->load->_ci_assign_to_models();
 	}
@@ -272,7 +272,7 @@ class CI_Loader {
 			$this->database();
 		}
 		
-		$CI =& get_instance();
+		$CI = get_instance();
 	
 		require_once(BASEPATH.'database/DB_forge'.EXT);
 		require_once(BASEPATH.'database/drivers/'.$CI->db->dbdriver.'/'.$CI->db->dbdriver.'_forge'.EXT);
@@ -511,7 +511,7 @@ class CI_Loader {
 	 */
 	function language($file = array(), $lang = '')
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 
 		if ( ! is_array($file))
 		{
@@ -533,7 +533,7 @@ class CI_Loader {
 	 */
 	function scaffold_language($file = '', $lang = '', $return = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		return $CI->lang->load($file, $lang, $return);
 	}
 	
@@ -548,7 +548,7 @@ class CI_Loader {
 	 */
 	function config($file = '', $use_sections = FALSE, $fail_gracefully = FALSE)
 	{			
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->config->load($file, $use_sections, $fail_gracefully);
 	}
 
@@ -576,7 +576,7 @@ class CI_Loader {
 			show_error('You must include the name of the table you would like to access when you initialize scaffolding');
 		}
 		
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->_ci_scaffolding = TRUE;
 		$CI->_ci_scaff_table = $table;
 	}
@@ -626,12 +626,12 @@ class CI_Loader {
 		
 		if ($this->_ci_is_instance())
 		{
-			$_ci_CI =& get_instance();
+			$_ci_CI = get_instance();
 			foreach (get_object_vars($_ci_CI) as $_ci_key => $_ci_var)
 			{
 				if ( ! isset($this->$_ci_key))
 				{
-					$this->$_ci_key =& $_ci_CI->$_ci_key;
+					$this->$_ci_key = $_ci_CI->$_ci_key;
 				}
 			}
 		}
@@ -772,7 +772,7 @@ class CI_Loader {
 					// return a new instance of the object
 					if ( ! is_null($object_name))
 					{
-						$CI =& get_instance();
+						$CI = get_instance();
 						if ( ! isset($CI->$object_name))
 						{
 							return $this->_ci_init_class($class, config_item('subclass_prefix'), $params, $object_name);			
@@ -812,7 +812,7 @@ class CI_Loader {
 					// return a new instance of the object
 					if ( ! is_null($object_name))
 					{
-						$CI =& get_instance();
+						$CI = get_instance();
 						if ( ! isset($CI->$object_name))
 						{
 							return $this->_ci_init_class($class, '', $params, $object_name);
@@ -921,7 +921,7 @@ class CI_Loader {
 		$this->_ci_classes[$class] = $classvar;
 
 		// Instantiate the class		
-		$CI =& get_instance();
+		$CI = get_instance();
 		if ($config !== NULL)
 		{
 			$CI->$classvar = new $name($config);
@@ -956,7 +956,7 @@ class CI_Loader {
 		// Load any custom config file
 		if (count($autoload['config']) > 0)
 		{			
-			$CI =& get_instance();
+			$CI = get_instance();
 			foreach ($autoload['config'] as $key => $val)
 			{
 				$CI->config->load($val);
@@ -1032,7 +1032,7 @@ class CI_Loader {
 	
 		if ($this->_ci_is_instance())
 		{
-			$CI =& get_instance();
+			$CI = get_instance();
 			foreach ($this->_ci_models as $model)
 			{			
 				$CI->$model->_assign_libraries();

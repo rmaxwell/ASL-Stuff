@@ -36,7 +36,7 @@ class CI_Base {
 
 	public function CI_Base()
 	{
-		self::$instance =& $this;
+		self::$instance = $this;
 	}
 
 	public static function &get_instance()

@@ -44,7 +44,7 @@ class CI_Parser {
 	 */
 	function parse($template, $data, $return = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 		$template = $CI->load->view($template, $data, TRUE);
 		
 		if ($template == '')

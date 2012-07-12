@@ -325,9 +325,9 @@ class CI_Zip  {
 			$filename .= '.zip';
 		}
 
-		$zip_content =& $this->get_zip();
+		$zip_content = $this->get_zip();
 
-		$CI =& get_instance();
+		$CI = get_instance();
 		$CI->load->helper('download');
 
 		force_download($filename, $zip_content);

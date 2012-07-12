@@ -42,7 +42,7 @@ if ( ! function_exists('form_open'))
 {
 	function form_open($action = '', $attributes = '', $hidden = array())
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 
 		if ($attributes == '')
 		{
@@ -606,7 +606,7 @@ if ( ! function_exists('set_value'))
 {
 	function set_value($field = '', $default = '')
 	{
-		if (FALSE === ($OBJ =& _get_validation_object()))
+		if (FALSE === ($OBJ = _get_validation_object()))
 		{
 			if ( ! isset($_POST[$field]))
 			{
@@ -638,7 +638,7 @@ if ( ! function_exists('set_select'))
 {
 	function set_select($field = '', $value = '', $default = FALSE)
 	{
-		$OBJ =& _get_validation_object();
+		$OBJ = _get_validation_object();
 
 		if ($OBJ === FALSE)
 		{
@@ -693,7 +693,7 @@ if ( ! function_exists('set_checkbox'))
 {
 	function set_checkbox($field = '', $value = '', $default = FALSE)
 	{
-		$OBJ =& _get_validation_object();
+		$OBJ = _get_validation_object();
 
 		if ($OBJ === FALSE)
 		{ 
@@ -748,7 +748,7 @@ if ( ! function_exists('set_radio'))
 {
 	function set_radio($field = '', $value = '', $default = FALSE)
 	{
-		$OBJ =& _get_validation_object();
+		$OBJ = _get_validation_object();
 
 		if ($OBJ === FALSE)
 		{
@@ -803,7 +803,7 @@ if ( ! function_exists('form_error'))
 {
 	function form_error($field = '', $prefix = '', $suffix = '')
 	{
-		if (FALSE === ($OBJ =& _get_validation_object()))
+		if (FALSE === ($OBJ = _get_validation_object()))
 		{
 			return '';
 		}
@@ -829,7 +829,7 @@ if ( ! function_exists('validation_errors'))
 {
 	function validation_errors($prefix = '', $suffix = '')
 	{
-		if (FALSE === ($OBJ =& _get_validation_object()))
+		if (FALSE === ($OBJ = _get_validation_object()))
 		{
 			return '';
 		}
@@ -952,7 +952,7 @@ if ( ! function_exists('_get_validation_object'))
 {
 	function &_get_validation_object()
 	{
-		$CI =& get_instance();
+		$CI = get_instance();
 
 		// We set this as a variable since we're returning by reference
 		$return = FALSE;

@@ -43,7 +43,7 @@ class CI_Form_validation {
 	 */	
 	function CI_Form_validation($rules = array())
 	{	
-		$this->CI =& get_instance();
+		$this->CI = get_instance();
 		
 		// Validation rules can be stored in a config file.
 		$this->_config_rules = $rules;
@@ -417,18 +417,18 @@ class CI_Form_validation {
 				else
 				{
 					// start with a reference
-					$post_ref =& $_POST;
+					$post_ref = $_POST;
 					
 					// before we assign values, make a reference to the right POST key
 					if (count($row['keys']) == 1)
 					{
-						$post_ref =& $post_ref[current($row['keys'])];
+						$post_ref = $post_ref[current($row['keys'])];
 					}
 					else
 					{
 						foreach ($row['keys'] as $val)
 						{
-							$post_ref =& $post_ref[$val];
+							$post_ref = $post_ref[$val];
 						}
 					}
 

@@ -72,14 +72,14 @@ class Controller extends CI_Base {
 		
 		foreach ($classes as $var => $class)
 		{
-			$this->$var =& load_class($class);
+			$this->$var = load_class($class);
 		}
 
 		// In PHP 5 the Loader class is run as a discreet
 		// class.  In PHP 4 it extends the Controller
 		if (floor(phpversion()) >= 5)
 		{
-			$this->load =& load_class('Loader');
+			$this->load = load_class('Loader');
 			$this->load->_ci_autoloader();
 		}
 		else
@@ -91,7 +91,7 @@ class Controller extends CI_Base {
 			{
 				if (is_object($this->$attribute))
 				{
-					$this->load->$attribute =& $this->$attribute;
+					$this->load->$attribute = $this->$attribute;
 				}
 			}
 		}

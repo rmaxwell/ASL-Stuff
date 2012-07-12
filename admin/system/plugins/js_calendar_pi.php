@@ -126,7 +126,7 @@ Lastly, you'll need some CSS for your calendar:
 
 function js_calendar_script($form_name = 'entryform')
 {		
-$CI =& get_instance();
+$CI = get_instance();
 $CI->load->language('calendar');
 ob_start();
 ?>
