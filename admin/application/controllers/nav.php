@@ -10,6 +10,7 @@ class Nav extends Controller
 	
 	function index()
 	{
+		$this->load->view('includes/header');
 		$this->load->view('cms/nav');
 		$this->load->view('nav');
 	}

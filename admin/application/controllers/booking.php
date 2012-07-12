@@ -12,6 +12,7 @@ class Booking extends Controller
 	
 	function index()
 	{
+		$this->load->view('includes/header');
 		$this->load->helper('form');
 		$data['title'] = 'Booking';
 		$data['heading'] = "Update Booking Page's Info";

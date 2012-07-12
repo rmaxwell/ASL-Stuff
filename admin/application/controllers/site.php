@@ -10,6 +10,7 @@ class Site extends Controller
 
 	function members_area()
 	{
+		$this->load->view('includes/header');
 		$this->load->view('cms/nav');
 		$this->load->view('logged_in_area');
 	}

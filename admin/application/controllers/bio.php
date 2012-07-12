@@ -11,6 +11,7 @@ class Bio extends Controller
 	
 	function index()
 	{
+		$this->load->view('includes/header');
 		$this->load->helper('form');
 		$data['title'] = 'Update Bio Info';
 		$data['heading'] = 'Update Bio';
