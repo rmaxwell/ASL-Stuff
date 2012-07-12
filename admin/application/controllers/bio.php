@@ -5,7 +5,7 @@ class Bio extends Controller
 	function __construct()
 	{
 		parent::Controller();
-		$this->load->model('Bio_model');
+		$this->load->model('bio_model');
 /* 		$this->is_logged_in(); */
 	}
 	
@@ -14,7 +14,7 @@ class Bio extends Controller
 		$this->load->helper('form');
 		$data['title'] = 'Update Bio Info';
 		$data['heading'] = 'Update Bio';
-		$data["bio_info"] = $this->Bio_model->get_bio();
+		$data["bio_info"] = $this->bio_model->get_bio();
 		$this->load->view('cms/nav');
 		$this->load->view('bio', $data);
 	}
@@ -28,7 +28,7 @@ class Bio extends Controller
 				'bio_button' => $this->input->post('bio_button'),
 			);
 			
-			$this->Bio_model->update($postdata);
+			$this->bio_model->update($postdata);
 			
 			redirect('/bio', 'refresh');
 	}
