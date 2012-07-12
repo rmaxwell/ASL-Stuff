@@ -1,0 +1,165 @@
+/* PUFF The Magic Mascot CSS */
+/* Brad Bohen */
+/* CSS RESET BEGIN */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+/* END OF CSS RESET */
+
+/* Document Wide */
+
+body {
+	background-image: url("../img/t2.png");
+	font-family:Arial,serif;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto; 
+}
+
+@font-face { font-family: Homestead; src: url('../css/homestead.otf'); } 
+
+/* Nav Area */
+
+#navwrap{
+	width: 100%;
+	background-color: black;
+	height: 40px;
+}
+
+nav{
+	width: 960px;
+	margin: 0 auto;
+}
+
+nav img{
+	float: left;
+}
+
+nav ul{
+	float: left;
+	background-color: black;
+	height: 40px;
+	margin-left: 220px;
+}
+
+nav ul li{
+	float: left;
+	padding: 5px;
+	padding-top: 12px;
+	padding-right: 10px;
+	letter-spacing: -1px;
+}
+
+nav ul li a{
+	color: white;
+}
+
+nav ul li a:hover{
+	color: #62BD19;
+}
+
+.social{
+	margin-top: -2px;
+}
+
+#logo{
+	position: absolute;
+	z-index: 2;
+	margin-left: 20px;
+}
+
+#cta{
+	clear: both;
+}
+
+/* Columns */
+
+#homecontent h2 {
+	margin-top: 15px; 
+	font-family: Homestead, sans-serif;
+	float: left;
+	font-size: 24px;
+	padding-right: 150px;	 
+}
+
+#contentheads h2:last-child { 
+	padding: 0;	
+	padding-left: 30px; 
+}
+
+.column{
+	width: 290px;
+	height: 425px;
+	background-color: blue;
+	float: left;
+	margin-right: 35px;
+	background-color: #0077C0;
+	margin-bottom: 35px;
+	border-radius: 5px;
+}
+
+#columncontent .column:last-child{
+	margin-right: 0;
+}
+
+#twitterScript{
+	margin-left: 10px;
+}
+/* Footer */
+
+#footwrap{
+	height: 140px;
+	width: 100%;
+	background-color: black;
+	clear: both;
+}
+
