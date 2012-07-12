@@ -65,7 +65,11 @@ body {
 	margin: 0 auto; 
 }
 
-@font-face { font-family: Homestead; src: url('../css/homestead.otf'); } 
+@font-face { font-family: Homestead; src: url('../css/homestead.otf'); }
+
+.clearfix{
+	clear: both;
+} 
 
 /* Nav Area */
 
@@ -73,6 +77,11 @@ body {
 	width: 100%;
 	background-image: url("../img/header_bg_black.jpg");
 	height: 40px;
+}
+
+#logowrap{
+	width: 960px;
+	margin: 0 auto;
 }
 
 nav{
@@ -104,6 +113,9 @@ nav ul li{
 
 nav ul li a{
 	color: white;
+	transition: color .25s ease-in-out;
+   -moz-transition: color .25s ease-in-out;
+   -webkit-transition: color .25s ease-in-out;
 }
 
 nav ul li a:hover{
@@ -158,13 +170,12 @@ nav ul li a:hover{
 	float: left;
 	color: #0077C0;
 	font-size: 24px;
-/* 	padding-right: 150px; */
-	margin-right: 30px;
+ 	padding-right: 150px; 
 /* 	padding-bottom: 10px; */
 	background-image: url("../img/module_btm.png");
 	background-repeat: no-repeat;
 	background-position-y: bottom;
-	width: 300px;
+	width: 200px;
 	padding-bottom: 10px;	 
 }
 
@@ -179,14 +190,13 @@ nav ul li a:hover{
 	height: 425px;
 /* 	background-color: blue; */
 	float: left;
-/* 	margin-right: 10px; */
 /* 	background-color: #0077C0; */
 	margin-bottom: 35px;
+	margin-right: 30px;
 /* 	border-radius: 5px; */
 }
 
 #yearTracker{
-	margin-left: 30px;
 	margin-top: 10px;
 	
 }
@@ -211,25 +221,34 @@ nav ul li a:hover{
 /* Footer */
 
 #footwrap{
-/* 	height: 140px; */
+ 	height: 140px; 
 	width: 100%;
 	background-color: black;
 	clear: both;
 }
 
 #footwrap ul{
-	float: left;
+	width: 940px;
 	background-color: black;
 	height: 40px;
-	margin-left: 220px;
+	margin: 0 auto;
 }
 
 #footwrap ul li{
 	float: left;
 	padding: 5px;
-	padding-top: 12px;
+	padding-top: 30px;
 	padding-right: 10px;
 	letter-spacing: -1px;
 }
 
+#footerlogo{
+	position: relative;
+	bottom: 25px;
+}
+
+.twtr-doc, .twtr-timeline{
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px;
+}
 
