@@ -5,7 +5,7 @@
 	<body>
 		<h1><?=$heading?></h1>
         
-        <div iclass="wrapper">
+        <div class="wrapper">
             <?php //set value for database and css codes
 			
 			if(!empty($book_data[0]{'booking_textarea'})){
