@@ -7,7 +7,7 @@
 
         <h1>Booking</h1>
         
-        <div id="booking_form">
+        <div class="wrapper">
             <?php //set value for database and css codes
 			
 			if(!empty($book_data[0]{'booking_textarea'})){
@@ -96,13 +96,27 @@
 	
 			//set form													
 			echo form_open('booking/save');
-			echo '<p>Pargraph: '.form_textarea($booking_textarea).'</p>';
-            echo '<p>Phone: '.form_input($booking_phone).'</p>';
-            echo '<p>Email: '.form_input($booking_email).'</p>';
-            echo '<p>Image1: '.form_input($booking_image1).'</p>';
-            echo '<p>Image2: '.form_input($booking_image2).'</p>';
-            echo '<p>Image3: '.form_input($booking_image3).'</p>';
-            echo '<p>Image4: '.form_input($booking_image4).'</p>';
+						echo '<fieldset>';
+            echo '<legend>Phone:</legend>'.form_input($booking_phone);
+            echo '</fieldset>';
+            echo '<fieldset>';
+            echo '<legend>Email:</legend>'.form_input($booking_email);
+            echo '</fieldset>';
+			echo '<fieldset>';
+			echo '<legend>Pargraph:</legend>'.form_textarea($booking_textarea);
+			echo '</fieldset>';
+            echo '<fieldset>';
+            echo '<legend>Image One:</legend>'.form_input($booking_image1);
+            echo '</fieldset>';
+            echo '<fieldset>';
+            echo '<legend>Image Two:</legend>'.form_input($booking_image2);
+            echo '</fieldset>';
+            echo '<fieldset>';
+            echo '<legend>Image Three:</legend>'.form_input($booking_image3);
+            echo '</fieldset>';
+            echo '<fieldset>';
+            echo '<legend>Image Four:</legend>'.form_input($booking_image4);
+            echo '</fieldset>';
         
             echo form_submit('submit', 'Update');
         
