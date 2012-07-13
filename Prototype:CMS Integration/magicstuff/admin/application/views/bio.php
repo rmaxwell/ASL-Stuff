@@ -4,7 +4,8 @@
 	</head>
 	<body>
 		<h1><?=$heading?></h1>
-		
+        
+		<div class="wrapper">
 		<?php echo form_open('bio/save');
 		
 		//Form Input Title
@@ -24,9 +25,10 @@
 				);
 		};
 				
-		echo form_label('Title', 'bio_title').'<br>';
+		echo '<fieldset>';
+		echo '<legend>Title</legend>';
 		echo form_input($bio_title);
-		echo '<p></p>';
+		echo '</fieldset>';
 		//End //Form Input Title
 
 		//Form Input Text
@@ -46,9 +48,10 @@
 				);
 		};
 		
-		echo form_label("Stuff's Bio", 'bio_text').'<br>';
+		echo '<fieldset>';
+		echo '<legend>Article</legend>';
 		echo form_textarea($bio_text);
-		echo '<br />';
+		echo '</fieldset>';
 		//END of //Form Input Text
 
 		//Form Input Button
@@ -68,14 +71,15 @@
 				);
 		};
 				
-		echo form_label("Stuff's bio page button text", 'bio_button').'<br>';
+		echo '<fieldset>';
+		echo '<legend>Short Text for Button</legend>';
 		echo form_input($bio_button);
+		echo '</fieldset>';
 		//End of //Form Input Button
-
-		echo '<p></p>';
 
 		echo form_submit('submit', 'Save Changes');
 		echo form_close();
 		?>
+        </div><!--[END]#wrapper-->
 	</body>
 </html>

@@ -95,8 +95,7 @@
 				echo form_submit('submit', 'Update');
        		    echo form_close();
 				}//end of loop
-
             ?>
-		</div><!-- end login_form-->
+		</div><!--[END]#wrapper-->
 	</body>
 </html>
