@@ -60,9 +60,18 @@ body {
 	font-family:Arial,serif;
 }
 
-#wrapper {
+#wrapper{
+	min-height: 100%; 
+}
+
+#main{
+	overflow:auto;
+	padding-bottom: 180px;
+}
+
+#contentwrapper {
 	width: 960px;
-	margin: 0 auto; 
+	margin: 0 auto;
 }
 
 @font-face { font-family: Homestead; src: url('../css/homestead.otf'); }
@@ -75,7 +84,7 @@ body {
 
 #navwrap{
 	width: 100%;
-	background-image: url("../img/header_bg_black.jpg");
+	background-image: url("../img/header_bg.jpg");
 	height: 40px;
 }
 
@@ -218,18 +227,20 @@ nav ul li a:hover{
 	margin-top: 10px;
 /* 	margin-left: 10px; */
 }
+
+
 /* Footer */
 
 #footwrap{
- 	height: 140px; 
-	width: 100%;
-	background-color: black;
+	position: relative;
+	margin-top: -180px;
+	height: 180px;
 	clear: both;
+	background-color: #004696;
 }
 
 #footwrap ul{
 	width: 940px;
-	background-color: black;
 	height: 40px;
 	margin: 0 auto;
 }

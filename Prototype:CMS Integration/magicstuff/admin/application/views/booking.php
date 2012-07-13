@@ -4,10 +4,8 @@
 	</head>
 	<body>
 		<h1><?=$heading?></h1>
-
-        <h1>Booking</h1>
         
-        <div class="wrapper">
+        <div iclass="wrapper">
             <?php //set value for database and css codes
 			
 			if(!empty($book_data[0]{'booking_textarea'})){
@@ -96,7 +94,7 @@
 	
 			//set form													
 			echo form_open('booking/save');
-						echo '<fieldset>';
+			echo '<fieldset>';
             echo '<legend>Phone:</legend>'.form_input($booking_phone);
             echo '</fieldset>';
             echo '<fieldset>';
