@@ -71,7 +71,7 @@ body {
 
 #navwrap{
 	width: 100%;
-	background-image: url("../img/header_bg_black.jpg");
+	background-image: url("../img/header_bg.jpg");
 	height: 40px;
 }
 #logowrap{
@@ -165,7 +165,7 @@ nav ul li a:hover{
 /* 	padding-right: 150px; */
 	margin-right: 30px;
 /* 	padding-bottom: 10px; */
-	background-image: url("../img/module_btm.png");
+	background-image: url("../img/module_header.png");
 	background-repeat: no-repeat;
 	background-position-y: bottom;
 	width: 300px;
