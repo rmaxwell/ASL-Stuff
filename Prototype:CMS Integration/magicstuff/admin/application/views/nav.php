@@ -13,7 +13,8 @@
 			foreach($nav_data as $nd){
 				//Set up count
 				$loopCount += 1;
-				
+				echo '<br><br><p>--------------- Link Number '.$loopCount.'------------------</p><br><br>';
+
 				//col 1
 				//url link
 				if(!empty($nd{'nav_url_link'})){
@@ -75,11 +76,11 @@
 				echo form_open('nav/save');
 				
 				echo '<fieldset>';
-				echo '<legend>nav_url_link: </legend>'.form_input($nav_url_link).'</p>';
+				echo '<legend>Name in short used to link file to the system</legend>'.form_input($nav_url_link).'</p>';
 				echo '</fieldset>';
 
 				echo '<fieldset>';
-				echo '<legend>nav_url_name: </legend>'.form_input($nav_url_name).'</p>';
+				echo '<legend>Disaply Name for link</legend>'.form_input($nav_url_name).'</p>';
 				echo '</fieldset>';
 
 				echo '<fieldset>';
@@ -93,9 +94,7 @@
 				echo form_hidden('nav_id', $nd{'nav_id'});
 				echo form_submit('submit', 'Update');
        		    echo form_close();
-				
-				echo '<br><br><p>--------------- Next Link '.$loopCount.'------------------</p><br><br>';
-			}//end of loop
+				}//end of loop
 
             ?>
 		</div><!-- end login_form-->
