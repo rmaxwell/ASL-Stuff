@@ -5,7 +5,7 @@
 	<body>
 		<h1><?=$heading?></h1>
         
-        <div id="nav_form">
+        <div class="wrapper">
             <?php //set value for database and css codes
 
 			//set form, nav controller, calling out save method	
@@ -73,19 +73,28 @@
 	
 				//Create and Echo the form
 				echo form_open('nav/save');
-				echo '<p>nav_url_link: '.form_input($nav_url_link).'</p>';
-				echo '<p>nav_url_name: '.form_input($nav_url_name).'</p>';
-				echo 'Disable: ';
-				echo form_radio($truefalseradio_0);
-				echo 'Enable: ';
-				echo form_radio($truefalseradio_1).'<p></p>';
- 				echo form_label('Number of tours', 'num_tours');				
 				
+				echo '<fieldset>';
+				echo '<legend>nav_url_link: </legend>'.form_input($nav_url_link).'</p>';
+				echo '</fieldset>';
+
+				echo '<fieldset>';
+				echo '<legend>nav_url_name: </legend>'.form_input($nav_url_name).'</p>';
+				echo '</fieldset>';
+
+				echo '<fieldset>';
+				echo '<legend>Do you want to show this link?</legend>';
+				echo '<p>Off: '.form_radio($truefalseradio_0).'</p>';
+				echo '<p>On: '.form_radio($truefalseradio_1).'</p>';
+ 				echo '</fieldset>';
+
+					
+				//this hidden from is used to set the diffrent from each submit button
 				echo form_hidden('nav_id', $nd{'nav_id'});
 				echo form_submit('submit', 'Update');
        		    echo form_close();
 				
-				echo '<p></p><p>---------------Loop------------------</p><p></p>';
+				echo '<br><br><p>--------------- Next Link '.$loopCount.'------------------</p><br><br>';
 			}//end of loop
 
             ?>

@@ -6,7 +6,7 @@ class Nav extends Controller
 	{
 		parent::Controller();
 		$this->load->model('nav_model');
-/* 		$this->is_logged_in(); */
+ 		$this->is_logged_in();
 	}
 	
 	function index()
@@ -33,8 +33,18 @@ class Nav extends Controller
 		
 		$this->nav_model->update($postdata);
 
-		//booking controller
+		//nav controller
 		redirect('/nav', 'refresh');
+	}
+
+	function is_logged_in()
+	{
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		if(!isset($is_logged_in) || $is_logged_in != true)
+		{
+			echo 'You don\'t have permission to access this page. <a href="../">Login</a>';	
+			die();		
+		}
 	}
 }
 ?>
