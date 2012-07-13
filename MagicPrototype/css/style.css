@@ -164,6 +164,7 @@ nav ul li a:hover{
 	float: left;
 	width: 960px;
 	margin: 0 auto;
+	margin-bottom: 20px;
 	text-align: center;
 	font-size: 24px;
 	color: rgba(0,0,0,0.5);
@@ -177,20 +178,18 @@ nav ul li a:hover{
 
 /* Columns */
 
+
 #homecontent h2 {
-	margin-top: 20px; 
-	font-family: Homestead, sans-serif;
-	font-weight: bold;
 	float: left;
-	color: #0077C0;
-	font-size: 24px;
- 	padding-right: 150px; 
-/* 	padding-bottom: 10px; */
-	background-image: url("../img/module_btm.png");
-	background-repeat: no-repeat;
+	margin-top: -5px;
+	padding-top: 20px;
+	padding-bottom: 6px;
+	font: 24px Homestead, sans-serif;
+	color: white;
+	background: url("../img/module_header.png") no-repeat;
 	background-position-y: bottom;
-	width: 200px;
-	padding-bottom: 10px;	 
+	width: 300px;
+	text-indent: 50px;
 }
 
 #contentheads h2:last-child { 
@@ -202,7 +201,7 @@ nav ul li a:hover{
 .column{
 	width: 300px;
 	height: 425px;
-/* 	background-color: blue; */
+ 	background-color: rgba(0,0,0,0.2); 
 	float: left;
 /* 	background-color: #0077C0; */
 	margin-bottom: 35px;
