@@ -56,7 +56,7 @@ a{
 /* Document Wide */
 
 body {
-	background-image: url("../img/t2.png");
+	background-image: url("../img/t3.png");
 	font-family:Arial,serif;
 }
 
@@ -189,7 +189,7 @@ nav ul li a:hover{
 	background: url("../img/module_header.png") no-repeat;
 	background-position-y: bottom;
 	width: 300px;
-	text-indent: 50px;
+	text-indent: 55px;
 }
 
 #contentheads h2:last-child { 
@@ -202,9 +202,10 @@ nav ul li a:hover{
 	width: 300px;
 	height: 425px;
  	background-color: rgba(0,0,0,0.2); 
+ 	border-radius: 18px 0px 0px 0px;
 	float: left;
 /* 	background-color: #0077C0; */
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 	margin-right: 30px;
 /* 	border-radius: 5px; */
 }
@@ -220,6 +221,11 @@ nav ul li a:hover{
 	border-bottom: 1px solid black;	
 	width: 300px;
 	
+}
+
+#col2 p{
+	padding: 8px;
+	line-height: 20px;	
 }
 
 
@@ -263,16 +269,33 @@ nav ul li a:hover{
 }
 
 /* Twitter */
-.twtr-doc, .twtr-timeline{
-	border-radius: 0px !important;
-	-webkit-border-radius: 0px;
-}
 
-.twtr-hd{
-	display: none;
+#col1 h3 a{
+	font: 20px Homestead, sans-serif;
+	margin-left: 30px;
+	margin-top: 10px;
+	color: #0077C0;
 }
 
 .tweet{
+	font: 15px Arial, serif;
+    color: black;
+    margin-top: 15px;
+}
+
+ .tweet_list {
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        border-radius: 0.5em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+/*         overflow-y: hidden; */
+/*         background-color: #8ADEE2; */
+    }
+ 
+.tweet a{
+	color: #0077C0;
 }
 
 .tweet_time a{
@@ -284,10 +307,11 @@ nav ul li a:hover{
 }
 
 .tweet_odd{
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(255,255,255,0.35);
+    border-bottom: 1px solid black;
 }
 
 .tweet_even{
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.85);
 }
 
