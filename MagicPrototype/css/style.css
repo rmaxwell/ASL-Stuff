@@ -262,8 +262,32 @@ nav ul li a:hover{
 	bottom: 25px;
 }
 
+/* Twitter */
 .twtr-doc, .twtr-timeline{
 	border-radius: 0px !important;
 	-webkit-border-radius: 0px;
+}
+
+.twtr-hd{
+	display: none;
+}
+
+.tweet{
+}
+
+.tweet_time a{
+	color: #62BD19;
+}
+
+.tweet_odd, .tweet_even{
+	padding: 8px;
+}
+
+.tweet_odd{
+	background-color: rgba(0,0,0,0.4);
+}
+
+.tweet_even{
+	background-color: rgba(255,255,255,0.5);
 }
 
