@@ -50,7 +50,8 @@
 		 <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
                 <img src="img/cta.png" data-thumb="img/cta.png" alt="" />
-                <img src="img/cta.png" data-thumb="img/cta.png" alt="" data-transition="slideInLeft" />
+                <img src="img/cta2.png" data-thumb="img/cta2.png" alt="" />
+                 <img src="img/cta3.png" data-thumb="img/cta3.png" alt="" />
             </div>
             <div id="htmlcaption" class="nivo-html-caption">
                 <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
@@ -93,10 +94,24 @@
 			<li class="social"><a href="#"><img class="social" src="img/t.png"></a></li>
 		</ul>
 	</div>
+	<!-  Note To Backend People
+	The settings below maybe different from the settings on the bio page ->
 	<script type="text/javascript">
     $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
+   		 $('#slider').nivoSlider({
+        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+        animSpeed: 1000, // Slide transition speed
+        pauseTime: 10000, // How long each slide will show
+        directionNav: true, // Next & Prev navigation
+        directionNavHide: true, // Only show on hover
+        controlNav: false, // 1,2,3... navigation
+        controlNavThumbs: false, // Use thumbnails for Control Nav
+        pauseOnHover: false, // Stop animation while hovering
+        prevText: 'Prev', // Prev directionNav text
+        nextText: 'Next', // Next directionNav text
+        randomStart: false // Start on a random slide
+	   	 });
+	   });
     </script>
 </body>
 </html>

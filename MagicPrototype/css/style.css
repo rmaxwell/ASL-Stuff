@@ -272,9 +272,15 @@ nav ul li a:hover{
 
 #col1 h3 a{
 	font: 20px Homestead, sans-serif;
-	margin-left: 30px;
-	margin-top: 10px;
 	color: #0077C0;
+	transition: color .25s ease-in-out;
+   -moz-transition: color .25s ease-in-out;
+   -webkit-transition: color .25s ease-in-out;
+  	margin-left: 25px;
+}
+
+#col1 h3 a:hover{
+	color: #62BD19;
 }
 
 .tweet{
@@ -299,7 +305,7 @@ nav ul li a:hover{
 }
 
 .tweet_time a{
-	color: #62BD19;
+	color: #0077C0;
 }
 
 .tweet_odd, .tweet_even{
@@ -313,5 +319,12 @@ nav ul li a:hover{
 
 .tweet_even{
 	background-color: rgba(255,255,255,0.85);
+}
+
+/* Bio Page */
+
+.bioslider{
+	height: 603px;;
+	width: 960px;
 }
 
