@@ -1,0 +1,203 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #0077C0;
+}
+
+h2{
+	padding-top: 5px;
+}
+
+h4{
+	text-align: right;
+}
+
+/* END OF CSS RESET */
+
+body {
+	background: #b6b6b6;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+#login_form {
+	width: 300px;
+	background: #f0f0f0 url(../img/login_bg.jpg) repeat-x 0 0;
+	border: 1px solid white;
+	margin: 250px auto 0;
+	padding: 1em;
+	-moz-border-radius: 3px;
+}
+h1,h2,h3,h4,h5 {
+	margin: 10px;
+	clear: both;
+	margin-top: 0;
+	font-family: arial black, arial;
+	
+}
+
+input[type=text], input[type=password] {
+	display: block;
+	margin: 0 0 1em 0;
+	width: 280px;
+	border: 5px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	padding: 1em;
+}
+
+input[type=submit], form a {
+	border: none;
+	margin-right: 1em;
+	padding: 6px;
+	text-decoration: none;
+	font-size: 12px;
+	-moz-border-radius: 4px;
+	background: #0077C0;
+	color: white;
+	box-shadow: 0 1px 0 white;
+	-moz-box-shadow: 0 1px 0 white;
+	-webkit-box-shadow: 0 1px 0 white;
+
+}
+
+.remove_booking[type=submit] {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+input[type=submit]:hover, form a:hover {
+	background: #074b9c;
+	cursor: pointer;
+}
+
+.remove_booking[type=submit]:hover {
+	text-decoration: underline;
+	background: none;
+}
+
+
+#navwrap{
+	width: 100%;
+	background-image: url(../img/header_bg.jpg);
+	height: 40px;
+}
+
+nav{
+	width: 960px;
+	margin: 0 auto;
+}
+
+nav img{
+	float: left;
+}
+
+nav ul{
+	float: left;
+	height: 40px;
+	margin-left: 20px;
+}
+
+nav ul li{
+	float: left;
+	padding: 10px 30px;
+	width: auto;
+	letter-spacing: -1px;
+	border-left: 1px solid rgba(152,148,148,0.5);
+}
+
+nav ul li:nth-last-child(1){
+	border-right: 1px solid rgba(152,148,148,0.5);
+}
+
+nav ul li a{
+	color: white;
+	margin: auto;
+}
+
+nav ul li a:hover{
+	color: #62BD19;
+}
+
+#logo{
+	float: left;
+	z-index: 2;
+	margin-left: 60px;
+}
+
+body {
+	background-image: url("../img/t2.png");
+	font-family:Arial,serif;
+}
+
+.wrapper {
+	clear: both;
+	width: auto;
+	margin: 25px 5px; 
+}
+
+
+/* Validation error messages */
+
+.error {
+	color: #393939;
+	font-size: 15px;
+}
+
+fieldset {
+	margin: auto;
+	margin-bottom: 2em;
+	display: block;
+	max-width: 960px;
+}
+
+/* FOR FUN */
+
+h1 {
+	text-shadow: 0 1px 0 white;
+}

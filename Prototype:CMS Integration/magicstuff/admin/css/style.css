@@ -183,10 +183,19 @@ body {
 
 
 /* Validation error messages */
+.error_div{
+	margin:10px 10px;
+}
 
 .error {
-	color: #393939;
+	color: #AF0000;
 	font-size: 15px;
+	padding:2px 0;
+}
+
+.cancellink{
+	color: #AF0000;
+	margin-left: 50px;
 }
 
 fieldset {

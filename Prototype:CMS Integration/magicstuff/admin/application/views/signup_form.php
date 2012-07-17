@@ -1,29 +1,54 @@
-<?php $this->load->view('includes/header'); ?>
+<div class="wrapper">
+    <h1>Create an Account!</h1>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <?php 
+            $singup_fname = array('name'=> 'first_name',
+                                'id'	=> 'first_name',
+                                'value' => set_value('first_name'),
+                                'placeholder' => 'Enter First Name');
+            $singup_lname = array('name'=> 'last_name',
+                                'id'	=> 'last_name',
+                                'value' => set_value('last_name'),
+                                'placeholder' => 'Enter Last Name');
+            $singup_email = array('name'=> 'email_address',
+                                'id'	=> 'email_address',
+                                'value' => set_value('email_address'),
+                                'placeholder' => 'Enter Eamil Name');
+            $singup_username = array('name'=> 'username',
+                                'id'	=> 'username',
+                                'value' => set_value('username'),
+                                'placeholder' => 'Enter Username Name');
+            $singup_password  = array('name'=> 'password',
+                                'id'	=> 'password',
+                                'value' => '',
+                                'placeholder' => 'Enter New Password');
+            $singup_password2  = array('name'=> 'password2',
+                                'id'	=> 'password2',
+                                'value' => '',
+                                'placeholder' => 'Enter Confirm Password');
 
-<h1>Create an Account!</h1>
-<fieldset>
-<legend>Personal Information</legend>
-<?php
-   
-echo form_open('login/create_member');
-
-echo form_input('first_name', set_value('first_name', 'First Name'));
-echo form_input('last_name', set_value('last_name', 'Last Name'));
-echo form_input('email_address', set_value('email_address', 'Email Address'));
-?>
-</fieldset>
-
-<fieldset>
-<legend>Login Info</legend>
-<?php
-echo form_input('username', set_value('username', 'Username'));
-echo form_input('password', set_value('password', 'Password'));
-echo form_input('password2', 'Password Confirm');
-
-echo form_submit('submit', 'Create Acccount');
-?>
-
-<?php echo validation_errors('<p class="error">'); ?>
-</fieldset>
-
-<?php $this->load->view('includes/footer'); ?>
+			echo '<div id="error">';			
+			echo validation_errors('<p class="error">');		
+			echo '</div>';	
+			//echo form_open('login/validate_credentials');      
+            echo form_open('login/create_member');
+            
+            echo form_input($singup_fname);
+            echo form_input($singup_lname);
+            echo form_input($singup_email);
+        ?>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Login Info</legend>
+        <?php
+            echo form_input($singup_username);
+            echo form_password($singup_password);
+            echo form_password($singup_password2);
+            
+            echo form_submit('submit', 'Create Acccount');
+            echo anchor('/login', 'Cancel', 'class=cancellink');
+        ?>
+    </fieldset>
+</div>
