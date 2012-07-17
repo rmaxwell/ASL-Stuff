@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD:magicstuff-backup/admin/application/controllers/home.php
 class Home extends Controller {
 	
 	function index(){
@@ -33,8 +34,19 @@ class Home extends Controller {
 				echo '<p>Fail</p>';		
 			}
 		}
+=======
+
+class Home extends Controller {
+
+	function __construct()
+	{
+		parent::Controller();
+		$this->load->model('home_model');
+		$this->is_logged_in();
+>>>>>>> CSS for CMS:Prototype:CMS Integration/magicstuff/admin/application/controllers/home.php
 	}
 	
-	function upload_photo(){}
+	
+	
 }	
 ?>

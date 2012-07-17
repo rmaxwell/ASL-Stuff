@@ -31,19 +31,19 @@
 		<div id="main">
 		<div id="navwrap">
 		<div id="logowrap">
-		<a href="home.html"><img id="logo" src="<?php echo base_url();?>/img/logo2.png"></a>
+		<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>/img/logo2.png"></a>
 		</div>
 		<nav>
 			<ul>
-				<li><a href="bio.html">STUFF'S Bio</a></li>
-				<li><a href="#">Photos</a></li>
-				<li><a href="#">Videos</a></li>
-				<li><a href="#">Book STUFF!</a></li>
-				<li><a href="#">13 Before 13</a></li>
+				<li><?=anchor('bio', 'Bio');?></li>
+				<li><?=anchor('gallery', 'Photos');?></li>
+				<li><?=anchor('videos', 'Videos');?></li>
+				<li><?=anchor('booking', 'Booking');?></li>
+				<li><?=anchor('blog', 'Blog');?></li>
 				<li><a href="#">STUFF'S School Show</a></li>
-				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
-				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
-				</ul>
+				<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
+				<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
+			</ul>
 		</nav>
 		</div><! End Nav Wrap >
 		<div id="contentwrapper">
@@ -59,15 +59,14 @@
 	</div><! End Wrapper ->
 	<div id="footwrap">
 		<ul>
-			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo2.png"></li>
-			<li><a href="bio.html">STUFF'S Bio</a></li>
-				<li><a href="#">Photos</a></li>
-				<li><a href="#">Videos</a></li>
-				<li><a href="#">Book STUFF!</a></li>
-				<li><a href="#">13 Before 13</a></li>
-				<li><a href="#">STUFF'S School Show</a></li>
-				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
-				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
+			<li><?=anchor('bio', 'Bio');?></li>
+			<li><?=anchor('gallery', 'Photos');?></li>
+			<li><?=anchor('videos', 'Videos');?></li>
+			<li><?=anchor('booking', 'Booking');?></li>
+			<li><?=anchor('blog', 'Blog');?></li>
+			<li><a href="#">STUFF'S School Show</a></li>
+			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
+			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
 		</ul>
 	</div>
 	<script type="text/javascript">

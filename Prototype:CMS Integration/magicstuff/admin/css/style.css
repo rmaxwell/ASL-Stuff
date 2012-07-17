@@ -43,7 +43,15 @@ table {
 
 a{
 	text-decoration: none;
-	color: white;
+	color: #0077C0;
+}
+
+h2{
+	padding-top: 5px;
+}
+
+h4{
+	text-align: right;
 }
 
 /* END OF CSS RESET */
@@ -63,10 +71,11 @@ body {
 	-moz-border-radius: 3px;
 }
 h1,h2,h3,h4,h5 {
+	margin: 10px;
 	clear: both;
 	margin-top: 0;
 	font-family: arial black, arial;
-	text-align: center;
+	
 }
 
 input[type=text], input[type=password] {
@@ -184,6 +193,7 @@ fieldset {
 	margin: auto;
 	margin-bottom: 2em;
 	display: block;
+	max-width: 960px;
 }
 
 /* FOR FUN */

@@ -26,6 +26,4 @@ echo form_submit('submit', 'Create Acccount');
 <?php echo validation_errors('<p class="error">'); ?>
 </fieldset>
 
-<?php $this->load->view('includes/tut_info'); ?>
-
 <?php $this->load->view('includes/footer'); ?>

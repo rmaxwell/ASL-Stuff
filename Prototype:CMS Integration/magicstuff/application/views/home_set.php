@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>STUFF The Magic Mascot</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css" />
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -12,7 +12,7 @@
 <body id="home"> 
 	<div id="navwrap">
 	<nav>
-	<img id="logo" src="img/logo.png">
+	<img id="logo" src="<?php echo base_url();?>img/logo.png">
 		<ul>
 			<li><?=anchor('bio', 'Bio');?></li>
 			<li><?=anchor('gallery', 'Photos');?></li>
@@ -26,8 +26,8 @@
 	</nav>
 	</div>
 	<div id="wrapper">
-			<img id="cta" src="img/banner.png">
-			<img id="ball" src="img/ball.png">
+			<img id="cta" src="<?php echo base_url();?>img/banner.png">
+			<img id="ball" src="<?php echo base_url();?>img/ball.png">
 			<p id="tagline">LOCK UP YOUR PETS. HIDE YOUR TOYS. ITS TIME TO MAKE SOME NOISE!</p>
 			<div id="homecontent">
 				<div id="contentheads"><! need this to align h2>
@@ -87,22 +87,22 @@
 					</ol>
 				</div>
 				<div class="column" id="col3">
-					<img src="img/media.png" style="margin-left: 60px; border: 6px solid black; margin-top: 10px">
+					<img src="<?php echo base_url();?>/img/media.png" style="margin-left: 60px; border: 6px solid black; margin-top: 10px">
 				</div>
 			</div><!- End Column Content ->
 			</div><!- End Home Content ->
 	</div><! End Wrapper ->
 	<div id="footwrap">
-		<img src="img/logo2.png">
+		<img src="<?php echo base_url();?>/img/logo2.png">
 		<ul>
-			<li><a href="#">STUFF'S Bio</a></li>
-			<li><a href="#">Photos</a></li>
-			<li><a href="#">Videos</a></li>
-			<li><a href="#">Book STUFF!</a></li>
-			<li><a href="#">13 Before 13</a></li>
+			<li><?=anchor('bio', 'Bio');?></li>
+			<li><?=anchor('gallery', 'Photos');?></li>
+			<li><?=anchor('videos', 'Videos');?></li>
+			<li><?=anchor('booking', 'Booking');?></li>
+			<li><?=anchor('blog', 'Blog');?></li>
 			<li><a href="#">STUFF'S School Show</a></li>
-			<li class="social"><a href="#"><img class="social" src="img/f.png"></a></li>
-			<li class="social"><a href="#"><img class="social" src="img/t.png"></a></li>
+			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="img/f.png"></a></li>
+			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="img/t.png"></a></li>
 		</ul>
 
 	</div>
