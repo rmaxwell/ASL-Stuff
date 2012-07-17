@@ -16,7 +16,6 @@
 	echo form_input($username);
 	echo form_password($password);
 	echo form_submit('submit', 'Login');
-	echo anchor('login/signup', 'Create Account');
 	echo form_close();
 	?>
 

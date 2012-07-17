@@ -1,98 +1,55 @@
 <html>
 	<head>
-	<title><?=$title?></title>
+ 	<title><?=$title?></title>
 	</head>
 	<body>
 		<h1><?=$heading?></h1>
         
         <div class="wrapper">
-            <?php //set value for database and css codes
-			
-			if(!empty($book_data[0]{'booking_textarea'})){
-				$booking_textarea = array('name'=> 'booking_textarea',
-							'id'	=> 'booking_textarea',
-							'value' => $book_data[0]{'booking_textarea'},
-							'placeholder' => 'Click to type infomation');
-			}else{
-				$booking_textarea = array('name'=> 'booking_textarea',
-							'id'	=> 'booking_textarea',
-							'value' => '',
-							'placeholder' => 'Click to type infomation');
-			};
-			
-			if(!empty($book_data[0]{'booking_email'})){
-				$booking_email = array(	'name'	=> 'booking_email',
+            <?php
+			$booking_textarea = array('name'=> 'booking_textarea',
+										'id'	=> 'booking_textarea',
+										'value' => $book_data[0]{'booking_textarea'},
+										'placeholder' => 'Click to type infomation');
+	
+			$booking_email = array(	'name'	=> 'booking_email',
 										'id'	=> 'booking_email',
 										'value' => $book_data[0]{'booking_email'},
 										'placeholder' => 'Click to type email');			
-			}else{
-				$booking_email = array(	'name'	=> 'booking_email',
-									'id'	=> 'booking_email',
-									'value' => '',
-									'placeholder' => 'Click to type email');		
-			};
 			
-			if(!empty($book_data[0]{'booking_phone'})){
-				$booking_phone = array(	'name'	=> 'booking_phone',
+			$booking_phone = array(	'name'	=> 'booking_phone',
 									'id'	=> 'booking_phone',
 									'value' => $book_data[0]{'booking_phone'},
-									'placeholder' => 'Click to type in phone number');		
+									'placeholder' => 'Click to type in phone number');
+			
+			if($book_data[0]{'booking_image1'} == 1)
+			{
+				$path1 = "../img/thumb/booking_image1_tn.jpg";	
 			}else{
-				$booking_phone = array(	'name'	=> 'booking_phone',
-									'id'	=> 'booking_phone',
-									'value' => '',
-									'placeholder' => 'Click to type in phone number');		
+				$path1 = "../img/thumb/no_image.jpg";
 			};
 			
-			if(!empty($book_data[0]{'booking_image1'})){
-				$booking_image1 = array('name'	=> 'booking_image1',
-									'id'	=> 'booking_image1',
-									'value' => $book_data[0]{'booking_image1'},
-								'placeholder' => 'Click to upload image');		
+			if($book_data[0]{'booking_image2'} == 1)
+			{
+				$path2 = "../img/thumb/booking_image2_tn.jpg";	
 			}else{
-				$booking_image1 = array('name'	=> 'booking_image1',
-									'id'	=> 'booking_image1',
-									'value' => '',
-								'placeholder' => 'Click to upload image');		
+				$path2 = "../img/thumb/no_image.jpg";
 			};
-			if(!empty($book_data[0]{'booking_image2'})){
-				$booking_image2 = array('name'	=> 'booking_image2',
-									'id'	=> 'booking_image2',
-									'value' => $book_data[0]{'booking_image2'},
-								'placeholder' => 'Click to upload image');		
+			
+			if($book_data[0]{'booking_image3'} == 1)
+			{
+				$path3 = "../img/thumb/booking_image3_tn.jpg";	
 			}else{
-				$booking_image2 = array('name'	=> 'booking_image2',
-									'id'	=> 'booking_image2',
-									'value' => '',
-								'placeholder' => 'Click to upload image');		
+				$path3 = "../img/thumb/no_image.jpg";
 			};
-			if(!empty($book_data[0]{'booking_image3'})){
-				$booking_image3 = array('name'	=> 'booking_image3',
-									'id'	=> 'booking_image3',
-									'value' => $book_data[0]{'booking_image3'},
-								'placeholder' => 'Click to upload image');		
+			
+			if($book_data[0]{'booking_image4'} == 1)
+			{
+				$path4 = "../img/thumb/booking_image4_tn.jpg";	
 			}else{
-				$booking_image3 = array('name'	=> 'booking_image3',
-									'id'	=> 'booking_image3',
-									'value' => '',
-								'placeholder' => 'Click to upload image');		
+				$path4 = "../img/thumb/no_image.jpg";
 			};
-			if(!empty($book_data[0]{'booking_image4'})){
-				$booking_image4 = array('name'	=> 'booking_image4',
-									'id'	=> 'booking_image4',
-									'value' => $book_data[0]{'booking_image4'},
-								'placeholder' => 'Click to upload image');		
-			}else{
-				$booking_image4 = array('name'	=> 'booking_image4',
-									'id'	=> 'booking_image4',
-									'value' => '',
-								'placeholder' => 'Click to upload image');		
-			};
-
-
-
-	
-			//set form													
+			
 			echo form_open('booking/save');
 			echo '<fieldset>';
             echo '<legend>Phone:</legend>'.form_input($booking_phone);
@@ -101,25 +58,77 @@
             echo '<legend>Email:</legend>'.form_input($booking_email);
             echo '</fieldset>';
 			echo '<fieldset>';
-			echo '<legend>Pargraph:</legend>'.form_textarea($booking_textarea);
+			echo '<legend>Booking Info:</legend>'.form_textarea($booking_textarea);
 			echo '</fieldset>';
-            echo '<fieldset>';
-            echo '<legend>Image One:</legend>'.form_input($booking_image1);
-            echo '</fieldset>';
-            echo '<fieldset>';
-            echo '<legend>Image Two:</legend>'.form_input($booking_image2);
-            echo '</fieldset>';
-            echo '<fieldset>';
-            echo '<legend>Image Three:</legend>'.form_input($booking_image3);
-            echo '</fieldset>';
-            echo '<fieldset>';
-            echo '<legend>Image Four:</legend>'.form_input($booking_image4);
-            echo '</fieldset>';
-        
-            echo form_submit('submit', 'Update');
-        
+			echo form_submit('submit', 'Save Changes');
             echo form_close();
             ?>
+            
+            <br />
+            <fieldset>
+            <legend>Image One:</legend>
+            <img src="<?=$path1?>"  style="float: left; width: 50px; height: 76px; padding-right: 3px;">
+            <form class="booking_img" method="post" action="booking/upload" enctype="multipart/form-data" />
+	        	<input type="file" name="userfile" size="20" />
+				<br />
+				<br />
+				<input type="hidden" name="image_number" value="booking_image1" />
+				<input type="submit" value="upload" style="float: left;" class="button"/>
+        	</form>
+        	<form class="booking_remove" method="post" action="booking/remove" />
+	        	<input type="hidden" name="image_number" value="booking_image1" />
+				<input type="submit" value="Remove" style="float: left;" class="remove_booking" />
+        	</form>        	
+        	</fieldset>
+        	
+        	<fieldset>
+            <legend>Image Two:</legend>
+            <img src="<?=$path2?>" style="float: left; width: 50px; height: 76px; padding-right: 3px;">
+            <form class="booking_img" method="post" action="booking/upload" enctype="multipart/form-data" />
+	        	<input type="file" name="userfile" size="20" />
+				<br />
+				<br />
+				<input type="hidden" name="image_number" value="booking_image2" />
+				<input type="submit" value="upload" style="float: left;" class="button" />
+        	</form>
+        	<form class="booking_remove" method="post" action="booking/remove" />
+	        	<input type="hidden" name="image_number" value="booking_image2" />
+				<input type="submit" value="Remove" style="float: left;" class="remove_booking" />
+        	</form>
+        	</fieldset>
+        	
+        	<fieldset>
+            <legend>Image Three:</legend>
+            <img src="<?=$path3?>" style="float: left; width: 50px; height: 76px; padding-right: 3px;">
+            <form class="booking_img" method="post" action="booking/upload" enctype="multipart/form-data" />
+	        	<input type="file" name="userfile" size="20" />
+				<br />
+				<br />
+				<input type="hidden" name="image_number" value="booking_image3" />
+				<input type="submit" value="upload" style="float: left;" class="button" />
+        	</form>
+        	<form class="booking_remove" method="post" action="booking/remove" />
+	        	<input type="hidden" name="image_number" value="booking_image3" />
+				<input type="submit" value="Remove" style="float: left;" class="remove_booking"/>
+        	</form>
+        	</fieldset>
+        	
+        	<fieldset>
+            <legend>Image Four:</legend>
+            <img src="<?=$path4?>" style="float: left; width: 50px; height: 76px; padding-right: 3px;">
+            <form class="booking_img" method="post" action="booking/upload" enctype="multipart/form-data" />
+	        	<input type="file" name="userfile" size="20" />
+				<br />
+				<br />
+				<input type="hidden" name="image_number" value="booking_image4" />
+				<input type="submit" value="upload" style="float: left;" class="button" />
+        	</form>
+        	<form class="booking_remove" method="post" action="booking/remove" />
+	        	<input type="hidden" name="image_number" value="booking_image4" />
+				<input type="submit" value="Remove" style="float: left;" class="remove_booking"/>
+        	</form>
+        	</fieldset>
+      
 		</div><!-- end login_form-->
 	</body>
 </html>
