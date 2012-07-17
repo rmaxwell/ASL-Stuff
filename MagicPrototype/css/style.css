@@ -76,7 +76,12 @@ body {
 }
 
 #slider{
-	box-shadow: 0px 0px 10px 2px black;
+	box-shadow: 0px 0px 10px 1px black;
+}
+
+.slider-wrapper{
+	margin-top: 25px;
+	
 }
 
 @font-face { font-family: Homestead; src: url('../css/homestead.otf'); }
@@ -90,7 +95,8 @@ body {
 #navwrap{
 	width: 100%;
 	background-image: url("../img/header_bg.jpg");
-	height: 40px;
+	height: 55px;
+	border-bottom: 2px solid black;
 }
 
 #logowrap{
@@ -116,9 +122,9 @@ nav ul{
 
 nav ul li{
 	float: left;
-	padding: 10px;
-	padding-top: 12px;
-/* 	padding-right: 10px; */
+	padding: 12px;
+	padding-top: 23px;
+	padding-bottom: 17px;
 	letter-spacing: -1px;
 	border-right: 1px solid rgba(152,148,148,0.5);
 /* 	border-left: 1px solid rgba(152,148,148,0.5); */
@@ -143,7 +149,10 @@ nav ul li a:hover{
 #logo{
 	position: absolute;
 	z-index: 100;
-	margin-left: 20px;
+	margin-left: 10px;
+	margin-top: 5px;
+	width:200px;
+	
 }
 
 #cta{
@@ -181,15 +190,15 @@ nav ul li a:hover{
 
 #homecontent h2 {
 	float: left;
-	margin-top: -5px;
+	margin-top: -13px;
 	padding-top: 20px;
-	padding-bottom: 6px;
+	padding-bottom: 10px;
 	font: 24px Homestead, sans-serif;
 	color: white;
 	background: url("../img/module_header.png") no-repeat;
 	background-position-y: bottom;
 	width: 300px;
-	text-indent: 55px;
+	text-indent: 60px;
 }
 
 #contentheads h2:last-child { 
@@ -200,24 +209,18 @@ nav ul li a:hover{
 
 .column{
 	width: 300px;
-	height: 425px;
- 	background-color: rgba(0,0,0,0.2); 
- 	border-radius: 18px 0px 0px 0px;
+	height: 400px;
+	background-color: #eee;
+	background-position-y: 15px;;
 	float: left;
-/* 	background-color: #0077C0; */
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 	margin-right: 30px;
-/* 	border-radius: 5px; */
+
 }
 
 #yearTracker{
 	margin-top: 10px;
 	
-}
-
-#prog{
-	font-size: 70px;
-	color: rgba(0,0,0,0.50);
 }
 
 #yearTracker li{
@@ -226,19 +229,6 @@ nav ul li a:hover{
 	border-bottom: 1px solid black;	
 	width: 300px;
 	
-}
-
-#col2 p{
-	padding: 8px;
-	line-height: 20px;	
-}
-
-#col2 h3{
-	color: rgba(0,0,0,0.50);
-}
-
-#col2 .youtube{
-	margin-left: 9px;
 }
 
 
@@ -281,63 +271,70 @@ nav ul li a:hover{
 	bottom: 25px;
 }
 
-/* Twitter */
-
-#col1 h3 a{
-	font: 20px Homestead, sans-serif;
-	color: #0077C0;
-	transition: color .25s ease-in-out;
-   -moz-transition: color .25s ease-in-out;
-   -webkit-transition: color .25s ease-in-out;
-  	margin-left: 25px;
+.twtr-doc, .twtr-timeline{
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px;
 }
 
-#col1 h3 a:hover{
-	color: #62BD19;
+
+
+.columnContent{
+	font: 15px Georgia, serif;
+	color: black;
+	background-color: #eee;
+	margin-top: 15px;
+	height: 375px;
 }
 
-.tweet{
-	font: 15px Arial, serif;
-    color: black;
-    margin-top: 15px;
+
+
+
+
+
+.tweet,
+.query {
+	font: 15px Georgia, serif;
+	color: black;
+	background-color: #eee;
+	margin-top: 15px;
 }
 
- .tweet_list {
-        -webkit-border-radius: 0.5em;
-        -moz-border-radius: 0.5em;
-        border-radius: 0.5em;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-/*         overflow-y: hidden; */
-/*         background-color: #8ADEE2; */
-    }
- 
-.tweet a{
-	color: #0077C0;
+.tweet_list {
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+/* 		overflow-y: hidden; */
+/* 		background-color: #8ADEE2; */
+}
+	
+.tweet_list li {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0.5em;
+	list-style-type: none;
 }
 
-.tweet_time a{
-	color: #0077C0;
+.tweet_list li a {
+	color: #62bd19;
 }
 
-.tweet_odd, .tweet_even{
-	padding: 8px;
+.tweet_list .tweet_even {
+	background-color: rgba(0,0,0,0.2);
+/* 			border-bottom: 1px solid black; */
 }
-
-.tweet_odd{
-	background-color: rgba(255,255,255,0.35);
-    border-bottom: 1px solid black;
+.tweet_list .tweet_odd{
+/* 			border-bottom: 1px solid black; */
+	
 }
-
-.tweet_even{
-	background-color: rgba(255,255,255,0.85);
+		
+.tweet_list .tweet_avatar {
+	padding-right: .5em; float: left;
+	display: none;
 }
-
-/* Bio Page */
-
-.bioslider{
-	height: 603px;;
-	width: 960px;
+		
+.tweet_list .tweet_avatar img {
+	vertical-align: middle;
 }
-
