@@ -9,7 +9,6 @@ class Book_model extends Model {
 
 	public function get()
 	{
-		//From database with table 'booking_contacts', col 'booking_id'
 		$this->db->where('booking_id',1);
 		$query = $this->db->get('booking_contacts');
 		return $query->result_array();
@@ -21,3 +20,4 @@ class Book_model extends Model {
 		$this->db->update('booking_contacts', $data);
 	}
 }
+?>
