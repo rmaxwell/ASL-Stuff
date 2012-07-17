@@ -59,12 +59,12 @@
 	position:absolute;
 	left:0px;
 	bottom:0px;
-	background:#000;
+	/* background:#000; */
 	color:#fff;
 	width:100%;
 	z-index:8;
 	padding: 5px 10px;
-	opacity: 0.8;
+	/* opacity: 0.8; */
 	overflow: hidden;
 	display: none;
 	-moz-opacity: 0.8;
@@ -73,16 +73,26 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
+/*
 .nivo-caption p {
 	padding:5px;
 	margin:0;
 }
+
+*/
 .nivo-caption a {
 	display:inline !important;
 }
 .nivo-html-caption {
     display:none;
 }
+
+.nivo-caption #test1{
+	background-color: yellow;
+}
+
+
 /* Direction nav styles (e.g. Next & Prev) */
 .nivo-directionNav a {
 	position:absolute;

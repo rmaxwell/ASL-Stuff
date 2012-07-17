@@ -146,6 +146,12 @@ nav ul li a:hover{
 	margin-top: -3px;
 }
 
+#social_f:hover, #social_t:hover{
+	background-color: green;
+}
+
+
+
 #logo{
 	position: absolute;
 	z-index: 100;
@@ -286,9 +292,7 @@ nav ul li a:hover{
 	height: 375px;
 }
 
-
-
-
+/* Twitter Styles */
 
 
 .tweet,
@@ -337,4 +341,15 @@ nav ul li a:hover{
 		
 .tweet_list .tweet_avatar img {
 	vertical-align: middle;
+}
+
+/* BIO Page */
+
+#cap1 {
+	width: 400px;
+	margin-left: 460px;
+	line-height: 35px;
+	margin-bottom: 140px;
+	font-size: 20px;
+	color: black;
 }
