@@ -215,6 +215,11 @@ nav ul li a:hover{
 	
 }
 
+#prog{
+	font-size: 70px;
+	color: rgba(0,0,0,0.50);
+}
+
 #yearTracker li{
 	padding-bottom: 5px;
 	padding-top: 5px;
@@ -226,6 +231,14 @@ nav ul li a:hover{
 #col2 p{
 	padding: 8px;
 	line-height: 20px;	
+}
+
+#col2 h3{
+	color: rgba(0,0,0,0.50);
+}
+
+#col2 .youtube{
+	margin-left: 9px;
 }
 
 
