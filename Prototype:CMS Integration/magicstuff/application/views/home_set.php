@@ -14,14 +14,14 @@
 	<nav>
 	<img id="logo" src="img/logo.png">
 		<ul>
-			<li><a href="#">STUFF'S Bio</a></li>
-			<li><a href="#">Photos</a></li>
-			<li><a href="#">Videos</a></li>
-			<li><a href="#">Book STUFF!</a></li>
-			<li><a href="#">13 Before 13</a></li>
+			<li><?=anchor('bio', 'Bio');?></li>
+			<li><?=anchor('gallery', 'Photos');?></li>
+			<li><?=anchor('videos', 'Videos');?></li>
+			<li><?=anchor('booking', 'Booking');?></li>
+			<li><?=anchor('blog', 'Blog');?></li>
 			<li><a href="#">STUFF'S School Show</a></li>
-			<li class="social"><a href="#"><img class="social" src="img/f.png"></a></li>
-			<li class="social"><a href="#"><img class="social" src="img/t.png"></a></li>
+			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="img/f.png"></a></li>
+			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="img/t.png"></a></li>
 		</ul>
 	</nav>
 	</div>

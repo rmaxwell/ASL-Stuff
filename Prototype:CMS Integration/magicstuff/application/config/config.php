@@ -12,7 +12,7 @@
 |
 */
  
-$config['base_url'] = "http://localhost:8888/Prototype:CMS%20Integration2/admin/";
+$config['base_url'] = "http://localhost:8888/magicstuff/";
  
 /*
 |--------------------------------------------------------------------------

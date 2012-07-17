@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<title>STUFF The Magic Mascot</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/style.css" />
+	<link rel="stylesheet" href="<?php echo base_url();?>/themes/default/default.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo base_url();?>/css/nivo-slider.css" type="text/css" media="screen" />
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/jquery.tweet.js"></script>
-	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/jquery.tweet.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/jquery.nivo.slider.js"></script>
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -31,7 +31,7 @@
 		<div id="main">
 		<div id="navwrap">
 		<div id="logowrap">
-		<a href="home.html"><img id="logo" src="img/logo2.png"></a>
+		<a href="home.html"><img id="logo" src="<?php echo base_url();?>/img/logo2.png"></a>
 		</div>
 		<nav>
 			<ul>
@@ -41,17 +41,17 @@
 				<li><a href="#">Book STUFF!</a></li>
 				<li><a href="#">13 Before 13</a></li>
 				<li><a href="#">STUFF'S School Show</a></li>
-				<li class="social"><a href="#"><img class="social" src="img/f.png"></a></li>
-				<li class="social"><a href="#"><img class="social" src="img/t.png"></a></li>
+				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
+				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
 				</ul>
 		</nav>
 		</div><! End Nav Wrap >
 		<div id="contentwrapper">
 		 <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider bioslider">
-                <img src="img/b1.png" height="603" width="960" data-thumb="img/bioMainwithText.png" alt="" />
-                <img src="img/b2.png" height="603" width="960" data-thumb="img/bioMain2.png" alt="" data-transition="slideInRight" />
-                <img src="img/b3.png" height="603" width="960" data-thumb="img/bioMain3.png" alt=""/>
+                <img src="<?php echo base_url();?>/img/b1.png" height="603" width="960" data-thumb="<?php echo base_url();?>/img/bioMainwithText.png" alt="" />
+                <img src="<?php echo base_url();?>/img/b2.png" height="603" width="960" data-thumb="<?php echo base_url();?>/img/bioMain2.png" alt="" data-transition="slideInRight" />
+                <img src="<?php echo base_url();?>/img/b3.png" height="603" width="960" data-thumb="<?php echo base_url();?>/img/bioMain3.png" alt=""/>
             </div>
         </div>
 	</div><! End Content Wrapper ->
@@ -59,15 +59,15 @@
 	</div><! End Wrapper ->
 	<div id="footwrap">
 		<ul>
-			<li id="footerlogo"><img src="img/logo2.png"></li>
-			<li><a href="#">STUFF'S Bio</a></li>
-			<li><a href="#">Photos</a></li>
-			<li><a href="#">Videos</a></li>
-			<li><a href="#">Book STUFF!</a></li>
-			<li><a href="#">13 Before 13</a></li>
-			<li><a href="#">STUFF'S School Show</a></li>
-			<li class="social"><a href="#"><img class="social" src="img/f.png"></a></li>
-			<li class="social"><a href="#"><img class="social" src="img/t.png"></a></li>
+			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo2.png"></li>
+			<li><a href="bio.html">STUFF'S Bio</a></li>
+				<li><a href="#">Photos</a></li>
+				<li><a href="#">Videos</a></li>
+				<li><a href="#">Book STUFF!</a></li>
+				<li><a href="#">13 Before 13</a></li>
+				<li><a href="#">STUFF'S School Show</a></li>
+				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
+				<li class="social"><a href="#"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
 		</ul>
 	</div>
 	<script type="text/javascript">
