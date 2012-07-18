@@ -56,8 +56,8 @@ a{
 /* Document Wide */
 
 body {
-	background-image: url("../img/t3.png");
 	font-family:Arial,serif;
+	background-image: url("../img/t3.png"); 
 }
 
 #wrapper{
@@ -65,17 +65,14 @@ body {
 }
 
 #main{
-	overflow:auto;
 	padding-bottom: 180px;
 }
 
-#contentwrapper {
+.contentwrapper {
 	width: 960px;
 	margin: 0 auto;
-	margin-top: 20px;
-}
-
-#slider{
+	background-color: white;
+	overflow: hidden;
 	box-shadow: 0px 0px 10px 1px black;
 }
 
@@ -84,7 +81,42 @@ body {
 	
 }
 
-@font-face { font-family: Homestead; src: url('../css/homestead.otf'); }
+/*font area */
+
+@font-face {
+    font-family: 'Homestead';
+    src: url('homestead-regular-webfont.eot');
+    src: url('homestead-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('homestead-regular-webfont.woff') format('woff'),
+         url('homestead-regular-webfont.ttf') format('truetype'),
+         url('homestead-regular-webfont.svg#HomesteadRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DesignerNotesRegular';
+    src: url('../font/designer-notes-webfont.eot');
+    src: url('../font/designer-notes-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/designer-notes-webfont.woff') format('woff'),
+         url('../font/designer-notes-webfont.ttf') format('truetype'),
+         url('../font/designer-notes-webfont.svg#DesignerNotesRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TradeGothic-BoldOblique';
+    src: url('gothic.eot');
+    src: url('gothic.eot?#iefix') format('embedded-opentype'),
+         url('gothic.woff') format('woff'),
+         url('gothic.ttf') format('truetype'),
+         url('gothic.svg#gothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .clearfix{
 	clear: both;
@@ -164,7 +196,7 @@ nav ul li a:hover{
 #cta{
 	margin-top: 20px;
 	clear: both;
-	box-shadow: 0px 0px 10px 2px black;
+	/*box-shadow: 0px 0px 10px 2px black;*/
 }
 
 #ball{
@@ -186,25 +218,22 @@ nav ul li a:hover{
 	font-weight: bold;
 	background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#333));
 	-webkit-background-clip: text;
- ` -webkit-text-fill-color: transparent;
-	
-	
+    -webkit-text-fill-color: transparent;
 }
 
 /* Columns */
-
 
 #homecontent h2 {
 	float: left;
 	margin-top: -13px;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	font: 24px Homestead, sans-serif;
+	font: 24px TradeGothic-BoldOblique, sans-serif;
 	color: white;
 	background: url("../img/module_header.png") no-repeat;
 	background-position-y: bottom;
 	width: 300px;
-	text-indent: 60px;
+	text-indent: 50px;
 }
 
 #contentheads h2:last-child { 
@@ -221,7 +250,6 @@ nav ul li a:hover{
 	float: left;
 	margin-bottom: 35px;
 	margin-right: 30px;
-
 }
 
 #yearTracker{
@@ -322,16 +350,12 @@ nav ul li a:hover{
 }
 
 .tweet_list li a {
-	color: #62bd19;
+	color: #0077C0;
 }
 
 .tweet_list .tweet_even {
 	background-color: rgba(0,0,0,0.2);
 /* 			border-bottom: 1px solid black; */
-}
-.tweet_list .tweet_odd{
-/* 			border-bottom: 1px solid black; */
-	
 }
 		
 .tweet_list .tweet_avatar {
@@ -343,13 +367,126 @@ nav ul li a:hover{
 	vertical-align: middle;
 }
 
+/* 13 by 13 Homepage Column */
+#progressList{width: 300px;margin-top: 44px;}
+
+#progressList a{color: #005bc3;}
+
+td.progressNumber{text-align: right;font-size:15px;padding-left: 10px;}
+
+td.progressTask{text-align: right;font-size: 17px;}
+
+td.progressDate{text-align: right;font-size: 13px;padding-right:20px;padding-top: 5px;padding-bottom: 5px;}
+
+tr{border-bottom: 1px solid #62bd19;}
+
+.column img{padding: 10px;}
+
+/* 13 by 13 main page*/
+
+/* 13 by 13 page styles */
+
+#nav13 {
+    width:960px;
+    position:relative;
+}
+.arrow {
+    float:left;
+    margin:0 -15px 10px 0;
+}
+.arrow a {
+    display:block;
+    width:88px;
+    height:40px;
+    background-image:url(../img/13arrow.png);
+    background-repeat:no-repeat;
+    font-size:30px;
+    text-align:center;
+    padding-top:8px;
+}
+.arrow a:hover {
+    background-position:0px -48px;
+    margin-top:-2px;
+    padding-top:10px;
+}
+#blog {
+    margin-top:85px;
+}
+.blogModule {
+    width:960px;
+    height:320px;
+    background-color:#c4ced4;
+    margin-bottom:30px;
+    overflow:hidden;
+    position:relative;
+}
+.blogPhoto {
+    width:460px;
+    height:280px;
+    background-color:#000;
+    margin:20px;
+    float:left;
+    border:2px inset #0077c0;
+}
+.blogTitle {
+    float:left;
+    font-size:25px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.blogContent {
+    width:440px;
+    float:left;
+    font-size:15px;
+    line-height:1.2em;
+}
+.smallGallery {
+    width:460px;
+    height:55px;
+    position:absolute;
+    z-index:1;
+    overflow:hidden;
+    margin:245px 0 0 40px;
+}
+.thumbNail {
+    width:50px;
+    height:50px;
+    background-color:#999;
+    float:left;
+    margin:0 5px;
+}
+
 /* BIO Page */
 
 #cap1 {
-	width: 400px;
+	width: 410px;
 	margin-left: 460px;
 	line-height: 35px;
-	margin-bottom: 140px;
-	font-size: 20px;
+	margin-bottom: 90px;
+	letter-spacing: 2px;
+	font-size: 25px;
 	color: black;
+	font-family: DesignerNotesRegular;
+}
+
+#cap2 {
+	width: 450px;
+	margin-left: 60px;
+	line-height: 35px;
+	margin-bottom: 60px;
+	letter-spacing: 2px;
+	font-size: 25px;
+	color: black;
+	font-family: DesignerNotesRegular;
+}
+
+#cap3 {
+	width: 440px;
+	margin-left: 40px;
+	line-height: 33px;
+	margin-bottom: 100px;
+	letter-spacing: 2px;
+	font-size: 25px;
+	color: black;
+	font-family: DesignerNotesRegular;
 }
