@@ -77,7 +77,7 @@ body {
 }
 
 .slider-wrapper{
-	margin-top: 25px;
+	margin-top: 0px;
 	
 }
 
@@ -154,7 +154,7 @@ nav ul{
 
 nav ul li{
 	float: left;
-	padding: 12px;
+	padding: 10px;
 	padding-top: 23px;
 	padding-bottom: 17px;
 	letter-spacing: -1px;
@@ -175,14 +175,21 @@ nav ul li a:hover{
 }
 
 .social{
-	margin-top: -3px;
+	margin-top: 5px;
+	padding: 0;
 }
 
 #social_f:hover, #social_t:hover{
 	background-color: green;
 }
 
+#socialnav{
+	margin-left: 40px;	
+}
 
+#socialnav a, img{
+	margin-right: 10px;
+}
 
 #logo{
 	position: absolute;
@@ -223,6 +230,10 @@ nav ul li a:hover{
 
 /* Columns */
 
+#homecontent{
+	padding: 10px;
+}
+
 #homecontent h2 {
 	float: left;
 	margin-top: -13px;
@@ -249,7 +260,8 @@ nav ul li a:hover{
 	background-position-y: 15px;;
 	float: left;
 	margin-bottom: 35px;
-	margin-right: 30px;
+	margin-right: 20px;
+	border-radius: 15px 0px 0px 0px;
 }
 
 #yearTracker{
@@ -343,8 +355,6 @@ nav ul li a:hover{
 }
 	
 .tweet_list li {
-	overflow-y: auto;
-	overflow-x: hidden;
 	padding: 0.5em;
 	list-style-type: none;
 }
@@ -387,7 +397,6 @@ tr{border-bottom: 1px solid #62bd19;}
 /* 13 by 13 page styles */
 #small13 {
 	padding:15px 20px;
-<<<<<<< HEAD
 	background-color:#c4ced4;
 	margin:-20px 0 15px 0;
 }
@@ -395,16 +404,17 @@ tr{border-bottom: 1px solid #62bd19;}
 	font-size:15px;
 =======
 	margin:-20px 0 5px 0;
-}
+/*	background-color:#c4ced4;
+*/}
 #small13 p {
 	font-size:15px;
 	line-height:1.2em;
+	font:TradeGothic-BoldOblique, sans-serif;
 }
 #small13 span {
-	font-size:22px;
+	font-size:20px;
 	font-weight:bold;
 	color:#0077c0;	
->>>>>>> 4238f319643753eb23178578e5a8b69df2277d4e
 }
 #nav13 {
     width:960px;
@@ -452,6 +462,8 @@ tr{border-bottom: 1px solid #62bd19;}
 .blogTitle {
     float:left;
     font-size:25px;
+	font-weight:bold;
+	color:#0077c0;
     margin-top:20px;
     margin-bottom:10px;
 }
@@ -467,7 +479,7 @@ tr{border-bottom: 1px solid #62bd19;}
     position:absolute;
     z-index:1;
     overflow:hidden;
-    margin:245px 0 0 40px;
+    margin:248px 0 0 40px;
 }
 .thumbNail {
     width:50px;
@@ -475,10 +487,58 @@ tr{border-bottom: 1px solid #62bd19;}
     background-color:#999;
     float:left;
     margin:0 5px;
+	
+	-moz-box-shadow: 0px 0px 5px 1px #000000;
+	-webkit-box-shadow: 0px 0px 5px 1px #000000;
+	box-shadow: 0px 0px 5px 1px #000000;	
+	
 }
-
 /* BIO Page */
 
+#stuffbio{
+	margin-top: 10px;
+}
+
+.big{
+	font-size: 40px;
+}
+
+#stuffspan{
+	color: #0077C0;
+	font-weight: bolder;
+}
+
+#stuffbio p{
+	line-height: 35px;
+	font-size: 25px;
+	font-family: DesignerNotesRegular;
+}
+
+#bio1{
+	padding: 10px;
+	width: 50%;
+	float: left;
+}
+
+#bio2{
+	padding: 10px;
+	width: 50%;
+	float: right;
+}
+
+#bio3{
+	padding: 10px;
+}
+
+#bp1{
+	float: right;
+}
+
+#bp2{
+	float: left;
+}
+
+/*
 #cap1 {
 	width: 410px;
 	margin-left: 460px;
@@ -511,3 +571,4 @@ tr{border-bottom: 1px solid #62bd19;}
 	color: black;
 	font-family: DesignerNotesRegular;
 }
+*/
