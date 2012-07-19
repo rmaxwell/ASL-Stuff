@@ -41,7 +41,7 @@
     <body id="home"> 
 	<div id="navwrap">
 	<div id="logowrap">
-		<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>/img/logo2.png"></a>
+		<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>/img/logo.png"></a>
 	</div>
 	<nav>
 		<ul>
@@ -125,7 +125,7 @@
 		</div><! End Wrapper ->
 	<div id="footwrap">
 		<ul>
-			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo2.png"></li>
+			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo.png"></li>
 			<li><?=anchor('bio', 'Bio');?></li>
 			<li><?=anchor('gallery', 'Photos');?></li>
 			<li><?=anchor('videos', 'Videos');?></li>

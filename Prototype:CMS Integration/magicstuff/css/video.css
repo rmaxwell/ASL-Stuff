@@ -1,0 +1,52 @@
+*{
+	list-style:none;
+	padding: 0;
+}
+.roundabout-holder{
+      height: 400px;
+      width: 600px;
+      margin: 0 auto;
+      margin-left:135px;
+}
+.roundabout-moveable-item{
+	height: 315px;
+    width: 420px;
+    cursor: pointer;
+    background-color: #ccc;
+}
+.roundabout-in-focus{
+	cursor: auto;
+}
+#videoControl{
+	width:420px;
+	margin:0 auto;
+	margin-top:70px;
+	margin-bottom: 20px;
+}
+.prev, .next{
+	display:block;
+	-moz-box-shadow: 0 0 3px #000000;
+	background-color:#222222;
+    border: 1px solid #111111;
+    color: #FFF;
+    cursor: pointer;
+    height: 32px;
+    text-align: center;
+    width: 32px;
+    float:left;
+}
+.prev{
+	background-image: url("../img/icons/prev.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.next{
+	background-image: url("../img/icons/next.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-left: 352px;
+	margin-bottom: 30px;
+}
+#footwrap{
+	clear:both;
+}

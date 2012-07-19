@@ -11,23 +11,18 @@
     <fieldset>
     	<legend>Upload a Cover Photo</legend>
     	<?php echo form_open('home/upload_photo'); 	?>
-    	<input type="file" name="userfile" size="20" />
-    	<input type="submit" value="upload" />
-    </fieldset>
-    <fieldset>
-    	<legend>Change Main Content Block</legend>
-    	<?php echo form_open('home/upload_content'); 	
-    		echo form_textarea('cta', set_value('cta', 'Main Content'));
-    		echo form_submit('submit', 'Save Content');
-    	?>
+    	<ul>
+    		<li><input type="file" name="cta1" size="20" /></li>
+    		<li><input type="file" name="cta2" size="20" /></li>
+    		<li><input type="file" name="cta3" size="20" /></li>
+    		<li><input type="file" name="cta4" size="20" /></li>
+    		<li><input type="file" name="cta5" size="20" /></li>
+    		<li><input type="submit" value="upload" /></li>
+    	</ul>
     </fieldset>
     <fieldset>
     	<legend>Blog Listing</legend>
     	<p>Most recent blog post</p>
-    </fieldset>
-    <fieldset>
-    	<legend>Media</legend>
-    	<p>Either most recent media or selected content</p>
     </fieldset>
 </body>
 </html>	
