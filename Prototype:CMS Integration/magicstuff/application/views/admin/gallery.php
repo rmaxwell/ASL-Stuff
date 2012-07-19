@@ -1,4 +1,4 @@
-<h1><?=$heading?></h1>
+<h1>Edit Gallery Content</h1>
 
 <fieldset>
     <legend>Add a new Photo Album</legend>

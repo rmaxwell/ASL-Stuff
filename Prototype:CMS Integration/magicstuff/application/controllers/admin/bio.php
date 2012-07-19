@@ -1,7 +1,4 @@
-<?php
-
-class Bio extends Controller 
-{
+<?php class Bio extends Controller {
 	function __construct()
 	{
 		parent::Controller();
@@ -11,14 +8,12 @@ class Bio extends Controller
 	
 	function index()
 	{
-		$this->load->view('admin/includes/header');
 		$this->load->helper('form');
-		$data['title'] = 'Update Bio Info';
-		$data['heading'] = 'Update Bio';
+	
+		$data['main_content'] = 'admin/bio';
+		$data['title'] = 'STUFF the Magic Mascot | Update Bio Info | Content Management System';
 		$data["bio_info"] = $this->bio_model->get_bio();
-		$this->load->view('admin/includes/nav');
-		$this->load->view('admin/bio', $data);
-		$this->load->view('admin/includes/footer');
+		$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	public function save()

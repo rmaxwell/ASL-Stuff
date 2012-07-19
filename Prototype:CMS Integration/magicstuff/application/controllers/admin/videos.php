@@ -10,9 +10,10 @@ class Videos extends Controller
 	
 	function index()
 	{
-		$this->load->view('admin/includes/header');
-		$this->load->view('admin/includes/nav');
-		$this->load->view('admin/videos');
+		$data['main_content'] = 'admin/videos';
+		$data['title'] = 'STUFF the Magic Mascot | Update Videos | Content Management System';
+		//$data['book_gallery'] = $this->book_model->get();
+		$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	function is_logged_in()

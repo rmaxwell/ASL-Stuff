@@ -10,12 +10,12 @@ class Gallery extends Controller
 	
 	function index()
 	{
-		$data['title'] = 'Update Gallery';
-		$data['heading'] = 'Update Gallery';
-		$this->load->view('admin/includes/header', $data);
-		$this->load->view('admin/includes/nav');
-		$this->load->view('admin/gallery', $data);
-		$this->load->view('admin/includes/footer');
+		$this->load->helper('form');
+	
+		$data['main_content'] = 'admin/gallery';
+		$data['title'] = 'STUFF the Magic Mascot | Update Gallery | Content Management System';
+		//$data['book_gallery'] = $this->book_model->get();
+		$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	function add()

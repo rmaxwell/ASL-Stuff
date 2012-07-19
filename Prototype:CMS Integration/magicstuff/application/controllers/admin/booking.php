@@ -11,14 +11,12 @@ class Booking extends Controller
 	
 	function index()
 	{
-		$this->load->view('admin/includes/header');
-		$this->load->view('admin/includes/footer');
 		$this->load->helper('form');
-		$data['title'] = 'Booking';
-		$data['heading'] = "Update Booking Page";
+	
+		$data['main_content'] = 'admin/booking';
+		$data['title'] = 'STUFF the Magic Mascot | Update Booking Info | Content Management System';
 		$data['book_data'] = $this->book_model->get();
-		$this->load->view('admin/includes/nav');
-		$this->load->view('admin/booking', $data);
+		$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	function save()
