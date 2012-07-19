@@ -1,7 +1,4 @@
-<?php
-
-class Nav extends Controller 
-{
+<?php class Nav extends Controller  {
 	function __construct()
 	{
 		parent::Controller();
@@ -11,13 +8,12 @@ class Nav extends Controller
 	
 	function index()
 	{
-		$this->load->view('admin/includes/header');
 		$this->load->helper('form');
-		$data['title'] = 'Navagation Bar';
-		$data['heading'] = "Update Navagation Bar Heading";
+	
+		$data['main_content'] = 'admin/nav';
+		$data['title'] = 'STUFF the Magic Mascot | Edit Nav Content Management System';
 		$data['nav_data'] = $this->nav_model->get();
-		$this->load->view('admin/includes/nav');
-		$this->load->view('admin/nav', $data);
+		$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	function save()

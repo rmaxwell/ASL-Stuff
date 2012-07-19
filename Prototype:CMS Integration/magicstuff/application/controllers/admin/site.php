@@ -1,7 +1,4 @@
-<?php
-
-class Site extends Controller 
-{
+<?php class Site extends Controller {
 	function __construct()
 	{
 		parent::Controller();
@@ -11,14 +8,12 @@ class Site extends Controller
 	
 	function index()
 	{
-		$this->load->view('admin/includes/header');
 		$this->load->helper('form');
-		$data['title'] = 'Home';
-		$data['heading'] = "Update Home Page";
-		$data['site_data'] = $this->site_model->get();
-		$this->load->view('admin/includes/nav');
-		$this->load->view('admin/logged_in_area', $data);
-		$this->load->view('admin/includes/footer');	
+		
+		$data['main_content'] = 'admin/logged_in_area';
+		$data['title'] = 'STUFF the Magic Mascot | Content Management System';
+		$data['site_data'] = $this->site_model->get();		
+		$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	function is_logged_in()
