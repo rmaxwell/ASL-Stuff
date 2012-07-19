@@ -11,7 +11,7 @@
 		$this->load->helper('form');
 	
 		$data['main_content'] = 'admin/nav';
-		$data['title'] = 'STUFF the Magic Mascot | Edit Nav Content Management System';
+		$data['title'] = 'STUFF the Magic Mascot | Edit Nav | Content Management System';
 		$data['nav_data'] = $this->nav_model->get();
 		$this->load->view('admin/includes/temp_full', $data);
 	}

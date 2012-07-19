@@ -9,7 +9,7 @@
 	function newuser()
 	{
 		$data['main_content'] = 'admin/signup_form';
-		$data['title'] = 'Login STUFF the Magic Mascot | Create new user Content Management System';
+		$data['title'] = 'Login STUFF the Magic Mascot | Create new user | Content Management System';
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -37,7 +37,7 @@
 			}
 		}else{
 			$data['main_content'] = 'admin/signup_form';
-			$data['title'] = 'STUFF the Magic Mascot | Create New User Content Management System';
+			$data['title'] = 'STUFF the Magic Mascot | Create New User | Content Management System';
 			$this->load->view('admin/includes/temp_min', $data);
 		}
 	}

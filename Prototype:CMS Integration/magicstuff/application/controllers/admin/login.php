@@ -29,14 +29,14 @@
 				echo '</div>';	
 				
 				$data['main_content'] = 'admin/login_form';
-				$data['title'] = 'Login STUFF the Magic Mascot | Content Management System';
+				$data['title'] = 'Login | STUFF the Magic Mascot | Content Management System';
 				$this->load->view('admin/includes/temp_min', $data);	
 			}
 
 		}else{
 			//form_validation did not pass -- function validate_credentials()
 			$data['main_content'] = 'admin/login_form';
-			$data['title'] = 'Login STUFF the Magic Mascot | Content Management System';
+			$data['title'] = 'Login | STUFF the Magic Mascot | Content Management System';
 			$this->load->view('admin/includes/temp_min', $data);	
 		}
 	}
