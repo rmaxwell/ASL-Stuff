@@ -218,12 +218,12 @@ nav ul li a:hover{
 	float: left;
 	width: 960px;
 	margin: 0 auto;
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 	text-align: center;
 	font-size: 24px;
 	color: rgba(0,0,0,0.5);
 	font-weight: bold;
-	background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#333));
+	background: -webkit-gradient(linear, left top, left bottom, from(#b1b1b1), to(#333));
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
