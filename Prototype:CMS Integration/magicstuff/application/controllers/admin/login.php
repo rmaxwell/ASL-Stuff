@@ -2,12 +2,6 @@
 
 class Login extends Controller {
 	
-	function index()
-	{
-		$data['main_content'] = 'admin/login_form';
-		$this->load->view('admin/includes/template', $data);		
-	}
-	
 	function validate_credentials()
 	{		
 		$this->load->model('admin/membership_model');
@@ -24,13 +18,14 @@ class Login extends Controller {
 		}
 		else // incorrect username or password
 		{
-			$this->index();
+			$data['main_content'] = 'admin/login_form';
+			$this->load->view('admin/includes/template', $data);
 		}
 	}	
 	
 	function signup()
 	{
-		$data['main_content'] = 'admin/sign_up';
+		$data['main_content'] = 'admin/signup_form';
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -72,7 +67,8 @@ class Login extends Controller {
 	function logout()
 	{
 		$this->session->sess_destroy();
-		$this->index();
+		$data['main_content'] = 'admin/login_form';
+		$this->load->view('admin/includes/template', $data);
 	}
 
 }

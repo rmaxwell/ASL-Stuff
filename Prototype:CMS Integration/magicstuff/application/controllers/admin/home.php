@@ -12,8 +12,7 @@ class Home extends Controller {
 	function index()
 	{
 		$data['main_content'] = 'admin/login_form';
-		$this->load->view('admin/includes/template', $data);
-				
+		$this->load->view('admin/includes/template', $data);	
 	}
 	
 	function is_logged_in()
