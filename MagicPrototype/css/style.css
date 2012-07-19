@@ -387,11 +387,24 @@ tr{border-bottom: 1px solid #62bd19;}
 /* 13 by 13 page styles */
 #small13 {
 	padding:15px 20px;
+<<<<<<< HEAD
 	background-color:#c4ced4;
 	margin:-20px 0 15px 0;
 }
 #small13 p {
 	font-size:15px;
+=======
+	margin:-20px 0 5px 0;
+}
+#small13 p {
+	font-size:15px;
+	line-height:1.2em;
+}
+#small13 span {
+	font-size:22px;
+	font-weight:bold;
+	color:#0077c0;	
+>>>>>>> 4238f319643753eb23178578e5a8b69df2277d4e
 }
 #nav13 {
     width:960px;
