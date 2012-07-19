@@ -6,5 +6,10 @@ class Home extends Controller {
 	{
 		$this->load->view('home_set');		
 	}
+	
+	function admin()
+	{
+		$this->load->view('admin/login_form');
+	}
 
 }

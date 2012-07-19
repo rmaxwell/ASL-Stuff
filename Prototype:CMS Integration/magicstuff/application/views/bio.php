@@ -31,7 +31,7 @@
 		<div id="main">
 		<div id="navwrap">
 		<div id="logowrap">
-		<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>/img/logo2.png"></a>
+		<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>/img/logo.png"></a>
 		</div>
 		<nav>
 			<ul>
