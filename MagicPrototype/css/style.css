@@ -385,10 +385,18 @@ tr{border-bottom: 1px solid #62bd19;}
 /* 13 by 13 main page*/
 
 /* 13 by 13 page styles */
-
+#small13 {
+	padding:15px 20px;
+	background-color:#c4ced4;
+	margin:-20px 0 15px 0;
+}
+#small13 p {
+	font-size:15px;
+}
 #nav13 {
     width:960px;
     position:relative;
+	margin-left:-2px;
 }
 .arrow {
     float:left;
@@ -410,7 +418,7 @@ tr{border-bottom: 1px solid #62bd19;}
     padding-top:10px;
 }
 #blog {
-    margin-top:85px;
+    margin-top:75px;
 }
 .blogModule {
     width:960px;
