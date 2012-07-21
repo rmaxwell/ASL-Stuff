@@ -195,6 +195,130 @@ fieldset {
 	max-width: 960px;
 }
 
+
+/* =================================================================================================================================================== */
+
+.gallery_album {
+	text-align: left;
+	font-size: 24px;
+	padding: 3px 0;
+	text-decoration: underline;
+	margin: 0 0 5px;
+	float: left;
+}
+
+.gallery_album a {
+	color: #074b9c;
+}
+
+.gallery_album a:hover {
+	color: #62BD19;
+}
+
+.album_heading {
+	font-size: 26px;
+}
+
+.delete_album {
+	float: left;
+	color: black;
+	padding: 10px;
+}
+
+.delete_album:hover {
+	text-decoration: underline;
+}
+
+.images {
+	text-align: center;
+}	
+	
+.edit_img {
+	margin: 10px auto;
+	width: 550px;
+	height: 550px;
+	text-align: center;
+	position: relative;
+}
+
+input[name='image_title'] {
+	width: 530px;
+	margin: 10px 0;
+}
+
+.delete_image {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	margin: 15px;
+}
+
+.delete_image:hover {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	text-decoration: underline;
+}
+
+.active {
+	opacity: 0.3;
+}
+
+.gallery_info {
+	text-align: right;	
+}
+
+.gallery_info input[type=submit] {
+	margin: 10px 0;
+}
+
+.next, .prev {
+	display: block;
+	border-style:solid;
+	border-width:40px;
+	width:0;
+	height:0;
+	position: absolute;
+	cursor: pointer;
+	top: 100px;
+}
+
+.next:hover {
+	border-color:  transparent transparent  transparent #B8B8B8;
+}
+
+.prev:hover {
+	border-color:  transparent #B8B8B8 transparent  transparent;
+}
+
+.next {
+	border-color:  transparent transparent  transparent #404040;
+	right: -100px;
+}
+
+.prev {
+	border-color:  transparent #404040 transparent  transparent;     
+	left: -100px;
+}
+
+.con {
+	position: absolute;
+	padding: 50px 0 0;
+	left: 220px;
+	top: 220px;
+	bottom: 220px;
+	right: 220px;
+	background-color: rgba(0,0,0,1);
+	border-radius: 25px;
+	overflow: auto;
+	min-height: 650px;
+}
+
+
 /* FOR FUN */
 
 h1 {
