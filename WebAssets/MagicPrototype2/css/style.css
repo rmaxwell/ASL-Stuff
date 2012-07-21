@@ -345,7 +345,6 @@ nav ul li a:hover{
 .query {
 	font: 15px Arial, serif;
 	color: black;
-	background-color: #eee;
 	margin-top: 15px;
 }
 
@@ -382,13 +381,20 @@ nav ul li a:hover{
 }
 
 .tweet_list .tweet_even {
-	background-color: rgba(0,0,0,0.2);
-/* 			border-bottom: 1px solid black; */
+/*
+	background-color: rgba(0,0,0,0.2); */
+	border-bottom: 1px solid black; 
 }
+
+.tweet_odd {
+/*
+	background-color: rgba(0,0,0,0.2); */
+	border-bottom: 1px solid black; 
+}
+
 		
 .tweet_list .tweet_avatar {
 	padding-right: .5em; float: left;
-	display: none;
 }
 		
 .tweet_list .tweet_avatar img {
