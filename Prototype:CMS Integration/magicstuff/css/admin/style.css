@@ -67,11 +67,11 @@ body {
 	padding: 0;
 	font-family: arial;
 }
-#login_form {
-	width: 300px;
+#login_form{
+	position:absolute; top:0; bottom:0; left:0; right:0;
+	margin:auto; height:11em; width:300px;
 	background: #f0f0f0 url(../../img/admin/login_bg.jpg) repeat-x 0 0;
 	border: 1px solid white;
-	margin: 250px auto 0;
 	padding: 1em;
 	-moz-border-radius: 3px;
 }
