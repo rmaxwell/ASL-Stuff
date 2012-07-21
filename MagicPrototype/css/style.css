@@ -48,24 +48,30 @@ table {
 
 a{
 	text-decoration: none;
-	color: white;
 }
 
 /* END OF CSS RESET */
 
 /* Document Wide */
 
+html{
+	background-color: #004696;
+}
+
 body {
 	font-family:Arial,serif;
-	background-image: url("../img/t3.png"); 
+	background-image: url("../img/t4.png"); 
 }
 
 #wrapper{
-	min-height: 100%; 
+
+	height: 100%; 
+	padding-bottom: 90px;
+
 }
 
 #main{
-	padding-bottom: 180px;
+	/* padding-bottom: 90px; /* This is for the footer */
 }
 
 .contentwrapper {
@@ -139,29 +145,35 @@ body {
 nav{
 	width: 960px;
 	margin: 0 auto;
+	font: 18px TradeGothic-BoldOblique, sans-serif;
 }
 
 nav img{
 	float: left;
+	margin-top: 6px;
 }
 
 nav ul{
 	float: left;
 /* 	background-color: black; */
-	height: 40px;
 	margin-left: 210px;
 }
 
 nav ul li{
 	float: left;
 	padding: 10px;
-	padding-top: 23px;
+	padding-top: 20px;
 	padding-bottom: 17px;
 	letter-spacing: -1px;
 	border-right: 1px solid rgba(152,148,148,0.5);
 /* 	border-left: 1px solid rgba(152,148,148,0.5); */
-	
 }
+
+nav ul li:last-child{
+	border-right: none;
+}
+	
+
 
 nav ul li a{
 	color: white;
@@ -183,19 +195,11 @@ nav ul li a:hover{
 	background-color: green;
 }
 
-#socialnav{
-	margin-left: 40px;	
-}
-
-#socialnav a, img{
-	margin-right: 10px;
-}
-
 #logo{
 	position: absolute;
 	z-index: 100;
 	margin-left: 10px;
-	margin-top: 5px;
+	padding-top: 15px;
 	width:200px;
 	
 }
@@ -226,6 +230,7 @@ nav ul li a:hover{
 	background: -webkit-gradient(linear, left top, left bottom, from(#b1b1b1), to(#333));
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family:TradeGothic-BoldOblique, sans-serif;
 }
 
 /* Columns */
@@ -239,12 +244,16 @@ nav ul li a:hover{
 	margin-top: -13px;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	font: 24px TradeGothic-BoldOblique, sans-serif;
-	color: white;
+	font: 24px Arial, sans-serif;
+	letter-spacing: -2px;
+	font-weight: bolder;
+	color: black;
+	/*
 	background: url("../img/module_header.png") no-repeat;
+	*/
 	background-position-y: bottom;
 	width: 300px;
-	text-indent: 50px;
+	text-indent: 0px;
 }
 
 #contentheads h2:last-child { 
@@ -256,12 +265,16 @@ nav ul li a:hover{
 .column{
 	width: 300px;
 	height: 400px;
+	/*
 	background-color: #eee;
+	*/
 	background-position-y: 15px;;
 	float: left;
 	margin-bottom: 35px;
 	margin-right: 20px;
-	border-radius: 15px 0px 0px 0px;
+	border-top-width: 2px;
+	border-top-color: black;
+	border-top-style: solid;
 }
 
 #yearTracker{
@@ -291,11 +304,13 @@ nav ul li a:hover{
 /* Footer */
 
 #footwrap{
-	position: relative;
-	margin-top: -180px;
-	height: 180px;
+	margin-top: -89px;
 	clear: both;
 	background-color: #004696;
+}
+
+#footwrap a{
+	color: white;
 }
 
 #footwrap ul{
@@ -315,6 +330,10 @@ nav ul li a:hover{
 #footerlogo{
 	position: relative;
 	bottom: 25px;
+}
+
+.footsocial{
+	margin-top: -70px;
 }
 
 .twtr-doc, .twtr-timeline{
@@ -337,7 +356,7 @@ nav ul li a:hover{
 
 .tweet,
 .query {
-	font: 15px Georgia, serif;
+	font: 15px Arial, serif;
 	color: black;
 	background-color: #eee;
 	margin-top: 15px;
@@ -349,12 +368,24 @@ nav ul li a:hover{
 	border-radius: 0.5em;
 	list-style: none;
 	margin: 0;
+	margin-top: 40px;
 	padding: 0;
-/* 		overflow-y: hidden; */
+	height: 320px;
+	max-height: 320px;
+/* 		overflowy: hidden; */
 /* 		background-color: #8ADEE2; */
 }
+
+#col1 h3{
+	margin-top: 10px;
+	margin-left: 45px;
+}
+
+#col1 h3:hover{
+	color: #62BD19;
+}
 	
-.tweet_list li {
+.tweet_list li{
 	padding: 0.5em;
 	list-style-type: none;
 }
@@ -377,14 +408,22 @@ nav ul li a:hover{
 	vertical-align: middle;
 }
 
+#followstuff{
+	font: 18px TradeGothic-BoldOblique, sans-serif;
+	
+}
+
 /* 13 by 13 Homepage Column */
-#progressList{width: 300px;margin-top: 44px;}
+#progressList{
+	width: 300px;
+	margin-top: 44px;
+}
 
 #progressList a{color: #005bc3;}
 
 td.progressNumber{text-align: right;font-size:15px;padding-left: 10px;}
 
-td.progressTask{text-align: right;font-size: 17px;}
+td.progressTask{text-align: center;font-size: 17px;}
 
 td.progressDate{text-align: right;font-size: 13px;padding-right:20px;padding-top: 5px;padding-bottom: 5px;}
 
@@ -397,18 +436,17 @@ tr{border-bottom: 1px solid #62bd19;}
 /* 13 by 13 page styles */
 #small13 {
 	padding:15px 20px;
-	background-color:#c4ced4;
-	margin:-20px 0 15px 0;
+	/* background-color:#c4ced4; */
+	margin: 10px 0 15px 0;
 }
+
+#nav13 a{
+	color: white;
+}
+
 #small13 p {
 	font-size:15px;
-=======
-	margin:-20px 0 5px 0;
-/*	background-color:#c4ced4;
-*/}
-#small13 p {
-	font-size:15px;
-	line-height:1.2em;
+	line-height:1.3em;
 	font:TradeGothic-BoldOblique, sans-serif;
 }
 #small13 span {
@@ -496,12 +534,15 @@ tr{border-bottom: 1px solid #62bd19;}
 /* BIO Page */
 
 #stuffbio{
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
+/*
 .big{
-	font-size: 40px;
+	font-size: 25px;
+	font-weight: bolder;
 }
+*/
 
 #stuffspan{
 	color: #0077C0;
@@ -510,65 +551,93 @@ tr{border-bottom: 1px solid #62bd19;}
 
 #stuffbio p{
 	line-height: 35px;
-	font-size: 25px;
-	font-family: DesignerNotesRegular;
+	font-size: 16px;
+	font-family: Arial;
+	text-indent: 7px;
 }
 
 #bio1{
-	padding: 10px;
-	width: 50%;
+	padding: 15px;
+	width: 48%;
 	float: left;
 }
 
 #bio2{
-	padding: 10px;
-	width: 50%;
-	float: right;
+	padding: 15px;
+	width: 48%;
+	float: left;
 }
 
 #bio3{
-	padding: 10px;
+	padding: 15px;
+	width: 48%;
+	float: right;
 }
 
 #bp1{
 	float: right;
+	background-color: rgba(0,0,0,0.22);
+	display: block;
+	width: 450px;
+	height: 141px;
+	margin-right: 15px;
+}
+
+#bp1 p{
+	font: 25px DesignerNotesRegular, sans-serif;
+	margin: 20px;
+	line-height: 40px;
 }
 
 #bp2{
+	clear: right;
+	margin: 15px 0 0 5px;
+}
+
+#bp3{
+	margin: 15px 0 15px 15px;
 	float: left;
 }
 
-/*
-#cap1 {
-	width: 410px;
-	margin-left: 460px;
-	line-height: 35px;
-	margin-bottom: 90px;
-	letter-spacing: 2px;
-	font-size: 25px;
-	color: black;
-	font-family: DesignerNotesRegular;
+
+/* School Show Styling */
+
+#schoolShow{
+	background:url(../img/school-show-bg2.jpg) no-repeat;
 }
 
-#cap2 {
-	width: 450px;
-	margin-left: 60px;
-	line-height: 35px;
-	margin-bottom: 60px;
-	letter-spacing: 2px;
-	font-size: 25px;
-	color: black;
-	font-family: DesignerNotesRegular;
+#schoolShowContent{margin: 20px;margin-top:40px;width: 510px;line-height: 30px;font-size: 20px;font-family: TradeGothic-BoldOblique;}
+
+/*---- Book Stuff Styles ----*/
+
+#bookingContent {
+	width:750px;
+	margin:0 auto;
+}
+#bookingContent h3 {
+	width:710px;
+	margin:10px auto;
+	font-size:16px;
+	font-weight:bold;
+	line-height:1.2em;
+}
+#contactInfo {
+	font: 20px DesignerNotesRegular, sans-serif;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+#bookStuffTxt {
+	width:400px;
+	float:left;
+	margin: 30px 20px;
+}
+#bookStuffTxt p {
+	line-height:1.3em;
+	font: 20px DesignerNotesRegular, sans-serif;
+}
+#stuffBigImg {
+	float:left;
+	margin-top:-15px;
 }
 
-#cap3 {
-	width: 440px;
-	margin-left: 40px;
-	line-height: 33px;
-	margin-bottom: 100px;
-	letter-spacing: 2px;
-	font-size: 25px;
-	color: black;
-	font-family: DesignerNotesRegular;
-}
-*/
+/*--- Gallery CSS ----*/
