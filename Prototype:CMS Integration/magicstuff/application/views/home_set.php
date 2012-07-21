@@ -49,9 +49,11 @@
 		<div class="contentwrapper">
 		 <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
+            	<?php for (){?>
                 <img src="img/cta.png" data-thumb="img/cta.png" alt="" />
                 <img src="img/cta2.png" data-thumb="img/cta2.png" alt="" />
-	            <img src="img/cta3.png" data-thumb="img/cta3.png" alt="" /> 
+	            <img src="img/cta3.png" data-thumb="img/cta3.png" alt="" />
+	            <?php }?>
             </div>
             <div id="htmlcaption" class="nivo-html-caption">
                 <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
