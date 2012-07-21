@@ -61,7 +61,6 @@ class Login extends Controller {
 				$this->load->view('admin/signup_form');			
 			}
 		}
-		
 	}
 	
 	function logout()
@@ -70,5 +69,4 @@ class Login extends Controller {
 		$data['main_content'] = 'admin/login_form';
 		$this->load->view('admin/includes/temp_min', $data);
 	}
-
 }
