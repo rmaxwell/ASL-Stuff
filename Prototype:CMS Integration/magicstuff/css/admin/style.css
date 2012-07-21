@@ -330,7 +330,7 @@ input[name='image_title'] {
 .error {
 	color: #AF0000;
 	font-size: 15px;
-	padding:2px 0;
+	padding:2px 0 6px;
 }
 
 .cancellink{
