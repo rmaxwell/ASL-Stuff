@@ -12,6 +12,7 @@
 <!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
 </head>
 
 <body id="home">
@@ -20,30 +21,46 @@
     <div id="navwrap">
       <div id="logowrap"> <a href="home.html"><img id="logo" src="img/logo2.png"></a> </div>
       <nav>
-			<ul>
-				<li><a href="bio.html">STUFF'S Bio</a></li>
-				<li><a href="gallery.html">Photos</a></li>
-				<li><a href="video.html">Videos</a></li>
+        <ul>
+          <li><a href="bio.html">STUFF'S Bio</a></li>
 				<li><a href="bookstuff.html">Book STUFF!</a></li>
 				<li><a href="13by13.html">13 Before 13</a></li>
 				<li><a href="schoolshow.html">STUFF'S School Show</a></li>
+				<li><a href="gallery.html">Photos</a></li>
+				<li><a href="video.html">Videos</a></li>
 				<li class="social">
 					<img src="img/poweredby2.png" alt=""></br>
-				</li>
-			</ul>
-		</nav>  
-	</div>
+				</li>        
+				</ul>
+      </nav>
+    </div>
     <! End Nav Wrap >
-    <div class="contentwrapper"> <img src="img/bookmeHeaderImg.png" title="Book Stuff Today!" />
+    <div class="contentwrapper"> <img src="img/bookmeHeaderImg_2.png" title="Book Stuff Today!" />
       <div id="bookingContent">
-        <h3>STUFF is available for birthday parties, reunions, parades, conventions, weddings, business meetings, grand openings, assemblies, high school/college basketball games, etc.</h3>
         <div id="bookStuffTxt">
-          <p>STUFF can be seen entertaining 20,000 fans at the Amway Center during Magic games, he also makes hundreds of appearances year-round in the greater Orlando area. STUFF can bring the fun, energy and excitement of a Magic game to your event. This mascot has the right stuff to turn your shindig into a legendary experience. Whether its playing games and shooting silly string at little Jimmy's 5th birthday party, dancing and surprising Jessica at her Bat mitzvah or slicing cake and party at Grandma and Grandpa's 40th wedding anniversary, STUFF can do it all!</p>
-          <br />
-          <p>Something different? We can accommodate to several different scenarios. We have ideas to spice up your part, meeting and/or gathering. Just ask!</p>
+          <p><span>STUFF</span> can be seen entertaining 20,000 fans at the Amway Center during Magic games, he also makes hundreds of appearances year-round in the greater Orlando area. <span>STUFF</span> can bring the fun, energy and excitement of a Magic game to your event.</p><p>This mascot has the right stuff to turn your shindig into a legendary experience. Whether its playing games and shooting silly string at little Jimmy's 5th birthday party, dancing and surprising Jessica at her Bat mitzvah or slicing cake and party at Grandma and Grandpa's 40th wedding anniversary, <span>STUFF</span> can do it all!</p>
+          <h3><span>STUFF</span> is available for:</h3>
+          <ul>
+            <li>birthday parties</li>
+            <li>reunions</li>
+            <li>parades</li>
+            <li>conventions</li>
+            <li>weddings</li>
+            <li>business meetings</li>
+            <li>grand openings</li>
+            <li>assemblies</li>
+            <li>high school/college basketball games</li>
+          </ul>
+          <p>Something different? We can accommodate to several different scenarios. We have ideas to spice up your party, meeting and/or gathering. Just ask!</p>
         </div>
-        <div id="stuffBigImg"> <img src="img/stuffBookMe.png" alt="Book Stuff Today!" title="Stuff the Dragon" /> </div>
-        <p id="contactInfo">To inquire about booking STUFF contact <span>STUFF@orlandomagic.com</span> or call <span>407-916-2675</span></p>
+        <div id="stuffBigImg">
+        	<img id="img1" src="img/stuff_action.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
+            <img id="img2" src="img/stuff_action-02.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
+            <img id="img3" src="img/stuff_action-03.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
+            <img id="img4" src="img/stuff_action-04.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
+            <img id="img5" src="img/stuff_action-05.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
+        </div>
+        <p id="contactInfo">To inquire about booking <span>STUFF</span> contact <span>STUFF@orlandomagic.com</span> or call <span>407-916-2675</span></p>
       </div>
     </div>
   </div>
@@ -55,19 +72,38 @@
 </div>
 <! End Wrapper ->
 <div id="footwrap">
-  <ul>
-    <li id="footerlogo"><img src="img/logo2.png"></li>
-    <li><a href="#">STUFF'S Bio</a></li>
-    <li><a href="#">Photos</a></li>
-    <li><a href="#">Videos</a></li>
-    <li><a href="#">Book STUFF!</a></li>
-    <li><a href="#">13 Before 13</a></li>
-    <li><a href="#">STUFF'S School Show</a></li>
-    <li class="social"><a href="#"><img class="social" src="img/f.png"></a></li>
-    <li class="social"><a href="#"><img class="social" src="img/t.png"></a></li>
-  </ul>
-</div>
+		<ul>
+			<li id="footerlogo"><a href="home.html"><img src="img/logo2.png" alt=""></a></li>
+			<li><a href="bio.html">STUFF'S Bio</a></li>
+			<li><a href="bookstuff.html">Book STUFF!</a></li>
+			<li><a href="13by13.html">13 Before 13</a></li>
+			<li><a href="schoolshow.html">STUFF'S School Show</a></li>
+			<li><a href="gallery.html">Photos</a></li>
+			<li><a href="video.html">Videos</a></li>
+			<li class="social"><a href="#"><img class="footsocial" alt="" src="img/f.png"></a></li>
+			<li class="social"><a href="#"><img class="footsocial" alt="" src="img/t.png"></a></li>
+		</ul>
+		<div id="clearfix"></div>
+	</div>
 <!-  Note To Backend People
 	The settings below maybe different from the settings on the bio page -> 
+<script type="text/javascript">
+    $(window).load(function() {
+   		 $('#slider').nivoSlider({
+        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+        animSpeed: 1000, // Slide transition speed
+        pauseTime: 6000, // How long each slide will show
+        directionNav: true, // Next & Prev navigation
+        directionNavHide: true, // Only show on hover
+        controlNav: false, // 1,2,3... navigation
+        controlNavThumbs: false, // Use thumbnails for Control Nav
+        pauseOnHover: false, // Stop animation while hovering
+        prevText: 'Prev', // Prev directionNav text
+        nextText: 'Next', // Next directionNav text
+        randomStart: false // Start on a random slide
+	   	 });
+	   });
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
