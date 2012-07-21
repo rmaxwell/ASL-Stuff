@@ -10,7 +10,7 @@
 	{
 		$data['main_content'] = 'admin/signup_form';
 		$data['title'] = 'Login STUFF the Magic Mascot | Create new user | Content Management System';
-		$this->load->view('admin/includes/template', $data);
+		$this->load->view('admin/includes/temp_min', $data);
 	}
 	
 	function create_member()

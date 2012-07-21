@@ -31,7 +31,7 @@
                                 'placeholder' => 'Enter Confirm Password');
 
 
-            echo form_open('admin/login/create_member');
+            echo form_open('admin/signup/create_member');
 			echo form_error('first_name');
             echo form_input($singup_fname);
 			echo form_error('last_name');

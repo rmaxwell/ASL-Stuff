@@ -45,6 +45,7 @@
 	{
 		$this->session->sess_destroy();
 		$data['main_content'] = 'admin/login_form';
-		$this->load->view('admin/includes/template', $data);
+		$data['title'] = 'Login | STUFF the Magic Mascot | Content Management System';
+		$this->load->view('admin/includes/temp_min', $data);
 	}
 }

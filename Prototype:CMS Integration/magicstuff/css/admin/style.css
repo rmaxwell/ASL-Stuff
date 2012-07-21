@@ -318,6 +318,40 @@ input[name='image_title'] {
 	min-height: 650px;
 }
 
+/* Validation error messages */
+.error {
+	color: #AF0000;
+	font-size: 15px;
+	padding:2px 0;
+}
+
+.cancellink{
+	color: #AF0000;
+	margin-left: 50px;
+}
+
+fieldset {
+	margin: auto;
+	margin-bottom: 2em;
+	display: block;
+	max-width: 960px;
+}
+
+/*signup_successful.php*/
+#signup_successful {
+	margin: 40px auto;
+	width: 400px;
+}
+#signup_successful p{
+	margin: 10px;
+}
+
+/*signup_form.php*/
+#signup_form h1{
+	text-align:center;
+	margin: 40px auto;
+	width: 400px;
+}
 
 /* FOR FUN */
 
