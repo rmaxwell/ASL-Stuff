@@ -23,7 +23,7 @@
 									<li><?=anchor('videos', 'Videos');?></li>
 									<li><?=anchor('booking', 'Booking');?></li>
 									<li><?=anchor('blog', 'Blog');?></li>
-									<li><a href="#">STUFF'S School Show</a></li>
+									<li><?=anchor('school', "STUFF's School Show");?></li>
 									<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
 									<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>
 								</ul>
@@ -31,12 +31,13 @@
 						</div><! End Nav Wrap >
 			<div id="contentwrapper">
 			<ul class="roundabout-holder">
-			    <li class="roundabout-moveable-item roundabout-in-focus"><iframe width="420" height="315" src="http://www.youtube.com/embed/D46fb3s2j94" frameborder="0" allowfullscreen></iframe></li>
-			    <li class="roundabout-moveable-item"><iframe width="420" height="315" src="http://www.youtube.com/embed/HFJRNQCHGjI" frameborder="0" allowfullscreen></iframe></li>
-			    <li class="roundabout-moveable-item"><iframe width="560" height="315" src="http://www.youtube.com/embed/vc_UuwIpU98" frameborder="0" allowfullscreen></iframe></li>
-			    <li class="roundabout-moveable-item"><iframe src="http://player.vimeo.com/video/24516286" width="420" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
-			    <li class="roundabout-moveable-item"><iframe src="http://player.vimeo.com/video/13693690" width="420" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
+			   <? //echo $i["video_embed"];
+			   	for ($i=0; $i<count($videos); $i++){ ?>
+					<li class="roundabout-moveable-item"><iframe src="<?php echo $videos[$i]['video_embed'] ?>" width="420" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					</li>
+				<? } ?> 
 			</ul>
+			
 			<div id="videoControl">
 			    <a href="#" class="prev"></a>
 			    <a href="#" class="next"></a>
@@ -52,7 +53,7 @@
 			<li><?=anchor('videos', 'Videos');?></li>
 			<li><?=anchor('booking', 'Booking');?></li>
 			<li><?=anchor('blog', 'Blog');?></li>
-			<li><a href="#">STUFF'S School Show</a></li>
+			<li><?=anchor('school', "STUFF's School Show");?></li>
 			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
 			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>
 		</ul>

@@ -1,4 +1,5 @@
-<?php class Nav extends Controller  {
+<?php class Nav extends Controller 
+{
 	function __construct()
 	{
 		parent::Controller();
@@ -9,7 +10,7 @@
 	function index()
 	{
 		$this->load->helper('form');
-	
+		
 		$data['main_content'] = 'admin/nav';
 		$data['title'] = 'STUFF the Magic Mascot | Edit Nav | Content Management System';
 		$data['nav_data'] = $this->nav_model->get();

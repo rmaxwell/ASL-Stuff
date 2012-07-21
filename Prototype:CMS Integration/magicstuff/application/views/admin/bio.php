@@ -1,7 +1,10 @@
-<div class="wrapper">
-<h1>Update Bio</h1>
-<?php echo form_open('bio/save');
+<h1>Bio</h1>
 
+<div class="wrapper">
+<?php echo form_open('admin/bio/save'); ?>
+
+<?php
+	
 	$bio_title = array(
 		'name'	=> 'bio_title',
 		'id'	=> 'bio_title',

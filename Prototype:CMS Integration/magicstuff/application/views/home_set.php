@@ -40,7 +40,7 @@
 				<li><?=anchor('videos', 'Videos');?></li>
 				<li><?=anchor('booking', 'Booking');?></li>
 				<li><?=anchor('blog', 'Blog');?></li>
-				<li><a href="#">STUFF'S School Show</a></li>
+				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="img/f.png"></a></li>
 				<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="img/t.png"></a></li>
 			</ul>
@@ -49,11 +49,9 @@
 		<div class="contentwrapper">
 		 <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-            	<?php for (){?>
                 <img src="img/cta.png" data-thumb="img/cta.png" alt="" />
                 <img src="img/cta2.png" data-thumb="img/cta2.png" alt="" />
-	            <img src="img/cta3.png" data-thumb="img/cta3.png" alt="" />
-	            <?php }?>
+	            <img src="img/cta3.png" data-thumb="img/cta3.png" alt="" /> 
             </div>
             <div id="htmlcaption" class="nivo-html-caption">
                 <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
@@ -156,7 +154,7 @@
 			<li><?=anchor('videos', 'Videos');?></li>
 			<li><?=anchor('booking', 'Booking');?></li>
 			<li><?=anchor('blog', 'Blog');?></li>
-			<li><a href="#">STUFF'S School Show</a></li>
+			<li><?=anchor('school', "STUFF's School Show");?></li>
 			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="img/f.png"></a></li>
 			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="img/t.png"></a></li>
 		</ul>

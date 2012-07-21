@@ -33,5 +33,6 @@
 				],
 			});
 		</script>
+	</div>
 </body>
 </html>

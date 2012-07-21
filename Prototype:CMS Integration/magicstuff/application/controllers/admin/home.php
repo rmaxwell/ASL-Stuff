@@ -12,8 +12,7 @@ class Home extends Controller {
 	function index()
 	{
 		$data['main_content'] = 'admin/login_form';
-		$data['title'] = 'STUFF the Magic Mascot | Login Content Management System';
-		$this->load->view('admin/includes/temp_min', $data);	
+		$this->load->view('admin/includes/template', $data);	
 	}
 	
 	function is_logged_in()

@@ -52,6 +52,11 @@ h2{
 
 h4{
 	text-align: right;
+	margin-bottom: 20px;
+}
+	
+input{
+	background-color: #EFEFEF;
 }
 
 /* END OF CSS RESET */
@@ -176,8 +181,10 @@ body {
 
 .wrapper {
 	clear: both;
-	width: auto;
-	margin: 25px 5px; 
+	width: 960px;
+	margin: -20px auto;
+	padding: 10px;
+	background-color: #FFF;
 }
 
 
@@ -193,6 +200,7 @@ fieldset {
 	margin-bottom: 2em;
 	display: block;
 	max-width: 960px;
+	border: 1px solid #0077C0;
 }
 
 
@@ -357,4 +365,21 @@ fieldset {
 
 h1 {
 	text-shadow: 0 1px 0 white;
+}
+
+#logo{
+	
+}
+.albumlist{
+	float:left;
+}
+.tooltip{
+	background-color: #FFFFDD;
+	background-color: white;
+	padding: 10px;
+	max-width: 350px;
+	float: right;
+	color: #0077C0;
+	border: 1px solid #0077C0;
+	font-size: 12px;
 }

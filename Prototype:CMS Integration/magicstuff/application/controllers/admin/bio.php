@@ -1,4 +1,7 @@
-<?php class Bio extends Controller {
+<?php
+
+class Bio extends Controller 
+{
 	function __construct()
 	{
 		parent::Controller();
@@ -27,7 +30,7 @@
 			
 			$this->bio_model->update($postdata);
 			
-			redirect('/bio', 'refresh');
+			redirect('admin/bio', 'refresh');
 	}
 	
 	function is_logged_in()

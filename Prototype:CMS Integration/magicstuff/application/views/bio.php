@@ -27,6 +27,11 @@
 </head>
 
 <body id="home"> 
+
+<h1><?php 
+//	echo $bio_info[0]{'bio_title'};
+	echo $bio_info[0]{'bio_text'};	
+?></h1>
 	<div id="wrapper">
 		<div id="main">
 		<div id="navwrap">
@@ -40,7 +45,7 @@
 				<li><?=anchor('videos', 'Videos');?></li>
 				<li><?=anchor('booking', 'Booking');?></li>
 				<li><?=anchor('blog', 'Blog');?></li>
-				<li><a href="#">STUFF'S School Show</a></li>
+				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
 				<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
 			</ul>
@@ -64,7 +69,7 @@
 			<li><?=anchor('videos', 'Videos');?></li>
 			<li><?=anchor('booking', 'Booking');?></li>
 			<li><?=anchor('blog', 'Blog');?></li>
-			<li><a href="#">STUFF'S School Show</a></li>
+			<li><?=anchor('school', "STUFF's School Show");?></li>
 			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>/img/f.png"></a></li>
 			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>/img/t.png"></a></li>
 		</ul>

@@ -2,7 +2,7 @@
 
 class Gallery extends Controller 
 {
-	function __construct()
+	public function __construct()
 	{
 		parent::Controller();
 		$this->is_logged_in();
@@ -11,14 +11,27 @@ class Gallery extends Controller
 		$this->load->helper('form');
 	}
 	
-	function index()
-	{	
-		$albums = $this->gallery_model->get_albums();
+	public function index()
+	{
+	/*	$albums = $this->gallery_model->get_albums();
 	
-		$data['main_content'] = 'admin/albums';
-		$data['title'] = 'Update Gallery';
+		$data['main_content'] = 'admin/gallery';
+		$data['heading'] = 'Update Gallery';
 		$data['album_title'] = $albums; 
+		$data['title'] = 'STUFF the Magic Mascot | Update Gallery | Content Management System';
 		$this->load->view('admin/includes/temp_full', $data);
+	*/
+	$albums = $this->gallery_model->get_albums();
+	//$data['main_content'] = 'admin/albums';
+	$data['title'] = 'Update Gallery';
+	$data['heading'] = 'Update Gallery';
+	$data['album_title'] = $albums;
+	
+	$this->load->view('admin/includes/header', $data);
+	$this->load->view('admin/includes/nav');
+	$this->load->view('admin/albums', $data);
+	$this->load->view('admin/includes/footer');
+	//$this->load->view('admin/includes/temp_full', $data);
 	}
 	
 	public function add()

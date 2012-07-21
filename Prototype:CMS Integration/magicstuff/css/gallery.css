@@ -124,6 +124,24 @@ body{
 	text-align:center;
 	color:#00021c;
 }
+
+h1{
+    font-size:50px;
+    margin:50px;
+    color:#333;
+}
+span.reference{
+    font-family:Arial;
+    position:fixed;
+    right:10px;
+    top:10px;
+    font-size:15px;
+}
+span.reference a{
+    color:#fff;
+    text-transform:uppercase;
+    text-decoration:none;
+}
 /*------ Adjustments -------*/
 #wrapper{
 	height:500px;
@@ -156,3 +174,10 @@ body{
 .pp_descr{
 	bottom:50px;
 }
+#void{
+	width: 300px;
+	margin:0 auto;
+	margin-top: 70px;
+}
+
+

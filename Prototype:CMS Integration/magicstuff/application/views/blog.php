@@ -31,7 +31,7 @@
 		<div id="main">
 		<div id="navwrap">
 		<div id="logowrap">
-		<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>img/logo.png"></a>
+			<a href="<?php echo base_url();?>"><img id="logo" src="<?php echo base_url();?>img/logo.png"></a>
 		</div>
 		<nav>
 			<ul>
@@ -40,7 +40,7 @@
 				<li><?=anchor('videos', 'Videos');?></li>
 				<li><?=anchor('booking', 'Booking');?></li>
 				<li><?=anchor('blog', 'Blog');?></li>
-				<li><a href="#">STUFF'S School Show</a></li>
+				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
 				<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>			
 			</ul>
@@ -151,7 +151,7 @@
 			<li><?=anchor('videos', 'Videos');?></li>
 			<li><?=anchor('booking', 'Booking');?></li>
 			<li><?=anchor('blog', 'Blog');?></li>
-			<li><a href="#">STUFF'S School Show</a></li>
+			<li><?=anchor('school', "STUFF's School Show");?></li>
 			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
 			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>
 		</ul>

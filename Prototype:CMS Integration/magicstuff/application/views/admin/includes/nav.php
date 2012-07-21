@@ -10,6 +10,7 @@
 			<li><?=anchor('admin/booking', 'Booking');?></li>
 		</ul>
 	</nav>
-	<h4><?php echo anchor('admin/login/logout', 'Logout'); ?></h4>
-	<h4><?php echo anchor('admin/signup/newuser', 'Create Account'); ?></h4>
 </div>
+<div class="wrapper">
+<h4><?php echo anchor('admin/login/logout', 'Logout'); ?></h4>
+<h4><?php echo anchor('admin/login/signup', 'Create Account'); ?></h4>
