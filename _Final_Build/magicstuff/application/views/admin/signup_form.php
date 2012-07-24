@@ -31,7 +31,7 @@
                                 'placeholder' => 'Enter Confirm Password');
 
 
-            echo form_open('admin/login/create_member');
+            echo form_open('admin/signup/create_member');
 			echo form_error('first_name');
             echo form_input($singup_fname);
 			echo form_error('last_name');
@@ -50,7 +50,7 @@
             echo form_password($singup_password);
             echo form_password($singup_password2);
             
-            echo form_submit('admin/signup/create_member', 'Create Acccount');
+            echo form_submit('submit', 'Create Acccount');
             echo anchor('/admin/site', 'Cancel', 'class=cancellink');
         ?>
     </fieldset>

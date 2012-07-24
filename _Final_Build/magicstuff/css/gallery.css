@@ -8,6 +8,7 @@ body{
 	font-size: 100%;
 	color: #fff;
 	overflow:hidden;
+	background-image: url(../img/background/t4.png);
 }
 .pp_loading{
 	display:none;

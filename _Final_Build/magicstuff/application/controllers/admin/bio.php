@@ -24,8 +24,9 @@ class Bio extends Controller
 			$this->load->helper('url');
 			$postdata = array(
 				'bio_title'	=> $this->input->post('bio_title'),
-				'bio_text' => $this->input->post('bio_text'),
-				'bio_button' => $this->input->post('bio_button'),
+				'bio_text1' => $this->input->post('bio_text1'),
+				'bio_text2' => $this->input->post('bio_text2'),
+				'bio_flavor' => $this->input->post('bio_flavor'),
 			);
 			
 			$this->bio_model->update($postdata);

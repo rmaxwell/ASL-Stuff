@@ -16,15 +16,33 @@
 	echo form_input($bio_title);
 	echo '</fieldset>';
 	
-	$bio_text = array(
-		'name'	=> 'bio_text',
-		'id'	=> 'bio_text',
-		'value' => $bio_info[0]{'bio_text'},
+	$bio_text1 = array(
+		'name'	=> 'bio_text1',
+		'id'	=> 'bio_text1',
+		'value' => $bio_info[0]{'bio_text1'},
 	);
+	
+	$bio_text2 = array(
+		'name'	=> 'bio_text2',
+		'id'	=> 'bio_text2',
+		'value' => $bio_info[0]{'bio_text2'},
+	);
+	
+	$bio_flavor = array(
+		'name'	=> 'bio_flavor',
+		'id'	=> 'bio_flavor',
+		'value' => $bio_info[0]{'bio_flavor'},
+	);
+	
 
 	echo '<fieldset>';
 	echo '<legend>'.form_label("Stuff's Bio", 'bio_text').'</legend>'.'<br>';
-	echo form_textarea($bio_text);
+	echo '<h2>Text Block 1</h2>';
+	echo form_textarea($bio_text1).'<br>';
+	echo '<h2>Text Block 2</h2>';
+	echo form_textarea($bio_text2).'<br>';
+	echo '<h2>Flavor Text</h2>';
+	echo form_textarea($bio_flavor).'<br>';
 	echo '</fieldset>';
 	
 	$bio_button = array(
@@ -32,11 +50,6 @@
 		'id'	=> 'bio_button',
 		'value' => $bio_info[0]{'bio_button'},
 	);
-
-	echo '<fieldset>';
-	echo '<legend>'.form_label("Stuff's bio page button text", 'bio_button').'</legend>'.'<br>';
-	echo form_input($bio_button);
-	echo '</fieldset>';
 	
 	echo form_submit('submit', 'Save Changes');
 	

@@ -21,17 +21,17 @@
 	</div>
 	<nav>
 	    <ul>
-	    	<li><?=anchor('bio', 'Bio');?></li>
+	    	<li><?=anchor('bio', "STUFF's Bio");?></li>
 	    	<li><?=anchor('gallery', 'Photos');?></li>
 	    	<li><?=anchor('videos', 'Videos');?></li>
 	    	<li><?=anchor('booking', 'Booking');?></li>
 	    	<li><?=anchor('blog', 'Blog');?></li>
 	    	<li><?=anchor('school', "STUFF's School Show");?></li>
-	    	<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
-	    	<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>			
+	    	<li class="social">
+				<img src="<?php echo base_url();?>img/poweredby2.png" alt=""></br>
+			</li>
 	    </ul>
 	</nav>
-	<span class="reference">Image Gallery</span>
 	</div>
 	<div id="wrapper">
 		<div id="void">

@@ -18,14 +18,15 @@
 						</div>
 							<nav>
 								<ul>
-									<li><?=anchor('bio', 'Bio');?></li>
+									<li><?=anchor('bio', "STUFF's Bio");?></li>
 									<li><?=anchor('gallery', 'Photos');?></li>
 									<li><?=anchor('videos', 'Videos');?></li>
 									<li><?=anchor('booking', 'Booking');?></li>
 									<li><?=anchor('blog', 'Blog');?></li>
 									<li><?=anchor('school', "STUFF's School Show");?></li>
-									<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
-									<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>
+									<li class="social">
+										<img src="<?php echo base_url();?>img/poweredby2.png" alt=""></br>
+									</li>
 								</ul>
 							</nav>
 						</div><! End Nav Wrap >
@@ -33,7 +34,7 @@
 			<ul class="roundabout-holder">
 			   <? //echo $i["video_embed"];
 			   	for ($i=0; $i<count($videos); $i++){ ?>
-					<li class="roundabout-moveable-item"><iframe src="<?php echo $videos[$i]['video_embed'] ?>" width="420" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<li class="roundabout-moveable-item"><?php echo $videos[$i]['video_embed'] ?>
 					</li>
 				<? } ?> 
 			</ul>
@@ -47,7 +48,7 @@
 	</div><! End Wrapper ->
 	<div id="footwrap">
 		<ul>
-			<li id="footerlogo"><img src="<?php echo base_url();?>img/logo.png"></li>
+			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo.png"></li>
 			<li><?=anchor('bio', 'Bio');?></li>
 			<li><?=anchor('gallery', 'Photos');?></li>
 			<li><?=anchor('videos', 'Videos');?></li>
@@ -57,6 +58,7 @@
 			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="<?php echo base_url();?>img/f.png"></a></li>
 			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="<?php echo base_url();?>img/t.png"></a></li>
 		</ul>
+		<div id="clearfix"></div>
 	</div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script src="<?php echo base_url();?>js/jquery.roundabout.js"></script>
