@@ -2,7 +2,7 @@
 
 	class Blog extends Controller 
 	{
-
+	
 		function __construct()
 		{
 			parent::Controller();
@@ -19,7 +19,16 @@
 			$this->load->view('admin/blog/blog', $data);
 			
 			$this->load->view('admin/includes/footer');
-
+/*
+		// Kevin's Shit
+			$this->load->model('admin/blog_model');
+			$data['blogs'] = $this->blog_model->getBlogs();
+			
+			$data['main_content'] = 'admin/blog/blog';
+			$data['title'] = 'STUFF the Magic Mascot | Update Blog Info | Content Management System';
+		
+			$this->load->view('admin/includes/temp_full', $data);
+*/
 		}
 		
 		function addBlog()
@@ -33,8 +42,8 @@
 		function editBlog()
 		{
 			$this->load->model('admin/blog_model');
-			
 			$blog_id = $this->uri->segment(4);
+			
 			$post_id = $this->uri->segment(5);
 						
 			$data['posts'] = $this->blog_model->getPosts($blog_id);
@@ -78,8 +87,8 @@
 						}
 					}
 										
-					$newID = $this->blog_model->addPost($newPost);
-					$this->blog_model->upload($newID);
+					$this->blog_model->upload();
+					$this->blog_model->addPost($newPost);
 					
 					redirect('admin/blog/editBlog/'.$blog_id);
 				}else{
@@ -87,9 +96,6 @@
 				}
 					
 			}elseif($post_id == 'updatePost'){
-				
-				$bid = $this->uri->segment(4);
-				$pid = $this->uri->segment(6);
 				
 				$title = $_POST['event_title'];
 				$path = base_url().'images/blog/posts/resize/'.date('Ymd').$_FILES["userfile"]["name"];
@@ -104,26 +110,22 @@
 
 				if($_FILES['userfile']['name'] != ''){
 					$updatePost['post_photo_path'] = $path;
-					$this->blog_model->upload($pid);
+					
+					$this->blog_model->upload();
 				}
-
+				
+				$bid = $this->uri->segment(4);
+				$pid = $this->uri->segment(6);
+				
 				$this->blog_model->updatePost($updatePost, $pid);
-				$this->blog_model->upload($pid);
 				redirect('admin/blog/editblog/'.$bid.'/'.$pid);
 				
 			}elseif($post_id == 'deletePost'){
 				$delete_id = $this->uri->segment(6);
 				$this->blog_model->deletePost($delete_id);
 				redirect('admin/blog/editBlog/'.$blog_id);
-			}elseif($post_id == 'deleteThumb'){
-				$delete_id = $this->uri->segment(6);
-				$pid = $this->uri->segment(7);
-				$this->blog_model->deleteThumb($delete_id);				
-							
-				redirect('admin/blog/editBlog/'.$blog_id.'/'.$pid);
 			}else{
 				$data['postData'] = $this->blog_model->getPost($post_id);
-				$data['thumbnails'] = $this->blog_model->getThumbs($post_id);
 				$this->load->view('admin/blog/post_form', $data);
 			}
 			
@@ -145,18 +147,6 @@
 			$this->blog_model->showBlog($blog_id);
 		}
 		
-		function title()
-		{
-			$blog_id = $this->uri->segment(3);
-			
-			$this->load->view('admin/includes/header');
-
-			$this->load->view('admin/includes/nav');
-			$this->load->view('admin/blog/blog', $data);
-			
-			$this->load->view('admin/includes/footer');
-		}
-		
 		function back(){
 			redirect('admin/blog');
 		}
@@ -169,8 +159,6 @@
 				redirect('admin');
 			}		
 		}
-		
-		
 	}
 
 ?>
