@@ -582,6 +582,7 @@ tr{
 	width: 600px;
 	margin: 20px;
 	float: left;
+<<<<<<< HEAD
 	line-height:1.5em;
 	padding: 5px;
 	background-color: rgba(0,0,0,0.01);
@@ -590,6 +591,9 @@ tr{
 
 #schoolpic1{
 	margin-top: 30px;
+=======
+	line-height: 20px;
+>>>>>>> FUCKING SYNC COMMIT DO SOMETHING
 }
 
 #threee{
@@ -612,6 +616,11 @@ tr{
 img.headerImg{
 	border-bottom: 3px solid #014797;
 	box-shadow: 0px 1px 2px black;	
+}
+
+#schoolpic1{
+	margin-top: 30px;
+	
 }
 
 
