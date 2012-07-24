@@ -1,0 +1,385 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #0077C0;
+}
+
+h2{
+	padding-top: 5px;
+}
+
+h4{
+	text-align: right;
+	margin-bottom: 20px;
+}
+	
+input{
+	background-color: #EFEFEF;
+}
+
+/* END OF CSS RESET */
+
+body {
+	background: #b6b6b6;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+#login_form {
+	width: 300px;
+	background: #f0f0f0 url(../../img/admin/login_bg.jpg) repeat-x 0 0;
+	border: 1px solid white;
+	margin: 250px auto 0;
+	padding: 1em;
+	-moz-border-radius: 3px;
+}
+h1,h2,h3,h4,h5 {
+	margin: 10px;
+	clear: both;
+	margin-top: 0;
+	font-family: arial black, arial;
+}
+
+input[type=text], input[type=password] {
+	display: block;
+	margin: 0 0 1em 0;
+	width: 280px;
+	border: 5px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	padding: 1em;
+}
+
+input[type=submit], form a {
+	border: none;
+	margin-right: 1em;
+	padding: 6px;
+	text-decoration: none;
+	font-size: 12px;
+	-moz-border-radius: 4px;
+	background: #0077C0;
+	color: white;
+	box-shadow: 0 1px 0 white;
+	-moz-box-shadow: 0 1px 0 white;
+	-webkit-box-shadow: 0 1px 0 white;
+
+}
+
+.remove_booking[type=submit] {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+input[type=submit]:hover, form a:hover {
+	background: #074b9c;
+	cursor: pointer;
+}
+
+.remove_booking[type=submit]:hover {
+	text-decoration: underline;
+	background: none;
+}
+
+
+#navwrap{
+	width: 100%;
+	background-image: url(../../img/admin/header_bg.jpg);
+	height: 40px;
+}
+
+nav{
+	width: 960px;
+	margin: 0 auto;
+}
+
+nav img{
+	float: left;
+}
+
+nav ul{
+	float: left;
+	height: 40px;
+	margin-left: 20px;
+}
+
+nav ul li{
+	float: left;
+	padding: 10px 30px;
+	width: auto;
+	letter-spacing: -1px;
+	border-left: 1px solid rgba(152,148,148,0.5);
+}
+
+nav ul li:nth-last-child(1){
+	border-right: 1px solid rgba(152,148,148,0.5);
+}
+
+nav ul li a{
+	color: white;
+	margin: auto;
+}
+
+nav ul li a:hover{
+	color: #62BD19;
+}
+
+#logo{
+	float: left;
+	z-index: 2;
+	margin-left: 60px;
+}
+
+body {
+	background-image: url("../../img/admin/t2.png");
+	font-family:Arial,serif;
+}
+
+.wrapper {
+	clear: both;
+	width: 960px;
+	margin: -20px auto;
+	padding: 10px;
+	background-color: #FFF;
+}
+
+
+/* Validation error messages */
+
+.error {
+	color: #393939;
+	font-size: 15px;
+}
+
+fieldset {
+	margin: auto;
+	margin-bottom: 2em;
+	display: block;
+	max-width: 960px;
+	border: 1px solid #0077C0;
+}
+
+
+/* =================================================================================================================================================== */
+
+.gallery_album {
+	text-align: left;
+	font-size: 24px;
+	padding: 3px 0;
+	text-decoration: underline;
+	margin: 0 0 5px;
+	float: left;
+}
+
+.gallery_album a {
+	color: #074b9c;
+}
+
+.gallery_album a:hover {
+	color: #62BD19;
+}
+
+.album_heading {
+	font-size: 26px;
+}
+
+.delete_album {
+	float: left;
+	color: black;
+	padding: 10px;
+}
+
+.delete_album:hover {
+	text-decoration: underline;
+}
+
+.images {
+	text-align: center;
+}	
+	
+.edit_img {
+	margin: 10px auto;
+	width: 550px;
+	height: 550px;
+	text-align: center;
+	position: relative;
+}
+
+input[name='image_title'] {
+	width: 530px;
+	margin: 10px 0;
+}
+
+.delete_image {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	margin: 15px;
+}
+
+.delete_image:hover {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	text-decoration: underline;
+}
+
+.active {
+	opacity: 0.3;
+}
+
+.gallery_info {
+	text-align: right;	
+}
+
+.gallery_info input[type=submit] {
+	margin: 10px 0;
+}
+
+.next, .prev {
+	display: block;
+	border-style:solid;
+	border-width:40px;
+	width:0;
+	height:0;
+	position: absolute;
+	cursor: pointer;
+	top: 100px;
+}
+
+.next:hover {
+	border-color:  transparent transparent  transparent #B8B8B8;
+}
+
+.prev:hover {
+	border-color:  transparent #B8B8B8 transparent  transparent;
+}
+
+.next {
+	border-color:  transparent transparent  transparent #404040;
+	right: -100px;
+}
+
+.prev {
+	border-color:  transparent #404040 transparent  transparent;     
+	left: -100px;
+}
+
+.con {
+	position: absolute;
+	padding: 50px 0 0;
+	left: 220px;
+	top: 220px;
+	bottom: 220px;
+	right: 220px;
+	background-color: rgba(0,0,0,1);
+	border-radius: 25px;
+	overflow: auto;
+	min-height: 650px;
+}
+
+/* Validation error messages */
+.error {
+	color: #AF0000;
+	font-size: 15px;
+	padding:2px 0;
+}
+
+.cancellink{
+	color: #AF0000;
+	margin-left: 50px;
+}
+
+fieldset {
+	margin: auto;
+	margin-bottom: 2em;
+	display: block;
+	max-width: 960px;
+}
+
+/*signup_successful.php*/
+#signup_successful {
+	margin: 40px auto;
+	width: 400px;
+}
+#signup_successful p{
+	margin: 10px;
+}
+
+/*signup_form.php*/
+#signup_form h1{
+	text-align:center;
+	margin: 40px auto;
+	width: 400px;
+}
+
+/* FOR FUN */
+
+h1 {
+	text-shadow: 0 1px 0 white;
+}
+
+#logo{
+	
+}
+.albumlist{
+	float:left;
+}
+.tooltip{
+	background-color: #FFFFDD;
+	background-color: white;
+	padding: 10px;
+	max-width: 350px;
+	float: right;
+	color: #0077C0;
+	border: 1px solid #0077C0;
+	font-size: 12px;
+}
