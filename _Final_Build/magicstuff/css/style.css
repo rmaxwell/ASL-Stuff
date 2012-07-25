@@ -97,16 +97,26 @@ body {
          url('../font/designer-notes-webfont.svg#DesignerNotesRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'TradeGothic-BoldOblique';
     src: url('../font/gothic.eot') format('eot');
-    src: url('../font/gothic.eot?#iefix') format('embedded-opentype')
+    src: url('../font/gothic.eot?#iefix') format('embedded-opentype'),
          url('../font/gothic.woff') format('woff'),
          url('../font/gothic.ttf') format('truetype'),
          url('../font/gothic.svg#gothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothic2';
+    src: url('../font/tradegothicltboldcondensedno.20oblique.eot');
+    src: url('../font/tradegothicltboldcondensedno.20oblique.eot?#iefix') format('embedded-opentype'),
+         url('../font/tradegothicltboldcondensedno.20oblique.woff') format('woff'),
+         url('../font/tradegothicltboldcondensedno.20oblique.ttf') format('truetype'),
+         url('../font/tradegothicltboldcondensedno.20oblique.svg#tradegothicltboldcondensedno.20oblique') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -119,9 +129,8 @@ body {
 
 #navwrap{
 	width: 100%;
-	background-image: url("../img/header_bg.jpg");
+	background-image: url("../img/static/header_bg.jpg");
 	height: 55px;
-	border-bottom: 2px solid black;
 }
 
 #logowrap{
@@ -132,7 +141,7 @@ body {
 nav{
 	width: 960px;
 	margin: 0 auto;
-	font: 18px 'TradeGothic-BoldOblique', sans-serif;
+	font: 20px TradeGothic2, sans-serif;
 }
 
 nav img{
@@ -143,12 +152,13 @@ nav img{
 nav ul{
 	float: left;
 	margin-left: 210px;
+	height: 55px;
 }
 
 nav ul li{
 	float: left;
 	padding: 10px;
-	padding-top: 20px;
+	padding-top: 16px;
 	padding-bottom: 17px;
 	letter-spacing: -1px;
 	border-right: 1px solid rgba(152,148,148,0.5);
@@ -215,7 +225,7 @@ nav ul li a:hover{
 	background: -webkit-gradient(linear, left top, left bottom, from(#0077C0), to(black));
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family:'TradeGothic-BoldOblique', sans-serif;
+    font-family:TradeGothic2, sans-serif;
 }
 
 /* Columns */
@@ -227,13 +237,13 @@ nav ul li a:hover{
 #homecontent h2 {
 	float: left;
 	margin-top: -10px;
-	padding-top: 20px;
+	padding-top: 15px;
 	padding-bottom: 10px;
-	padding-left: 55px;
-	font: 24px TradeGothic-BoldOblique, sans-serif;
+	padding-left: 50px;
+	font: 28px TradeGothic2, sans-serif;
 	letter-spacing: -2px;
 	color: #014797;
-	background: url("../img/module_header4.png") no-repeat;
+	background: url("../img/modules/module_header4.png") no-repeat;
 	width: 300px;
 }
 
@@ -262,7 +272,7 @@ nav ul li a:hover{
 	margin-top: -89px;
 	clear: both;
 	background-color: #014797;
-	font: 18px TradeGothic-BoldOblique, sans-serif;
+	font: 18px TradeGothic2, sans-serif;
 }
 
 #footwrap a{
@@ -328,7 +338,7 @@ nav ul li a:hover{
 
 #col1 h3{
 	margin-top: 10px;
-	margin-left: 45px;
+	margin-left: 65px;
 }
 
 #col1 h3:hover{
@@ -362,7 +372,7 @@ nav ul li a:hover{
 }
 
 #followstuff{
-	font: 18px TradeGothic-BoldOblique, sans-serif;
+	font: 18px TradeGothic2, sans-serif;
 	color: #0077C0;
 	
 }
@@ -419,9 +429,8 @@ tr{
 }
 
 #small13 p {
-	font-size:15px;
-	line-height:1.3em;
-	font:TradeGothic-BoldOblique, sans-serif;
+	font-size:16px;
+	line-height:1.5em;
 }
 #small13 span {
 	font-size:20px;
@@ -441,7 +450,7 @@ tr{
     display:block;
     width:88px;
     height:40px;
-    background-image:url(../img/13arrow.png);
+    background-image:url(../img/sprites/13arrow.png);
     background-repeat:no-repeat;
     font-size:30px;
     text-align:center;
@@ -511,20 +520,13 @@ tr{
 	margin-top: 15px;
 }
 
-/*
-.big{
-	font-size: 25px;
-	font-weight: bolder;
-}
-*/
-
 #stuffspan{
 	color: #0077C0;
 	font-weight: bolder;
 }
 
 #stuffbio p{
-	line-height: 35px;
+	line-height: 2em;
 	font-size: 16px;
 	font-family: Arial;
 	text-indent: 7px;
@@ -580,16 +582,33 @@ tr{
 	width: 600px;
 	margin: 20px;
 	float: left;
+<<<<<<< HEAD
+	line-height:1.5em;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.01);
+}
+
+
+#schoolpic1{
+	margin-top: 30px;
+=======
+	line-height: 20px;
+>>>>>>> FUCKING SYNC COMMIT DO SOMETHING
 }
 
 #threee{
-	font-size: 38px;
+	background-color: rgba(0,0,0,0.1);
+	font-size: 2em;
 	color: #014797;
+	padding: 5px;
+	font-family: TradeGothic2;
+	margin-left: 80px;
 	
 }
 
 .threee{
 	color: #014797;
+	font-weight:bold;
 }
 
 
@@ -597,6 +616,11 @@ tr{
 img.headerImg{
 	border-bottom: 3px solid #014797;
 	box-shadow: 0px 1px 2px black;	
+}
+
+#schoolpic1{
+	margin-top: 30px;
+	
 }
 
 

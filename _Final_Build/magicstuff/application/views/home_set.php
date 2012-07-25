@@ -30,18 +30,18 @@
 		<div id="main">
 		<div id="navwrap">
 		<div id="logowrap">
-			<img id="logo" src="<?php echo base_url();?>img/logo.png">
+			<img id="logo" src="<?php echo base_url();?>img/logo/logo.png">
 		</div>
 		<nav>
 			<ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
+				<li><?=anchor('booking', 'Book STUFF!');?></li>
+				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>
-				<li><?=anchor('booking', 'Booking');?></li>
-				<li><?=anchor('blog', 'Blog');?></li>
-				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li class="social">
-					<img src="img/poweredby2.png" alt=""></br>
+					<a href="http://www.fullsail.edu" target="_blank"><img src="<?php echo base_url();?>img/poweredby2.png" alt=""></br></a>
 				</li>
 			</ul>
 		</nav>
@@ -49,12 +49,8 @@
 		<div class="contentwrapper">
 		 <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-	            <img src="img/CTA/cta1.jpg" data-thumb="img/CTA/cta1.jpg" alt="" />
-	            <a href="bio.html"><img src="img/CTA/cta2.jpg" data-thumb="img/CTA/cta2.jpg" alt="" /></a>
-	            <a href="bookStuff.html"><img src="img/CTA/cta3.png" data-thumb="img/CTA/cta3.png" alt="" /></a>
-	            <a href="schoolshow.html"><img src="img/CTA/cta4.jpg" data-thumb="img/CTA/cta4.jpg" alt="" /></a>
-	            <a href="http://www.facebook.com/pages/Stuff-the-Orlando-Magic-Dragon/196501417034259"><img src="img/CTA/cta5.png" data-thumb="img/CTA/cta5.png" alt="" /></a>    
-	            <a href="13by13.html"><img src="img/CTA/cta6.jpg" data-thumb="img/CTA/cta6.jpg" alt="" /></a>  
+            	<?php foreach($slider_images as $si){
+	            echo html_entity_decode($si['path']); } ?> 
             </div>
             <div id="htmlcaption" class="nivo-html-caption">
                 <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
@@ -152,15 +148,15 @@
 	</div><!-- End Wrapper -->
 	<div id="footwrap">
 		<ul>
-			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo.png"></li>
-			<li><?=anchor('bio', 'Bio');?></li>
+			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo/logo.png"></li>
+			<li><?=anchor('bio', "STUFF's Bio");?></li>
+			<li><?=anchor('booking', 'Book STUFF!');?></li>
+			<li><?=anchor('blog', '13 Before 13');?></li>
+			<li><?=anchor('school', "STUFF's School Show");?></li>
 			<li><?=anchor('gallery', 'Photos');?></li>
 			<li><?=anchor('videos', 'Videos');?></li>
-			<li><?=anchor('booking', 'Booking');?></li>
-			<li><?=anchor('blog', 'Blog');?></li>
-			<li><?=anchor('school', "STUFF's School Show");?></li>
-			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon"><img class="social" src="img/f.png"></a></li>
-			<li class="social"><a href="https://twitter.com/STUFF_Mascot"><img class="social" src="img/t.png"></a></li>
+			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon" target="_blank"><img class="footsocial" src="<?php echo base_url();?>img/sprites/f.png"></a></li>
+			<li class="social"><a href="https://twitter.com/STUFF_Mascot" target="_blank"><img class="footsocial" src="<?php echo base_url();?>img/sprites/t.png"></a></li>
 		</ul>
 		<div id="clearfix"></div>
 	</div>
