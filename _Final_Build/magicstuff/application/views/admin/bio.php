@@ -12,7 +12,9 @@
 	);
 	
 	echo '<fieldset>';
-	echo '<legend>'.form_label('Title', 'bio_title').'</legend>'.'<br>';
+	echo '<legend>'.form_label('Title', 'bio_title').'</legend><br>';
+	echo '<div class="tooltip">
+				<p>This allows the user to change the title in the Navigation Bar</p></div>';
 	echo form_input($bio_title);
 	echo '</fieldset>';
 	
@@ -34,14 +36,31 @@
 		'value' => $bio_info[0]{'bio_flavor'},
 	);
 	
-
+	
 	echo '<fieldset>';
+	echo '<div class="tooltip">
+			<h3>We highly recommend not changing the content on this page. The design will likely break.<h3>
+			</div>';
 	echo '<legend>'.form_label("Stuff's Bio", 'bio_text').'</legend>'.'<br>';
-	echo '<h2>Text Block 1</h2>';
+	echo '<h2>Text Block 1</h2>
+				<div class="tooltip">
+				<p>This will load next to the <span>First</span> picture.</p>
+				<p>This box will accept Approx <span>700 characters</span>.</p>
+				</div>';
 	echo form_textarea($bio_text1).'<br>';
-	echo '<h2>Text Block 2</h2>';
+	
+	echo '<h2>Text Block 2</h2>
+				<div class="tooltip">
+				<p>This will load next to the <span>Second</span> picture</p>
+				<p>This box will accept Approx <span>700 characters</span>.</p>
+				</div>';
 	echo form_textarea($bio_text2).'<br>';
-	echo '<h2>Flavor Text</h2>';
+	
+	echo '<h2>Flavor Text</h2>
+				<div class="tooltip">
+				<p>This will appear in the <span>gray box</span> on the page</p>
+				<p>Accepts approximately <span>100</span> characters</p>
+				</div>';
 	echo form_textarea($bio_flavor).'<br>';
 	echo '</fieldset>';
 	

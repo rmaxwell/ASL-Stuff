@@ -24,12 +24,20 @@
 			
 			echo form_open('admin/booking/save');
 			echo '<fieldset>';
+			echo '<div class="tooltip">
+            			<p>This will update the <span>phone number</span> on the Booking Page.</p></div>';
             echo '<legend>Phone:</legend>'.form_input($booking_phone);
             echo '</fieldset>';
+            
             echo '<fieldset>';
+            echo '<div class="tooltip">
+            			<p>This will update the <span>email address</span> on the Booking Page.</p></div>';
             echo '<legend>Email:</legend>'.form_input($booking_email);
             echo '</fieldset>';
+            
 			echo '<fieldset>';
+			echo '<div class="tooltip">
+            			<p>This page will support a <span>character count</span> of approxametly <span>850</span>.</p></div>';
 			echo '<legend>Booking Info:</legend>'.form_textarea($booking_textarea);
 			echo '</fieldset>';
 			echo form_submit('submit', 'Save Changes');
