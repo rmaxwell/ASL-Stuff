@@ -69,7 +69,7 @@ body {
 }
 #login_form{
 	position:absolute; top:0; bottom:0; left:0; right:0;
-	margin:auto; height:11em; width:300px;
+	margin:auto; height:190px; width:300px;/*TODO: change height boase on error*/
 	background: #f0f0f0 url(../../img/admin/login_bg.jpg) repeat-x 0 0;
 	border: 1px solid white;
 	padding: 1em;
@@ -185,6 +185,8 @@ body {
 	margin: -20px auto;
 	padding: 10px;
 	background-color: #FFF;
+	width: auto;
+	margin: 25px 5px; 
 }
 
 
@@ -224,12 +226,12 @@ fieldset {
 }
 
 .album_heading {
-	font-size: 26px;
+	font-size: 40px;
 }
 
 .delete_album {
 	float: left;
-	color: black;
+	color: AF0000;
 	padding: 10px;
 }
 
@@ -256,7 +258,7 @@ input[name='image_title'] {
 
 .delete_image {
 	background: none;
-	color: #000000;
+	color: #AF0000;
 	border: none;
 	outline: none;
 	box-shadow: none;
@@ -265,7 +267,7 @@ input[name='image_title'] {
 
 .delete_image:hover {
 	background: none;
-	color: #000000;
+	color: #AF0000;
 	border: none;
 	outline: none;
 	box-shadow: none;
@@ -275,6 +277,12 @@ input[name='image_title'] {
 .active {
 	opacity: 0.3;
 }
+
+/*Space uploaad botton from upload form*/
+#userfile{
+	margin-right: 30px;
+}
+
 
 .gallery_info {
 	text-align: right;	
