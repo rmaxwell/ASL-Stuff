@@ -37,7 +37,7 @@
 		</nav>
 		</div><!-- End Nav Wrap -->
 	<div class="contentwrapper">
-	<img class="headerImg" src="<?php echo base_url();?>img/header/stuff_school.jpg">
+	<img class="headerImg" src="<?php echo base_url();?>img/header/stuffSchoolShowHeader.jpg">
 	<div id="schoolShow">
 		<div id="schoolShowContent">
 			<?php echo $school_info[0]{'school_textarea'};?>

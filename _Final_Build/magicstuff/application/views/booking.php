@@ -18,10 +18,17 @@
 
 <body id="home">
 <div id="wrapper">
+<?php 
+	/*for($i=0; $i<count($blog_info); $i++){
+	    if($blog_info[$i]{"blog_visible"}==1){
+	    	echo $blog_info[$i]{"blog_title"};
+	    }
+	};*/
+?>
   <div id="main">
     <div id="navwrap">
       <div id="logowrap">
-      	<a href=<?php echo base_url();?>><img id="logo" src="<?php echo base_url();?>img/logo.png"></a> 
+      	<a href=<?php echo base_url();?>><img id="logo" src="<?php echo base_url();?>img/logo/logo.png"></a> 
       </div>
       <nav>
         <ul>
@@ -38,7 +45,7 @@
       </nav>
     </div>
     <! End Nav Wrap >
-    <div class="contentwrapper"> <img src="<?php echo base_url();?>img/header/bookmeHeaderImg.png" title="Book Stuff Today!" />
+    <div class="contentwrapper"> <img src="<?php echo base_url();?>img/header/bookMeHeader.jpg" title="Book Stuff Today!" />
       <div id="bookingContent">
         <div id="bookStuffTxt">
      	   <?php echo $book_data[0]{"booking_textarea"}; ?>
@@ -63,7 +70,7 @@
 <! End Wrapper ->
 <div id="footwrap">
 		<ul>
-			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo.png"></li>
+			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo/logo.png"></li>
 			<li><?=anchor('bio', "STUFF's Bio");?></li>
 			<li><?=anchor('booking', 'Book STUFF!');?></li>
 			<li><?=anchor('blog', '13 Before 13');?></li>

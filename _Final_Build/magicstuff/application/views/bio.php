@@ -38,7 +38,7 @@
 		</nav>
 		</div><! End Nav Wrap >
 		<div class="contentwrapper">
-		 <img src="<?php echo base_url();?>img/bio/bioHeader.png">
+		 <img src="<?php echo base_url();?>img/header/bioHeader.jpg">
 	<div id="stuffbio">
 		<p id="bio1">
 			<? echo $bio_info[0]{'bio_text1'};?>

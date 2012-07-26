@@ -433,7 +433,7 @@ tr{
 	line-height:1.5em;
 }
 #small13 span {
-	font-size:20px;
+	font-size:18px;
 	font-weight:bold;
 	color:#0077c0;	
 }
@@ -443,9 +443,10 @@ tr{
 	margin-left:-2px;
 }
 .arrow {
-    float:left;
+	float:left;
     margin:0 -15px 10px 0;
 }
+
 .arrow a {
     display:block;
     width:88px;
@@ -456,6 +457,25 @@ tr{
     text-align:center;
     padding-top:8px;
 }
+
+.arrowDeactive{
+	float:left;
+    margin:0 -15px 10px 0;
+}
+
+.arrowDeactive a{
+	display:block;
+    width:88px;
+    height:40px;
+    background-image:url(../img/sprites/13arrow.png);
+    background-position:0px -48px;
+    background-repeat:no-repeat;
+    font-size:30px;
+    text-align:center;
+    padding-top:8px;
+
+}
+
 .arrow a:hover {
     background-position:0px -48px;
     margin-top:-2px;
@@ -465,7 +485,7 @@ tr{
     margin-top:75px;
 }
 .blogModule {
-    width:960px;
+    width:940px;
     height:320px;
     background-color:#c4ced4;
     margin-bottom:30px;
@@ -489,7 +509,7 @@ tr{
     margin-bottom:10px;
 }
 .blogContent {
-    width:440px;
+    width:415px;
     float:left;
     font-size:15px;
     line-height:1.2em;

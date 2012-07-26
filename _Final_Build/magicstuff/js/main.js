@@ -1,10 +1,21 @@
 // JavaScript Document
+// Stuff webiste main JS
+//Author: Chris Allison
 
 $(document).ready(function(){
 	
 	//initially hides all images and only shows first image when page loads
 	$('#stuffBigImg').children().hide();
 	$('#img1').show();
+	
+	//scroll effect - 13by13 page
+	$('.arrow a').click(function(){
+		var div = $(this).html();
+		$.scrollTo('.'+div, 1000);
+		
+		return false;	
+	})
+
 
 })
 

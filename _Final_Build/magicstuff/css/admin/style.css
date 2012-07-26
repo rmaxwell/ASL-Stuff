@@ -203,6 +203,9 @@ fieldset {
 	border: 1px solid #0077C0;
 }
 
+fieldset img{
+	padding-top: 15px;
+}
 
 /* =================================================================================================================================================== */
 
@@ -361,18 +364,71 @@ fieldset {
 	width: 400px;
 }
 
-/* FOR FUN */
+/* ========================================================================================= */
+
+.slider_dd {	
+	float: left;
+	margin-top: 4px;
+}
+
+.slider_link {
+	display: none;	
+	float: left;
+}
+
+.slider {
+	width: 630px;
+	float: left;
+	height: 70px;
+	margin-bottom: 12px;
+}
+
+.slider_options {
+	font-size: 18px;
+	height: 25px;
+	width: 150px;
+	margin: 0 10px 0 12px;
+}
+
+.remove_slider {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	margin: 0;
+}
+
+.remove_slider:hover {
+	background: none;
+	color: #000000;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	text-decoration: underline;
+}
+
+.url_input {
+	display: none;
+}
+
+.url_space {
+	float: right;
+	width: 410px;
+}
+
+
+
+/* Tommy Test */
 
 h1 {
 	text-shadow: 0 1px 0 white;
 }
 
-#logo{
-	
-}
 .albumlist{
 	float:left;
 }
+
 .tooltip{
 	background-color: #FFFFDD;
 	background-color: white;
@@ -382,4 +438,12 @@ h1 {
 	color: #0077C0;
 	border: 1px solid #0077C0;
 	font-size: 12px;
+}
+
+.tooltip span{
+	font-weight: bold;
+}
+
+.clearfix{
+	clear: both;
 }

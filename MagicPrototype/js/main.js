@@ -1,10 +1,19 @@
 // JavaScript Document
+// Stuff webiste main JS
 
 $(document).ready(function(){
 	
 	//initially hides all images and only shows first image when page loads
 	$('#stuffBigImg').children().hide();
 	$('#img1').show();
+	
+	//scroll effect - 13by13 page
+	$('.arrow a').click(function(){
+		var div = $(this).html();
+		$.scrollTo('.'+div, 1000);
+		
+		return false;	
+	})
 
 })
 
@@ -13,7 +22,6 @@ var slidenum = 2;
 var slide = function(){
 
 	for(i=1;i<6;i++){
-		console.log(i);
 		$("#img"+i).fadeOut(500);
 	}
 	

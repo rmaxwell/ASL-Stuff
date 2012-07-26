@@ -38,7 +38,7 @@
 		</nav>	
 		</div><! End Nav Wrap >
 		<div class="contentwrapper">
-		<img src="<?php echo base_url();?>img/header/13header.png" alt="">
+		<img src="<?php echo base_url();?>img/header/13Before13Header.jpg" alt="">
 		     <div id="small13">
             <p><span>On</span> any given day during the offseason, you can catch STUFF doing his typical offseason routine. An appearance here and there, planning videos, chasing dogs, and working on in-game skits.</p><br />
             <p><span>One</span> hot summer day in 2012 STUFF was reading his fan mail and a Magic fan wrote to STUFF telling him how she wanted to meet him and get an autograph.This request really got STUFF thinking... what did he want to do? Was there someone he wanted to meet? Was there something he wanted to accomplish?</p><br />
@@ -75,54 +75,6 @@
                             <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
                             <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
                             <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                        </div>
-                    </div>
-                    <div class="blogModule 1">
-                    	<div class="blogPhoto"></div>
-                        <div class="blogTitle"><h3>Day 2: Something Crazy</h3></div>
-                        <div class="blogContent">
-                        	<p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p><br /><p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p>
-                        </div>
-                        <div class="smallGallery">
-                        	<div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                        </div>
-                    </div>
-                    <div class="blogModule 1">
-                    	<div class="blogPhoto"></div>
-                        <div class="blogTitle"><h3>Day 3: More Craziness</h3></div>
-                        <div class="blogContent">
-                        	<p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p><br /><p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p>
-                        </div>
-                        <div class="smallGallery">
-                        	<div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                        </div>
-                    </div>
-                    <div class="blogModule 1">
-                    	<div class="blogPhoto"></div>
-                        <div class="blogTitle"><h3>Day 4: Even more crazy ish!</h3></div>
-                        <div class="blogContent">
-                        	<p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p><br /><p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p>
-                        </div>
-                        <div class="smallGallery">
-                        	<div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
-                            <div class="thumbNail"></div>
                         </div>
                     </div>
                 </div>

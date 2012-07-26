@@ -46,6 +46,7 @@
 			</div><! End Content Wrapper ->
 		</div><! End Main ->
 	</div><! End Wrapper ->
+	<div id="clearfix"></div>
 	<div id="footwrap">
 		<ul>
 			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo/logo.png"></li>
