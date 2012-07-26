@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-	<title>STUFF the Magic Mascot | Content Management System</title>
-	<link rel="stylesheet" href="<?php echo base_url();?>admin/css/style.css" type="text/css" media="screen" />
-</head>
 <body>
 	<h2>Welcome Back, <?php echo $this->session->userdata('username'); ?>!</h2>
     <fieldset>
