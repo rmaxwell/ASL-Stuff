@@ -23,7 +23,13 @@
 	    <ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
 				<li><?=anchor('booking', 'Book STUFF!');?></li>
-				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><a href="<?=base_url();?>index.php/blog"><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+				?></a></li>
 				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>
@@ -68,6 +74,7 @@
         <div>    
 		</div>
 		</div><! End Wrapper ->
+		<div class="clearfix">
 	<div id="footwrap">
 		<ul>
 			<li id="footerlogo"><img src="<?php echo base_url();?>/img/logo/logo.png"></li>
@@ -77,8 +84,8 @@
 			<li><?=anchor('school', "STUFF's School Show");?></li>
 			<li><?=anchor('gallery', 'Photos');?></li>
 			<li><?=anchor('videos', 'Videos');?></li>
-			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon" target="_blank"><img class="footsocial" src="<?php echo base_url();?>img/sprites/f.png"></a></li>
-			<li class="social"><a href="https://twitter.com/STUFF_Mascot" target="_blank"><img class="footsocial" src="<?php echo base_url();?>img/sprites/t.png"></a></li>
+			<li class="social"><a href="http://www.facebook.com/stuffthemagicdragon" target="_blank"><img class="footsocial" src="<?php echo base_url();?>img/sprites/f.png" style="margin-top: -8px;" ></a></li>
+			<li class="social"><a href="https://twitter.com/STUFF_Mascot" target="_blank"><img class="footsocial" src="<?php echo base_url();?>img/sprites/t.png" style="margin-top: -8px;"></a></li>
 		</ul>
 		<div class="clearfix">
 		</div>

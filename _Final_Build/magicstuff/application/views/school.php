@@ -26,7 +26,13 @@
 			<ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
 				<li><?=anchor('booking', 'Book STUFF!');?></li>
-				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><a href="<?=base_url();?>index.php/blog"><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+				?></a></li>
 				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>

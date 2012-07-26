@@ -5,6 +5,7 @@
 <fieldset>
     <legend>Add a new Photo Album</legend>
     <div class="tooltip">
+    	<h3>Please Limit To 9 Albums</h3>
 		<p>Please enter an Album Name to begin</p>
 	</div>
 	<form class="add_albums" method="post" action="gallery/add" enctype="multipart/form-data" />
@@ -19,6 +20,7 @@
 	<fieldset>
 	    <legend>Add a new Photo Album</legend>
 	   <div class="tooltip">
+	   		<h3>Please Limit To 9 Albums</h3>
 			<p>Please enter an Album Name to begin</p>
 		</div>
 		<form class="add_albums" method="post" action="gallery/add" enctype="multipart/form-data" />
@@ -31,7 +33,7 @@
 	<fieldset>
 	    <legend>Current Albums</legend>
 	   		<div class="tooltip">
-				<p>Click on a Album Title to view Images in that Album</p>
+	  			<p>Click on a Album Title to view Images in that Album</p>
 			</div>
 			<div class="albumlist">
 	   		<?php for ($ii=0; $ii<count($album_title); $ii++){ ?>

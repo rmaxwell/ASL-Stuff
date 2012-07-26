@@ -95,6 +95,7 @@ class Gallery extends Controller
 		$album = $this->uri->segment(4);
 		$image = $images['userfile']['type'][0];
 		$orgpath = array();
+		
 		if($image == ''){	
 			redirect('admin/gallery/load_album/'.$album);
 		}else if($image == 'image/png' || $image == 'image/gif' || $image == 'image/jpg' || $image == 'image/jpeg'){
@@ -109,15 +110,16 @@ class Gallery extends Controller
 				$path = 'uploads/gallery/images/'.$an.'/'.$name;
 				$pathtn = 'uploads/gallery/thumbs/'.$an.'/tn_'.$name;
 								
-				$this->imageResize($orgfile, $path);
-				$this->imageThumb($orgfile, $pathtn);
-
 				$postdata = array(
 					'album_id' => $album,
 					'photo_path' => $path,
 					'photo_tn' => $pathtn,
 				);
-				$this->gallery_model->insert_photos($postdata);
+				
+				$img_id = $this->gallery_model->insert_photos($postdata);
+				
+				$this->imageResize($orgfile, $path, $img_id);
+				$this->imageThumb($orgfile, $pathtn);
 				array_push($orgpath, $orgfile);
 			}
 		}else{
@@ -127,7 +129,7 @@ class Gallery extends Controller
 			redirect('admin/gallery/load_album/'.$album);
 	}
 	
- 	public function imageResize($orgfile, $path) 
+ 	public function imageResize($orgfile, $path, $img_id) 
 	{
 		$ar = getimagesize($orgfile);
 		if($ar['mime'] == 'image/gif'){
@@ -143,14 +145,17 @@ class Gallery extends Controller
 		
 		$ratio = $height / $orgh;
 		$width = $orgw * $ratio;
+		$orientation = 1;
 		
 		if($width > 550){
 			$width = 550;
 			$ratio = $width / $orgw;
 			$height = $orgh * $ratio;
+			$orientation = 0;
 		}
 		
-		$cont = imagecreatetruecolor( $width, $height);
+		$this->gallery_model->orientation($orientation, $img_id);
+		$cont = imagecreatetruecolor($width, $height);
 		imagecopyresampled($cont, $n, 0, 0, 0, 0, $width, $height, $orgw, $orgh);
 		imagejpeg($cont, $path ,100);
 		imagedestroy($n);

@@ -587,11 +587,11 @@ tr{
 
 #bp2{
 	clear: right;
-	margin: 15px 0 0 5px;
+	margin: 15px 0 15px 5px;
 }
 
 #bp3{
-	margin: 15px 0 15px 15px;
+	margin: 15px 15px 15px 15px;
 	float: left;
 }
 
@@ -602,7 +602,6 @@ tr{
 	width: 600px;
 	margin: 20px;
 	float: left;
-<<<<<<< HEAD
 	line-height:1.5em;
 	padding: 5px;
 	background-color: rgba(0,0,0,0.01);
@@ -611,9 +610,8 @@ tr{
 
 #schoolpic1{
 	margin-top: 30px;
-=======
 	line-height: 20px;
->>>>>>> FUCKING SYNC COMMIT DO SOMETHING
+
 }
 
 #threee{
@@ -678,7 +676,6 @@ img.headerImg{
 #stuffBigImg {
 	float:left;
 	width:350px;
-	margin-top:-60px;
 	margin-left:-60px;
 }
 

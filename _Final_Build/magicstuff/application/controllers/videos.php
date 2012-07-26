@@ -8,6 +8,7 @@ class Videos extends Controller{
 		$this->load->model('video_model');
 		$this->load->helper('url');
 		$this->load->helper('form');
+		$this->load->model('blog_model');
 	}
 	
 	function index()
@@ -16,6 +17,7 @@ class Videos extends Controller{
 		
 		$data['main_content'] = '/videos';
 		$data['videos'] = $videos;
+		$data["blog_info"] = $this->blog_model->getBlogs();
 		$this->load->view('videos', $data);
 				
 	}

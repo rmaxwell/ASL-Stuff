@@ -18,13 +18,6 @@
 
 <body id="home">
 <div id="wrapper">
-<?php 
-	/*for($i=0; $i<count($blog_info); $i++){
-	    if($blog_info[$i]{"blog_visible"}==1){
-	    	echo $blog_info[$i]{"blog_title"};
-	    }
-	};*/
-?>
   <div id="main">
     <div id="navwrap">
       <div id="logowrap">
@@ -34,7 +27,13 @@
         <ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
 				<li><?=anchor('booking', 'Book STUFF!');?></li>
-				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><a href="<?=base_url();?>index.php/blog"><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+				?></a></li>
 				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>
@@ -46,7 +45,8 @@
     </div>
     <! End Nav Wrap >
     <div class="contentwrapper"> <img src="<?php echo base_url();?>img/header/bookMeHeader.jpg" title="Book Stuff Today!" />
-      <div id="bookingContent">
+      <div id="bookingContent"><br>
+      	<p id="contactInfo">To inquire about booking <span>STUFF</span> contact <span><?php echo $book_data[0]{"booking_email"}; ?></span> or call <span><?php echo $book_data[0]{"booking_phone"}; ?></span></p>
         <div id="bookStuffTxt">
      	   <?php echo $book_data[0]{"booking_textarea"}; ?>
         </div>
@@ -57,7 +57,6 @@
             <img id="img4" src="<?php echo base_url();?>img/bookingslider/stuff_action-04.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
             <img id="img5" src="<?php echo base_url();?>img/bookingslider/stuff_action-05.png" alt="Book Stuff Today!" title="Stuff the Dragon" />
         </div>
-        <p id="contactInfo">To inquire about booking <span>STUFF</span> contact <span><?php echo $book_data[0]{"booking_email"}; ?></span> or call <span><?php echo $book_data[0]{"booking_phone"}; ?></span></p>
       </div>
     </div>
   </div>

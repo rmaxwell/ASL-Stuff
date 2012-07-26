@@ -37,7 +37,9 @@
             
 			echo '<fieldset>';
 			echo '<div class="tooltip">
-            			<p>This page will support a <span>character count</span> of approxametly <span>850</span>.</p></div>';
+            			<p>This page will support a <span>character count</span> of approxametly <span>850</span>.</p><br>
+            			<p>If you paste from <span>Microsoft Word</span> please click the "Paste From Word" button</p>
+            		</div>';
 			echo '<legend>Booking Info:</legend>'.form_textarea($booking_textarea);
 			echo '</fieldset>';
 			echo form_submit('submit', 'Save Changes');

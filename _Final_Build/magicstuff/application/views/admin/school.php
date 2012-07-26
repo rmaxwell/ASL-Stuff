@@ -1,4 +1,4 @@
-<h1>Update Stuff' School Show Info</h1>
+<h1>Update Stuff' School Show Info</h1><br>
 <div class="wrapper">
 
 <?php
@@ -19,7 +19,9 @@
 	
 	echo form_open('admin/school/save');
 	echo '<fieldset>';
-	echo '<legend>Booking Info:</legend>'.form_textarea($school_textarea);
+	echo '<legend>School Page Info:</legend>';
+	echo '<div class="tooltip"><p>If you paste from <span>Microsoft Word</span> please click the "Paste From Word" button</p></div>';
+	echo form_textarea($school_textarea);
 	echo '</fieldset>';
 	echo form_submit('submit', 'Save Changes');
 	echo form_close();

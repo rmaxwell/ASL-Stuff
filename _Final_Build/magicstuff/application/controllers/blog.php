@@ -11,6 +11,7 @@ class Blog extends Controller{
 	function index()
 	{
 		$data['blog_info'] = $this->blog_model->getBlogs();
+		$data['post_data'] = $this->blog_model->getPosts(5);
 		$this->load->view('blog', $data);
 	}
 

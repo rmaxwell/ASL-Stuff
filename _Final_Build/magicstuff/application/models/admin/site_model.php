@@ -20,5 +20,21 @@
 			$this->db->update('mainContent', $data);
 		}
 		
+		public function slider_images()
+		{
+			$query = $this->db->query('SELECT * FROM home_content;');
+			$results = $query->result_array();
+			return $results;
+		}
+		
+		public function update_slider($row)
+		{
+			$query = $this->db->query('UPDATE home_content SET on_off = 1, path ="'.$row['slider_path'].'", date_uploaded = NOW() WHERE id ='.$row['id'].';');
+		}
+		
+		public function slider_image_off($img)
+		{
+			$query = $this->db->query('UPDATE home_content SET on_off = 0, date_uploaded = NOW() WHERE id ='.$img.';');
+		}
 	}
 ?>

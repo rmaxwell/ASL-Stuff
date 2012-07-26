@@ -52,6 +52,13 @@
 			return $theReturn;
 		}
 		
+		public function getThumbs($id)
+		{
+			$query = $this->db->query('SELECT * FROM thumbnails where post_id = '.$id);
+			$theReturn = $query->result_array();
+			return $theReturn;
+		}
+		
 		public function addPost($data)
 		{
 			if(array_key_exists('post_photo_path', $data)){
@@ -64,6 +71,11 @@
 			
 			$this->db->query('INSERT INTO posts (blog_id, post_title, post_desc, post_photo_title, '.$path_col.' date_updated)
 			VALUES ("'.$data["blog_id"].'", "'.$data["post_title"].'", "'.$data["post_desc"].'", "'.$data["post_photo_title"].'", '.$path_val.' NOW() );');
+			
+			$newPost = $this->db->query('SELECT post_id FROM posts ORDER BY date_updated DESC LIMIT 1;');
+			$pid = $newPost->row_array();
+			
+			return $pid['post_id'];
 		}
 		
 		public function updatePost($data, $id)
@@ -73,10 +85,9 @@
 			if(array_key_exists('post_photo_path', $data)){
 				$photo = ', post_photo_path = "'.$data['post_photo_path'].'"';
 			}
-						
+			
 			$this->db->query('UPDATE posts
-			SET post_title = "'.$data['post_title'].'", post_desc = "'.$data['post_desc'].'", post_photo_title = "'.$data['post_photo_title'].'", date_updated = NOW()'.$photo.'
-			WHERE post_id = '.$id.';');
+			SET post_title = "'.addslashes($data['post_title']).'", post_desc = "'.addslashes($data['post_desc']).'", post_photo_title = "'.$data['post_photo_title'].'", date_updated = NOW()'.$photo.' WHERE post_id = '.$id.';');
 			
 			return 1;
 		}
@@ -86,8 +97,13 @@
 			$this->db->where('post_id', $id);
 			$this->db->delete('posts');
 		}
-				
-		public function upload()
+		
+		public function thumbUpload($imgPath, $tnPath, $id)
+		{
+			$this->db->query('INSERT INTO thumbnails (image_path, thumbnail_path, post_id) values ("'.$imgPath.'", "'.$tnPath.'", "'.$id.'");');
+		}
+		
+		public function upload($post_id)
 		{
 			$image = $_FILES;
 			$whitman = $image['album']['name'][0];
@@ -98,13 +114,13 @@
 			$config['max_size']	= '1000000';
 			$config['max_width']  = '1024';
 			$config['max_height']  = '768';
-						
+			
 			$this->load->library('upload', $config);
 			
 			if ( !$this->upload->do_upload() )
 			{
 				$error = array('error' => $this->upload->display_errors());
-				var_dump($error);
+/* 				var_dump($error); */
 			}else{
 			
 				$data = array('upload_data' => $this->upload->data());
@@ -114,31 +130,48 @@
 				
 				$this->imageResize($path, $filename, $fileType);
 				$this->imageThumb($path, $filename, $fileType);
+			}
+			
+			if($whitman != ''){
+				$folderDate = date('Ymd');
 				
-				if($whitman != ''){
-					$folderDate = date('Ymd-His');
-					
-					$orgFolder = 'images/blog/albums/original/'.$folderDate.'/';
-					$resizeFolder = 'images/blog/albums/resize/'.$folderDate.'/';
-					$thumbFolder = 'images/blog/albums/thumb/'.$folderDate.'/';
+				$orgFolder = 'images/blog/albums/original/'.$folderDate.'/';
+				$resizeFolder = 'images/blog/albums/resize/'.$folderDate.'/';
+				$thumbFolder = 'images/blog/albums/thumb/'.$folderDate.'/';
 				
+				if(!is_dir($orgFolder)){
 					mkdir($orgFolder, 0777);
+				};
+				
+				if(!is_dir($resizeFolder)){
 					mkdir($resizeFolder, 0777);
+				};
+				
+				if(!is_dir($thumbFolder)){
 					mkdir($thumbFolder, 0777);
+				};
+									
+				for ($i=0; $i<count($image['album']['name']); $i++)
+				{	
+					$uploads_dir = 'images/blog/albums/original/'.$folderDate.'/';
+					$tempfile = $image['album']["tmp_name"][$i];
+					$name = $image['album']["name"][$i];
+					$orgfile = $uploads_dir.$name;
+					$type = $image['album']["type"][$i];
 					
-					for ($i=0; $i<count($image['album']['name']); $i++)
-					{	
-						$uploads_dir = 'images/blog/albums/original/'.$folderDate.'/';
-						$tempfile = $image['album']["tmp_name"][$i];
-						$name = $image['album']["name"][$i];
-						$orgfile = $uploads_dir.$name;
-						$type = $image['album']["type"][$i];
-						move_uploaded_file($tempfile, $orgfile);
+					var_dump($image['album']["size"][$i]);
+						
+/* 						move_uploaded_file($tempfile, $orgfile); */
+					
+					
+					$thumb = base_url().$thumbFolder.'tn_'.date('Ymd').$name;
+					$resize = base_url().$resizeFolder.date('Ymd').$name;
+					
+					$this->thumbUpload($resize, $thumb, $post_id);
 
-						$this->imageResize($orgfile, $name, $type, $resizeFolder);
-						$this->imageThumb($orgfile, $name, $type, $thumbFolder);
-					}
-				}// end of multiple file upload
+					$this->imageResize($orgfile, $name, $type, $resizeFolder);
+					$this->imageThumb($orgfile, $name, $type, $thumbFolder);
+				}
 			}
 		}
 		
@@ -176,11 +209,25 @@
 			$orgw = $ar[0];
 			$orgh = $ar[1];
 			
-			$cont = imagecreatetruecolor(50, 76);
+			$cont = imagecreatetruecolor(50, 50);
 			imagecopyresampled($cont, $n, 0, 0, 0, 0, 50, 50, $orgw, $orgh);
 			imagejpeg($cont, $imgPath.'tn_'.date('Ymd').$fn  ,100);
 			imagedestroy($n);
 		}
-	}
+		
+		
+		public function deleteThumb($id)
+		{
+			$this->db->where('thumbnail_id', $id);
+			$this->db->delete('thumbnails');
+		
+			return 1;
+		}
+		
+
+		
+		
+		
+	}// END OF FILE
 
 ?>

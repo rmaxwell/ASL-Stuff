@@ -26,5 +26,15 @@
 			return $theReturn;
 		}
 		
+		public function getFrontPagePosts($id)
+		{
+			$query= $this->db->query('SELECT post_title, Date(date_updated)as date_updated 
+										FROM blogs 
+										LEFT JOIN posts on blogs.blog_id = posts.blog_id
+										WHERE blogs.blog_id= '.$id);
+			$theReturn = $query->result_array();
+			return $theReturn;
+		}
+		
 	}
 ?>

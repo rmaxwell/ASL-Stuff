@@ -10,6 +10,9 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.tweet.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.nivo.slider.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/main.js"></script>
+	
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->	
@@ -26,7 +29,13 @@
 			<ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
 				<li><?=anchor('booking', 'Book STUFF!');?></li>
-				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><a href="<?=base_url();?>index.php/blog"><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+				?></a></li>
 				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>
@@ -61,22 +70,28 @@
             </ul>
 			<div id="homecontent">
             	<div id="blog">
-                	<div class="blogModule 1">
+            		<?php for ($i=0; $i<count($post_data); $i++){?>
+                	<div class="blogModule <?php echo $i+1;?>">
                     	<div class="blogPhoto"><img src="13images/1a.jpg" width="460px" height="280px" /></div>
-                        <div class="blogTitle"><h3>Day 1: Dance off with LMFAO</h3></div>
-                        <div class="blogContent">
-                        	<p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p><br /><p>Magna aliquam erat volutpat ut wisi enim ad minim veniam quis? Sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Legentis in iis qui, facit eorum claritatem Investigationes. Ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit. Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes in.</p>
+                        <div class="blogTitle">
+                        	<h3>
+                        		<?php echo $post_data[$i]{"post_title"};?>
+                        	</h3>
                         </div>
-                        <div class="smallGallery">
-                        	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                            <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                            <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                            <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                            <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                            <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
-                            <div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                        <div class="blogContent">
+                 			<?php echo $post_data[$i]{"post_desc"};?>
+                        </div>
+							<div class="smallGallery">
+                        		<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                            	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                            	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                            	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                            	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                            	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
+                            	<div class="thumbNail"><img src="13images/media.png" width="50px" height="50px" /></div>
                         </div>
                     </div>
+                    <?php   }?>
                 </div>
 			</div><!- End Home Content ->
 	</div><! End Content Wrapper ->

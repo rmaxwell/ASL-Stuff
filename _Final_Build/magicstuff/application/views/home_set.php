@@ -36,7 +36,13 @@
 			<ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
 				<li><?=anchor('booking', 'Book STUFF!');?></li>
-				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><a href="<?=base_url();?>index.php/blog"><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+				?></a></li>
 				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>
@@ -65,80 +71,37 @@
  					<h3><a href="https://twitter.com/STUFF_mascot" id="followstuff" class="twitter-follow-button" data-show-count="false">Follow @STUFF_mascot</a></h3>
 				</div>
 				<div class="column" id="col2">
-					<h2>13 Before 13</h2>
+					<h2><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+						?>
+					</h2>
 					<table id="progressList">
+					  <?php for ($i=0; $i<count($post_data); $i++){?>
 					  <tr>
 					    <td class="progressNumber">1</td>
-					    <td class="progressTask"><a href="#">LMFAO Dance Off</a></td>
-					    <td class="progressDate">03/23/2012</td>
+					    <td class="progressTask"><a href="<?=base_url();?>index.php/blog">
+					    		<?php
+					    			$trunk = $post_data[$i]{"post_title"}
+					    			;?>
+					    			
+					    			<a href="<?=base_url();?>index.php/blog"><?php echo $trunk ?></a><!--20 Characters-->
+					    </td>
+					    <td class="progressDate"><?php echo $post_data[$i]{"date_updated"};?></td>
 					  </tr>
-					  <tr>
-					    <td class="progressNumber">2</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">3</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">4</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">5</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">6</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">7</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">8</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">9</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">10</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">11</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">12</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
-					  <tr>
-					    <td class="progressNumber">13</td>
-					    <td class="progressTask"><a href="#">TBA</a></td>
-					    <td class="progressDate">01/01/2012</td>
-					  </tr>
+					  <?php }?>
 					</table>
 				</div>
-				<div class="column" id="col3">
+				<div class="column" id="col3" style="padding-bottom: 52px;">
 					<h2>Latest Photos</h2>
-					
-					<img src="img/photo.jpg" alt="">
-					<img src="img/photo2.jpg" alt="">
+					<?php foreach($new_images as $ni){ ?>
+						<a href="<?=base_url()?>gallery">
+							<img src="<?=$ni['photo_path'];?>" alt="" style="width:280px">
+						</a>
+					<?php } ?>
 					
 				</div>
 			</div><!-- End Column Content -->

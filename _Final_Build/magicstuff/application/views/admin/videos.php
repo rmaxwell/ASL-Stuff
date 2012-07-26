@@ -11,7 +11,8 @@
 	</form>
 	<div class="tooltip">
 		<p>Enter the embed link with a title</p>
-		<p>example: http://www.youtube.com/embed/samplevideo</p>
+		<br>
+		<p><span>Example:</span> &lt;iframe width="640" height="360" src="http://www.youtube.com/embed/wp6b27JwLek" frameborder="0" allowfullscreen>&lt;/iframe></p>
 	</div>
 </fieldset>
 
@@ -21,7 +22,8 @@
 	<legend>Add New Videos</legend>
 	<div class="tooltip">
 		<p>Enter the embed link with a title</p>
-		<p>example: <code>http://www.youtube.com/embed/samplevideo</code></p>
+		<br>
+		<p><span>Example:</span> &lt;iframe width="640" height="360" src="http://www.youtube.com/embed/wp6b27JwLek" frameborder="0" allowfullscreen>&lt;/iframe></p>
 	</div>
 	<form class="videos" method="post" action="<?=base_url();?>index.php/admin/videos/add" enctype="multipart/form-data" />
     	<input type="text" name="video_title" size="20" placeholder="Video Title" />

@@ -27,7 +27,13 @@
 			<ul>
 				<li><?=anchor('bio', "STUFF's Bio");?></li>
 				<li><?=anchor('booking', 'Book STUFF!');?></li>
-				<li><?=anchor('blog', '13 Before 13');?></li>
+				<li><a href="<?=base_url();?>index.php/blog"><?php 
+						for($i=0; $i<count($blog_info); $i++){
+	  					  if($blog_info[$i]{"blog_visible"}==1){
+	    					echo $blog_info[$i]{"blog_title"};
+	  					  }
+						};
+				?></a></li>
 				<li><?=anchor('school', "STUFF's School Show");?></li>
 				<li><?=anchor('gallery', 'Photos');?></li>
 				<li><?=anchor('videos', 'Videos');?></li>
@@ -49,7 +55,7 @@
 
 		<img id="bp2" width="450" src="<?php echo base_url();?>img/bio/b2.png" alt="">
 		<div class="clearfix"></div>
-		<img id="bp3" width="450" src="<?php echo base_url();?>img/bio/b1.png" alt="">
+			<p></p><img id="bp3" width="450" src="<?php echo base_url();?>img/bio/b1.png" alt=""></p>
 		<p id="bio3">
 			<? echo $bio_info[0]{'bio_text2'};?>
 		</p>

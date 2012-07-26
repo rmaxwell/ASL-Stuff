@@ -39,7 +39,8 @@
 	
 	echo '<fieldset>';
 	echo '<div class="tooltip">
-			<h3>We highly recommend not changing the content on this page. The design will likely break.<h3>
+			<h3>We highly recommend not changing the content on this page. The design will likely break.</h3>
+			<p>If you paste from Microsoft Word please click the "Paste From Word" button</p>
 			</div>';
 	echo '<legend>'.form_label("Stuff's Bio", 'bio_text').'</legend>'.'<br>';
 	echo '<h2>Text Block 1</h2>

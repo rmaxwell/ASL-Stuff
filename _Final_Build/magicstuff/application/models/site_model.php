@@ -16,7 +16,7 @@
 		
 		public function new_images()
 		{
-			$query = $this->db->query('SELECT * FROM photos ORDER BY date_uploaded DESC LIMIT 2 ;');
+			$query = $this->db->query('SELECT * FROM photos WHERE orientation = 0 ORDER BY date_uploaded DESC LIMIT 2 ;');
 			$results = $query->result_array();
 			return $results;
 		}

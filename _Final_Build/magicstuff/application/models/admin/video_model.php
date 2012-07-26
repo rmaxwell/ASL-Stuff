@@ -24,7 +24,7 @@ class Video_model extends Model {
 	
 	public function insert_video($row)
 	{
-		$this->db->query("INSERT INTO videos (video_title, video_embed) values ('".$row["video_title"]."','".$row["video_embed"]."')");
+		$this->db->query("INSERT INTO videos (video_title, video_embed) values ('".$row["video_title"]."','{$row['video_embed']}')");
 		return $this->db->insert_id();
 	}
 

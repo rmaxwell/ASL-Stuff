@@ -24,7 +24,7 @@ var slidenum = 2;
 var slide = function(){
 
 	for(i=1;i<6;i++){
-		console.log(i);
+		//console.log(i);
 		$("#img"+i).fadeOut(500);
 	}
 	

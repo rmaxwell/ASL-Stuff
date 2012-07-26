@@ -12,7 +12,7 @@
       list: null,                               // [string]   optional name of list belonging to username
       favorites: false,                         // [boolean]  display the user's favorites instead of his tweets
       query: null,                              // [string]   optional search query (see also: http://search.twitter.com/operators)
-      avatar_size: null,                        // [integer]  height and width of avatar if displayed (48px max)
+      avatar_size: 48,                        // [integer]  height and width of avatar if displayed (48px max)
       count: 3,                                 // [integer]  how many tweets to display?
       fetch: null,                              // [integer]  how many tweets to fetch via the API (set this higher than 'count' if using the 'filter' option)
       page: 1,                                  // [integer]  which page of results to fetch (if count != fetch, you'll get unexpected results)
@@ -30,7 +30,7 @@
       twitter_url: "twitter.com",               // [string]   custom twitter url, if any (apigee, etc.)
       twitter_api_url: "api.twitter.com",       // [string]   custom twitter api url, if any (apigee, etc.)
       twitter_search_url: "search.twitter.com", // [string]   custom twitter search url, if any (apigee, etc.)
-      template: "{avatar}{time}{join}{text}",   // [string or function] template used to construct each tweet <li> - see code for available vars
+      template: "{avatar}{text}{time}",   // [string or function] template used to construct each tweet <li> - see code for available vars
       comparator: function(tweet1, tweet2) {    // [function] comparator used to sort tweets (see Array.sort)
         return tweet2["tweet_time"] - tweet1["tweet_time"];
       },
@@ -194,7 +194,12 @@
       o.tweet_relative_time = format_relative_time(extract_relative_time(o.tweet_time));
       o.entities = item.entities ? (item.entities.urls || []).concat(item.entities.media || []) : [];
       o.tweet_raw_text = o.retweet ? ('RT @'+o.retweeted_screen_name+' '+item.retweeted_status.text) : item.text; // avoid '...' in long retweets
-      o.tweet_text = $([linkURLs(o.tweet_raw_text, o.entities)]).linkUser().linkHash()[0];
+      
+      o.test = o.retweet ? ('RT @'+o.retweeted_screen_name+' '+item.retweeted_status.text) : item.text;
+      //alert(o.test.length);
+      if(o.test.length >= 50){o.testNew= o.test.substring(0,85) + '...';};
+      
+      o.tweet_text = $([linkURLs(o.testNew, o.entities)]).linkUser().linkHash()[0];
       o.tweet_text_fancy = $([o.tweet_text]).makeHeart()[0];
 
       o.avatar_size = s.avatar_size;
@@ -207,7 +212,7 @@
       o.join = s.join_text ? t(' <span class="tweet_join">{join_text}</span> ', o) : ' ';
       o.avatar = o.avatar_size ?
         t('<a class="tweet_avatar" href="{avatar_profile_url}"><img src="{avatar_url}" height="{avatar_size}" width="{avatar_size}" alt="{avatar_screen_name}\'s avatar" title="{avatar_screen_name}\'s avatar" border="0"/></a>', o) : '';
-      o.time = t('<span class="tweet_time"><a href="{tweet_url}" title="view tweet on twitter">{tweet_relative_time}</a></span>', o);
+      o.time = t('<br><span class="tweet_time"><a href="{tweet_url}" title="view tweet on twitter">{tweet_relative_time}</a></span>', o);
       o.text = t('<span class="tweet_text">{tweet_text_fancy}</span>', o);
       o.reply_action = t('<a class="tweet_action tweet_reply" href="{reply_url}">reply</a>', o);
       o.retweet_action = t('<a class="tweet_action tweet_retweet" href="{retweet_url}">retweet</a>', o);

@@ -41,6 +41,11 @@ class Gallery_model extends Model {
 		$query = $this->db->query('UPDATE photos SET photo_title ="'.$row['image_title'].'", date_uploaded = NOW() WHERE photo_id ='.$row['image_id'].';');
 	}
 	
+	public function orientation($or, $image_id)
+	{
+		$query = $this->db->query('UPDATE photos SET orientation ='.$or.' WHERE photo_id ='.$image_id.';');
+	}
+	
 	public function delete_album($album_id)
 	{
 		$query = $this->db->query('DELETE FROM photos WHERE album_id ='.$album_id.';');
