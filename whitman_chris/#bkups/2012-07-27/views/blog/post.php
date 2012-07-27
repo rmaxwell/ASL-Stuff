@@ -1,19 +1,9 @@
-<?php $id = $this->uri->segment(4); ?>
-
 <h1><?=$posts[0]['blog_title']?></h1>
 
 <h1><?=anchor('/admin/blog', 'Go Back');?></h1>
 
-
-<div>
-	<form method="post" action="<?=$id;?>/editTitle">
-		<input type="text" name='blog_title' maxlength="15" />
-		<input type="submit" value="Save" />
-	</form>
-</div>
-
-
 <fieldset>
+
 <legend><h3>Current Posts</h3></legend>
 
 <!-- this loads all the title of each blog entry -->

@@ -1,13 +1,125 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
 {\fonttbl\f0\fnil\fcharset0 FranklinGothic-Medium;\f1\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red0\green102\blue221;\red134\green0\blue9;}
+{\colortbl;\red255\green255\blue255;\red0\green102\blue221;\red222\green0\blue16;\red255\green128\blue0;
+\red134\green0\blue9;}
 {\info
 {\author Chris J. Whitman}
 {\*\company LocalityME}
 {\*\copyright LocalityME}}\margl1440\margr1440\vieww13760\viewh9340\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
-\f0\fs144 \cf0 2012-07-24\
+\f0\fs144 \cf0 2012-07-27\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f1\b\fs30 \cf2 Newest Changes:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\b0\fs24 \cf0 	Thumbnails Table deleted\
+	
+\i\fs30 images
+\i0\fs24  folder has correct pathing and Images used in SQL Shit\
+	
+\b\fs28 New
+\b0\fs24  Table Created: 
+\i post_slots\
+		
+\i0 Just the post_slots table DUMP is in SQL Shit\
+		there are two datasets already in there if needed for testing
+\i \
+	
+\i0 blog_model CHANGED\
+		New functions:\
+			editTitle() - updates blog title\
+				Add and Edit are limited to 15characters\
+			getSlots($id) - gets all saved slots for given POST_ID\
+				returns them in ASC order in an ARRAY\
+			slotSave($data) - saves slot data to POST_SLOTS table\
+			slotUpdate($data) - takes data and UPDATES current post\
+			slotDelete($id) - deletes row where POST_SLOT_ID = $id\
+		Changed Functions and Functionality\
+			upload($slot)\
+				No longer supports multiple photos\
+				No longer makes directories\
+					path is: 
+\b\fs30 \cf2 base_url().'images/blog/original/'.date('Ymd').$filename;
+\b0\fs24 \cf0 \
+					path is: 
+\b\fs30 \cf2 base_url().'images/blog/resize/'.date('Ymd').$filename;
+\b0\fs24 \cf0 \
+					path is: 
+\b\fs30 \cf2 base_url().'images/blog/thumb/'.date('Ymd').$filename;
+\b0\fs24 \cf0 \
+	Notable Changes\
+		Post is not in two parts\
+		Embed codes 
+\b\fs30 \cf3 NEED
+\b0\fs24 \cf0  
+\i\fs30 str_replace
+\i0\fs24  when pushing to the database and pulling.\
+			Pulling set of 
+\i\fs30 str_replace
+\i0\fs24  functions are on the 
+\b\fs30 \cf3 VIEW
+\b0\fs24 \cf0  
+\b\fs30 \cf3 POST_FORM
+\b0\fs24 \cf0 \
+				Lines: 64-66\
+			Pushing set is in 
+\b\fs30 \cf3 CONTROLLER
+\b0\fs24 \cf0 \
+				Lines: 168 -172\
+		Content uploaded is depended on Radio Button Selection\
+			Even if both fields are filled, it will only upload respective input\
+		
+\b\fs30 \cf3 CONTENT_IS
+\b0\fs24 \cf0  data will be either 
+\b\fs30 \cf3 PHOTO
+\b0\fs24 \cf0  or 
+\b\fs30 \cf3 VIDEO
+\b0\fs24 \cf0 \
+		When content is updated and a video is switched for an image or vice versa..\
+		..the opposing database column is turned too an empty string.\
+		Everything loads and proper slots\
+			each Row in 
+\b\fs30 \cf3 POST_SLOTS
+\b0\fs24 \cf0  table has a 
+\b\fs30 \cf3 POSITION
+\b0\fs24 \cf0  column to load information into respective slot.\
+			Proper option is selected if content has be loaded into a slot\
+		Delete button is INLINE styled and it's own form\
+		Blog Posts work entirely 
+\fs30 \ul without
+\fs24 \ulnone  JS but some JS would add to the look and usability\
+		\
+		
+\b\fs36 \cf4 Images are 460x280\
+		Thumbnails are 50x50
+\b0\fs24 \cf0 \
+\
+		I do NOT have input hits set up but don't see it being a problem to implement\
+		I like <HR /> but slot 7 doesn't get one\
+		Slot one is "ACTIVE" slot. (Has 'blue' color styling just case delete or change if need be)\
+		Slot data is returned in an array -> Slot data is passed to template -> slot data..\
+		..is then spliced from [0] -> Repeat until no more data is in the array.\
+		If array is empty -> empty 'SAVE slots are then put in it's place\
+\
+		For the other Chris' Blog set-up, should be able to do a conditional on column 'CONTENT_IS'..\
+		..to determine what goes where. if PHOTO do this if VIDEO do this.\
+\
+	INCLUDED\
+		..is the Other Chris' JS file for the FRONT-END blog view. I haven't touched it. I just packaged..\
+		..it with this in the root of my folder.\
+		\
+	[7/27/12 6:06:20 PM] Christopher Allison: also dont forget to change the CSS for those images so we dont have to hard code it in, if you havent changed that already\
+\
+	[7/27/12 6:08:26 PM] Christopher Allison: ...oh another thing just found out, if you change the width of the div smallGallery to 420px it still allows for all thumbnails on one row AND allows the user to click the youTube fullscreen button\
+	[no need to change the thumbnail size]\
+\
+	Brad has the Eye thing working for the active blog	\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs144 \cf0 \
+2012-07-24\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
 \f1\b\fs30 \cf2 Newest Changes:\
@@ -16,13 +128,14 @@
 \b0\fs24 \cf0 	Thumbnails working\
 	Thumbnails link to appropriate resized photo\
 	Textarea built to match the rest\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
-\f0\fs144 \
+\f0\fs144 \cf0 \
 2012-07-21
 \f1\fs24 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
-\b\fs48 \cf3 \ul \ulc3 Required Folders
+\b\fs48 \cf5 \ul \ulc5 Required Folders
 \b0\fs24 \ulnone \
 \cf0 Take the 
 \b\fs30 BLOG
