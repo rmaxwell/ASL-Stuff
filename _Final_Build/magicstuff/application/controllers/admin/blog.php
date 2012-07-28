@@ -2,11 +2,13 @@
 
 	class Blog extends Controller 
 	{
+		protected $blog_id = '';
 
 		function __construct()
 		{
 			parent::Controller();
 			$this->is_logged_in();
+
 		}
 		
 		function index()
@@ -49,41 +51,31 @@
 
 			if(!$post_id){
 				$this->load->view('admin/blog/post_form', $data);
+			}elseif($post_id == 'editTitle'){
+				$title = mysql_escape_string($_POST['blog_title']);
+				$this->blog_model->editTitle($title, $blog_id);
+				redirect('admin/blog/editBlog/'.$blog_id);
 			}elseif($post_id == 'addPost'){
 			
 				$title = $_POST['event_title'];
-				$path = base_url().'images/blog/posts/resize/'.date('Ymd').$_FILES["userfile"]["name"];
-				$photo_title = $_POST['photo_title'];
 				$desc = $_POST['post_desc'];
-				
-				$thumbs = $_FILES['album'];
-				$thumbCount = $thumbs['name'][0];
 				
 				if($title != '' && $desc != ''){
 					$newPost = array(
 						'blog_id' => $blog_id,
 						'post_title' => $title,
-						'post_photo_title' => $photo_title,
 						'post_desc' => $desc,
 					);
 					
-					if($path != '' || $thumbCount != ''){
-					
-						if($path != ''){
-							$newPost['post_photo_path'] = $path;	
-						}
-						
-						if($thumbCount != ''){
-							$newPost['thumbnails'] = $thumbs;
-						}
+					if($title != '' || $desc != ''){
+						$newID = $this->blog_model->addPost($newPost);
 					}
-										
-					$newID = $this->blog_model->addPost($newPost);
-					$this->blog_model->upload($newID);
 					
 					redirect('admin/blog/editBlog/'.$blog_id);
 				}else{
-					echo '<fieldset><legend><strong><h3>Error</h3></strong></legend><div>Please enter a valid Title and Description</div></fieldset>';
+				
+					// For error handling if Title and Desc are empty
+/* 					echo '<fieldset><legend><strong><h3>Error</h3></strong></legend><div>Please enter a valid Title and Description</div></fieldset>'; */
 				}
 					
 			}elseif($post_id == 'updatePost'){
@@ -92,40 +84,129 @@
 				$pid = $this->uri->segment(6);
 				
 				$title = $_POST['event_title'];
-				$path = base_url().'images/blog/posts/resize/'.date('Ymd').$_FILES["userfile"]["name"];
-				$photo_title = $_POST['photo_title'];
 				$desc = $_POST['post_desc'];
 			
 				$updatePost = array(
 					'post_title' => $title,
-					'post_photo_title' => $photo_title,
-					'post_desc' => $desc,
+					'post_desc' => $desc
 				);
-
-				if($_FILES['userfile']['name'] != ''){
-					$updatePost['post_photo_path'] = $path;
-					$this->blog_model->upload($pid);
-				}
-
+				
 				$this->blog_model->updatePost($updatePost, $pid);
-				$this->blog_model->upload($pid);
-				redirect('admin/blog/editblog/'.$bid.'/'.$pid);
+				redirect('admin/blog/editBlog/'.$bid.'/'.$pid);
 				
 			}elseif($post_id == 'deletePost'){
 				$delete_id = $this->uri->segment(6);
 				$this->blog_model->deletePost($delete_id);
 				redirect('admin/blog/editBlog/'.$blog_id);
-			}elseif($post_id == 'deleteThumb'){
-				$delete_id = $this->uri->segment(6);
-				$pid = $this->uri->segment(7);
-				$this->blog_model->deleteThumb($delete_id);				
-							
+			}elseif($post_id == 'saveSlot'){
+				$bid = $this->uri->segment(4);
+
+				$this->load->model('admin/blog_model');
+
+				$slotData = array(
+					'post_id' => $_POST['post_id'],
+					'position' => $_POST['position'],
+					'content_is' => $_POST['content']
+				);
+				
+				$imagetest = '';
+				$videotest = '';
+				
+				$videotest = $_POST['emb_tag'];
+				$imagetest = $_FILES['userfile']['name'];				
+				
+				if($_POST['content'] == 'photo' && $imagetest != ''){
+				
+					$slotData['userfile'] = $_FILES['userfile'];
+					$this->blog_model->slotSave($slotData);
+					$this->blog_model->upload($_POST['position']);
+					
+				}elseif($_POST['content'] == 'video' && $videotest != ''){
+				
+					//change code tags into ENTITIES
+					$videoLink = $_POST['emb_tag'];
+					$videoLink = str_replace('<', '&lt;', $videoLink);
+					$videoLink = str_replace('>', '&gt;', $videoLink);
+					$videoLink = str_replace('560', '460', $videoLink);
+					$videoLink = str_replace('315', '280', $videoLink);
+				
+					$slotData['emb_tag'] = $videoLink;
+				
+					$this->blog_model->slotSave($slotData);
+					$this->blog_model->upload($_POST['position']);
+					
+				}	
+				
+				$pid = $_POST['post_id'];
 				redirect('admin/blog/editBlog/'.$blog_id.'/'.$pid);
+
+			}elseif($post_id == 'updateSlot'){
+
+				$this->load->model('admin/blog_model');
+
+				$slotData = array(
+					'post_slot_id' => $_POST['slot_id'],
+					'content_is' => $_POST['content']
+				);
+				
+				$videotest = '';
+				$imagetest = '';
+				
+				$videotest = $_POST['emb_tag'];
+				$imagetest = $_FILES['userfile']['name'];
+				
+				if($_POST['content'] == 'photo' && $imagetest != ''){
+				
+					$slotData['userfile'] = $_FILES['userfile'];
+					//Update current SLOT
+					$this->blog_model->slotUpdate($slotData);
+					$this->blog_model->upload($_POST['position']);
+					
+				}elseif($_POST['content'] == 'video' && $video != ''){
+				
+					//change code tags into ENTITIES
+					$videoLink = $_POST['emb_tag'];
+					$videoLink = str_replace('<', '&lt;', $videoLink);
+					$videoLink = str_replace('>', '&gt;', $videoLink);
+					$videoLink = str_replace('560', '460', $videoLink);
+					$videoLink = str_replace('315', '280', $videoLink);
+				
+					$slotData['emb_tag'] = $videoLink;
+					//Update current SLOT then Upload and Resize photos
+					$this->blog_model->slotUpdate($slotData);
+					$this->blog_model->upload($_POST['position']);
+				}	
+
+				if($videotest != '' || $imagetest != ''){	
+										
+				}
+				
+				$bid = $this->uri->segment(4);
+				$pid = $_POST['post_id'];
+
+				redirect('admin/blog/editBlog/'.$bid.'/'.$pid);
+
+
+			}elseif($post_id == 'deleteSlot'){
+					$slot_id = $_POST['slot_id'];
+					$pid = $_POST['post_id'];
+
+					if(isset($slot_id)){
+						$blog_id = $this->uri->segment(4);
+					
+						$this->blog_model->slotDelete($slot_id);
+						
+						redirect('admin/blog/editBlog/'.$blog_id.'/'.$pid);
+					}else{
+						redirect('admin/blog/editBlog/'.$blog_id.'/'.$pid);
+					}
 			}else{
 				$data['postData'] = $this->blog_model->getPost($post_id);
-				$data['thumbnails'] = $this->blog_model->getThumbs($post_id);
+				$data['slots'] = $this->blog_model->getSlots($post_id);
+
 				$this->load->view('admin/blog/post_form', $data);
 			}
+			
 			
 			$this->load->view('admin/includes/footer');
 		}
@@ -145,17 +226,6 @@
 			$this->blog_model->showBlog($blog_id);
 		}
 		
-		function title()
-		{
-			$blog_id = $this->uri->segment(3);
-			
-			$this->load->view('admin/includes/header');
-
-			$this->load->view('admin/includes/nav');
-			$this->load->view('admin/blog/blog', $data);
-			
-			$this->load->view('admin/includes/footer');
-		}
 		
 		function back(){
 			redirect('admin/blog');
