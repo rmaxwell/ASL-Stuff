@@ -22,12 +22,12 @@ $(document).ready(function(){
 	$(thumb).click(function(event){
 		//declare variables for thumbnail html markup && main image html markup
 		var thumbHtml = $(this).find('img').attr('content');
-		var mainHtml = $(this).parent().parent().find('.blogPhoto').html();
+		var mainHtml = $(this).parent().parent().find('.blogPhoto').html(thumbHtml);
 		
 		  // On thumbnail click, the main image html is emptied and the thumbnail html is loaded in place
 		 // NOTE:: for this to work markup code (HTML) must be inside of a ~content~ attribute using single quotes
 		// to start the tag thus allowing double quotes to go around markup as normal inside attribute.
-		$(this).parent().parent().find('.blogPhoto').empty().append().html(thumbHtml);
+/* 		$(this).parent().parent().find('.blogPhoto').empty().append().html(thumbHtml); */
 		
 		//prevents default action - i.e. screen jump
 		event.preventDefault();
