@@ -8,7 +8,7 @@ Front End Team
 		"The Inside Man"
 	Brad Bohen
 		"The Fixer"
-	Joshua Ferrira
+	Joshua Ferreira
 		"The Lure"
 	Christopher Allison
 		"The Roper"
